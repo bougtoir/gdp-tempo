@@ -1,0 +1,1244 @@
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+
+<head>
+    <!-- charset must appear in the first 1024 bytes of the document -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Emerald Publishing Author Guidelines | Journals Gateway | Emerald Publishing</title>
+        
+
+
+
+        <script src="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="0197c624-2c4e-797f-8a8e-d7b514495009" class="cookiepro-otsdkstub"></script>
+    <script type="text/javascript">
+        function OptanonWrapper() {
+            // Get initial OnetrustActiveGroups ids
+            if (typeof OptanonWrapperCount == "undefined") {
+                otGetInitialGrps();
+            }
+
+            //Delete cookies
+            otDeleteCookie(otIniGrps);
+
+            // Assign OnetrustActiveGroups to custom variable
+            function otGetInitialGrps() {
+                OptanonWrapperCount = '';
+                otIniGrps = OnetrustActiveGroups;
+            }
+
+            function otDeleteCookie(iniOptGrpId) {
+                var otDomainGrps = JSON.parse(JSON.stringify(Optanon.GetDomainData().Groups));
+                var otDeletedGrpIds = otGetInactiveId(iniOptGrpId, OnetrustActiveGroups);
+                if (otDeletedGrpIds.length != 0 && otDomainGrps.length != 0) {
+                    for (var i = 0; i < otDomainGrps.length; i++) {
+                        //Check if CustomGroupId matches
+                        if (otDomainGrps[i]['CustomGroupId'] != '' && otDeletedGrpIds.includes(otDomainGrps[i]['CustomGroupId'])) {
+                            for (var j = 0; j < otDomainGrps[i]['Cookies'].length; j++) {
+                                // console.log("otDeleteCookie",otDomainGrps[i]['Cookies'][j]['Name'])
+                                //Delete cookie
+                                eraseCookie(otDomainGrps[i]['Cookies'][j]['Name']);
+                            }
+                        }
+
+                        //Check if Hostid matches
+                        if (otDomainGrps[i]['Hosts'].length != 0) {
+                            for (var j = 0; j < otDomainGrps[i]['Hosts'].length; j++) {
+                                //Check if HostId presents in the deleted list and cookie array is not blank
+                                if (otDeletedGrpIds.includes(otDomainGrps[i]['Hosts'][j]['HostId']) && otDomainGrps[i]['Hosts'][j]['Cookies'].length != 0) {
+                                    for (var k = 0; k < otDomainGrps[i]['Hosts'][j]['Cookies'].length; k++) {
+                                        //Delete cookie
+                                        eraseCookie(otDomainGrps[i]['Hosts'][j]['Cookies'][k]['Name']);
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+                otGetInitialGrps(); //Reassign new group ids
+            }
+
+            //Get inactive ids
+            function otGetInactiveId(customIniId, otActiveGrp) {
+                //Initial OnetrustActiveGroups
+                // console.log("otGetInactiveId",customIniId)
+                customIniId = customIniId.split(",");
+                customIniId = customIniId.filter(Boolean);
+
+                //After action OnetrustActiveGroups
+                otActiveGrp = otActiveGrp.split(",");
+                otActiveGrp = otActiveGrp.filter(Boolean);
+
+                var result = [];
+                for (var i = 0; i < customIniId.length; i++) {
+                    if (otActiveGrp.indexOf(customIniId[i]) <= -1) {
+                        result.push(customIniId[i]);
+                    }
+                }
+                return result;
+            }
+
+            //Delete cookie
+            function eraseCookie(name) {
+                //Delete root path cookies
+                domainName = window.location.hostname;
+                document.cookie = name + '=; Max-Age=-99999999; Path=/;Domain=' + domainName;
+                document.cookie = name + '=; Max-Age=-99999999; Path=/;';
+
+                //Delete LSO incase LSO being used, cna be commented out.
+                localStorage.removeItem(name);
+
+                //Check for the current path of the page
+                pathArray = window.location.pathname.split('/');
+                //Loop through path hierarchy and delete potential cookies at each path.
+                for (var i = 0; i < pathArray.length; i++) {
+                    if (pathArray[i]) {
+                        //Build the path string from the Path Array e.g /site/login
+                        var currentPath = pathArray.slice(0, i + 1).join('/');
+                        document.cookie = name + '=; Max-Age=-99999999; Path=' + currentPath + ';Domain=' + domainName;
+                        document.cookie = name + '=; Max-Age=-99999999; Path=' + currentPath + ';';
+                        //Maybe path has a trailing slash!
+                        document.cookie = name + '=; Max-Age=-99999999; Path=' + currentPath + '/;Domain=' + domainName;
+                        document.cookie = name + '=; Max-Age=-99999999; Path=' + currentPath + '/;';
+
+
+                    }
+                }
+
+            }
+        }
+    </script>
+                
+
+
+<script type="text/javascript" src="https://play.cadmore.media/js/CADMORE_ALL_JS.js"></script>
+
+
+
+        <script type='text/plain' defer src='//js.trendmd.com/trendmd.min.js' data-trendmdconfig='{"element":"#trendmd-suggestions"}' class='optanon-category-C0002'></script>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="//emer.silverchair-cdn.com/Themes/Silver/app/js/jquery.3.4.1.min.js" type="text/javascript">\x3C/script>')</script>
+<script src="//emer.silverchair-cdn.com/Themes/Silver/app/vendor/v-639181296848168139/jquery-migrate-3.1.0.min.js" type="text/javascript"></script>
+
+    <script type='text/plain' src='https://platform-api.sharethis.com/js/sharethis.js#property=643701de45aa460012e1032e&amp;product=sop' async='async' class='optanon-category-C0004'></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10" />
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <!-- Turn off telephone number detection. -->
+    <meta name="format-detection" content="telephone=no" />
+    
+<!-- Bookmark Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="//emer.silverchair-cdn.com/Themes/Client/app/img/favicons/v-639181293788770865/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="//emer.silverchair-cdn.com/Themes/Client/app/img/favicons/v-639181293789570875/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="//emer.silverchair-cdn.com/Themes/Client/app/img/favicons/v-639181293788770865/favicon-16x16.png" sizes="16x16">
+  <link rel="mask-icon" href="//emer.silverchair-cdn.com/Themes/Client/app/img/favicons/v-639181293789620896/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="icon" href="//emer.silverchair-cdn.com/Themes/Client/app/img/favicons/v-639181293789570875/favicon.ico">
+  <link rel="manifest" href="//emer.silverchair-cdn.com/Themes/Client/app/img/favicons/v-639181293789670908/site.webmanifest">
+  <meta name="msapplication-config" content="//emer.silverchair-cdn.com/Themes/Client/app/img/favicons/v-639181293788770865/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+
+    
+
+
+  <link rel="stylesheet" type="text/css" href="//emer.silverchair-cdn.com/Themes/Client/app/css/v-639195022330188836/site.min.css" />
+  <link rel="stylesheet" type="text/css" href="//emer.silverchair-cdn.com/Themes/Silver/app/icons/v-639181296765558696/style.css" />
+  <link rel="stylesheet" type="text/css" href="//emer.silverchair-cdn.com/Themes/Client/app/css/v-639181293788320861/bg_img.css" />
+
+<link rel="stylesheet" href="https://use.typekit.net/xpl0ais.css">
+
+
+        <link href="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/CSS/umbrella/v-639161690488582382/umbrella.css" rel="stylesheet" type="text/css" />
+            <link href="//emer.silverchair-cdn.com/data/SiteBuilderAssets/Live/CSS/journals/v-638730877931429433/site.css" rel="stylesheet" type="text/css" />
+
+            <script>
+                (function (w, d, s, l, i) {
+                    w[l] = w[l] || []; w[l].push({
+                        'gtm.start':
+                            new Date().getTime(), event: 'gtm.js'
+                    }); var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                        j.setAttribute('type', 'text/plain');
+                            j.setAttribute('class', 'optanon-category-C0002');
+                        j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', 'GTM-W9XTGPJQ');
+            </script>
+
+    
+
+        <script type="text/javascript">
+            var App = App || {};
+            App.LoginUserInfo = {
+                isInstLoggedIn: 0,
+                isIndividualLoggedIn: 0
+            };
+
+            App.CurrentSubdomain = 'journals';
+            App.SiteURL = 'www.emerald.com/journals';
+            App.EnableAdobeAnalytics = false;
+        </script>
+    
+    
+    
+    <meta name="citation_title" content="Emerald Publishing Author Guidelines" />
+<meta name="citation_author" content="" />
+<meta name="citation_publication_date" content="6/18/2026 12:19:21 PM" />
+<meta name="citation_description" content="Author checklistWhat you need to knowIs your paper a good fit for your chosen journal?&nbsp;Check by reading the aims and scope on our journal homepages and look at recently published articles.Have you checked the manuscript requirements for your chosen journal?&nbsp;Find our general manuscript requirements below and refer to your chosen journal’s homepage to check specific manuscript requirements such as article length, reference type and more.Have you read and understood Emerald’s publication ethics guidelines and your author responsibilities?&nbsp;Our&nbsp;publication&nbsp;ethics&nbsp;and&nbsp;author&nbsp;policies&nbsp;apply to all Emerald journals, and all authors should read them before submitting. Please also ensure you refer to our guidelines about permitted uses of AI and&nbsp;Emerald’s full AI policy,&nbsp;including examples of use cases, which can all be found on our&nbsp;Publishing Ethics&nbsp;page.Prepare&nbsp;your&nbsp;manuscriptHave you checked for spelling or typographical errors?&nbsp;Is&nbsp;your manuscript complete, grammatically correct, and without spelling or typographical errors?Have you cleared any necessary permissions?&nbsp;Find our guidance on permissions below and visit our&nbsp;permissions page&nbsp;for further information.Have you checked for any&nbsp;unintended&nbsp;identifying..." />
+<meta name="citation_doi" content="" />
+<meta name="citation_subtype" content="" />
+<meta name="citation_language" content="English" />
+<meta name="citation_publisher" content="" />
+<meta name="citation_issn" content="" />
+<meta name="citation_eissn" content="" />
+<meta name="citation_fulltext_world_readable" content="" />
+
+
+
+    <link rel="canonical" href="https://www.emerald.com/journals/author-guidance/1627/Emerald-Publishing-Author-Guidelines" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    <script type="text/plain" async="async" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" class='optanon-category-C0004'></script>
+
+    <script>
+        var SCM = SCM || {};
+        SCM.pubGradeAdsEnabled = false;
+    </script>
+
+
+<script>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+
+    googletag.cmd.push(function () {
+    googletag.setConfig({ disableInitialLoad: true });
+
+    
+
+    });
+</script>
+    
+
+
+    
+
+
+
+
+</head>
+
+<body data-sitename="journalsgateway" class="off-canvas pg_ContentManagementSystem pg_contentmanagementsystem   " theme-journals data-sitestyletemplate="Journal" >
+            <noscript>
+                <iframe  src="https://www.googletagmanager.com/ns.html?id=GTM-W9XTGPJQ"
+                        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+            </noscript>
+            <nav aria-label="Skip navigation">
+                <a href="#skipNav" class="skipnav">Skip to Main Content</a>
+            </nav>
+<input id="hdnSiteID" name="hdnSiteID" type="hidden" value="3" /><input id="hdnAdDelaySeconds" name="hdnAdDelaySeconds" type="hidden" value="3000" /><input id="hdnAdConfigurationTop" name="hdnAdConfigurationTop" type="hidden" value="basic" /><input id="hdnAdConfigurationRightRail" name="hdnAdConfigurationRightRail" type="hidden" value="basic" />
+    <div class="ad-banner js-ad-revealer ad-banner-revealer" role="region" aria-label="Advertisement" aria-hidden="true">
+    <div class="widget-AdBlock widget-instance-HeaderRevealerAd" 
+         data-widget-name="AdBlock" 
+         data-widget-instance="HeaderRevealerAd">
+        
+ 
+    </div>
+
+    </div>
+    
+
+
+
+
+<section class="master-header row vt-site-header" role="banner">
+
+    <div class="ad-banner js-ad-banner">
+    <div class="widget-AdBlock widget-instance-HeaderAd" 
+         data-widget-name="AdBlock" 
+         data-widget-instance="HeaderAd">
+        
+ 
+    </div>
+
+    </div>
+
+    <div class="widget-SitePageHeader widget-instance-SitePageHeader" 
+         data-widget-name="SitePageHeader" 
+         data-widget-instance="SitePageHeader">
+            <div class="site-theme-header">
+        <div class="site-theme-header_contents global-nav-base">
+
+
+<div class="global-nav">
+            <div class="collapsed-view">
+            <a class="js-dropdown-trigger global-nav-trigger" href="javascript:;">
+                <picture>
+                        <source media="(max-width: 600px)" srcset="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/images/umbrella/umbrella-logo-mobile.svg">
+                    <source media="(min-width: 601px)" srcset="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/Images/umbrella/umbrella-logo.svg">
+                    <img class="logo-JournalsGateway site-theme-header-image" src="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/Images/umbrella/umbrella-logo.svg" alt="Emerald Insight logo" />
+                </picture>
+                    <i class="icon-general_arrow-down arrow-icon"></i>
+            </a>
+            <nav class="navbar-menu global-nav-dropdown js-dropdown">
+                <div class="site-theme-header-logo">
+                    <a href="/" class="site-theme-header-image-wrap">
+                            <picture>
+                                    <source media="(max-width: 600px)" srcset="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/images/umbrella/umbrella-logo-mobile.svg">
+                                <source media="(min-width: 601px)" srcset="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/Images/umbrella/umbrella-logo.svg">
+                                <img class="logo-JournalsGateway site-theme-header-image" src="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/Images/umbrella/umbrella-logo.svg" alt="Emerald Insight logo" />
+                            </picture>
+                    </a>
+                    <a href="javascript:;" class="icon-general-close menu-close js-menu-close"><span class="screenreader-text">Close</span></a>
+                </div>
+                        <ul class="site-menu site-menu-lvl-0 js-theme-dropdown">
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-Journals " id="site-menu-item-15601">
+                        <a href="/journals" class="nav-link">
+                            Journals                         </a>
+
+                    
+                </li>
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-Books " id="site-menu-item-15602">
+                        <a href="/books" class="nav-link">
+                            Books                         </a>
+
+                    
+                </li>
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-Case-Studies " id="site-menu-item-15603">
+                        <a href="/case-studies" class="nav-link">
+                            Case Studies                         </a>
+
+                    
+                </li>
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-Collections " id="site-menu-item-15604">
+                        <a href="/emerald-collections" class="nav-link">
+                            Collections                         </a>
+
+                    
+                </li>
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-Open-Access " id="site-menu-item-15605">
+                        <a href="/open-access" class="nav-link">
+                            Open Access                         </a>
+
+                    
+                </li>
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-Citation-Manager " id="site-menu-item-15606">
+                        <a href="/citation-manager" class="nav-link">
+                            Citation Manager                         </a>
+
+                    
+                </li>
+        </ul>
+
+            </nav>
+        </div>
+    <div class="expanded-view">
+        <a href="/" class="global-nav_link-wrap">
+            <picture>
+                    <source media="(max-width: 600px)" srcset="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/images/umbrella/umbrella-logo-mobile.svg">
+                <source media="(min-width: 601px)" srcset="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/Images/umbrella/umbrella-logo.svg">
+                <img class="logo-JournalsGateway site-theme-header-image" src="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/Images/umbrella/umbrella-logo.svg" alt="Emerald Insight logo" />
+            </picture>
+        </a>
+                <ul class="site-menu site-menu-lvl-0 js-theme-dropdown">
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-Journals " id="site-menu-item-15601">
+                        <a href="/journals" class="nav-link">
+                            Journals                         </a>
+
+                    
+                </li>
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-Books " id="site-menu-item-15602">
+                        <a href="/books" class="nav-link">
+                            Books                         </a>
+
+                    
+                </li>
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-Case-Studies " id="site-menu-item-15603">
+                        <a href="/case-studies" class="nav-link">
+                            Case Studies                         </a>
+
+                    
+                </li>
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-Collections " id="site-menu-item-15604">
+                        <a href="/emerald-collections" class="nav-link">
+                            Collections                         </a>
+
+                    
+                </li>
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-Open-Access " id="site-menu-item-15605">
+                        <a href="/open-access" class="nav-link">
+                            Open Access                         </a>
+
+                    
+                </li>
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-Citation-Manager " id="site-menu-item-15606">
+                        <a href="/citation-manager" class="nav-link">
+                            Citation Manager                         </a>
+
+                    
+                </li>
+        </ul>
+
+    </div>
+</div>
+
+
+
+    <input type="hidden" class="hfEnableEnhancedAutoSuggest" value="false" name="searchScope" aria-hidden="true" />
+        <div class="mobile-menu-trigger_wrap mobile-search_wrap">
+            <button type="button"
+                    class="mobile-search_toggle at-search-toggle"
+                    aria-expanded="false"
+                    data-theme-dropdown-trigger="search-dropdown"><i class="icon-menu_search" aria-hidden="true"></i><span class="screenreader-text">Search Dropdown Menu</span></button>
+        </div>
+    <div class="navbar-search-container mobile-dropdown search-dropdown" data-theme-dropdown="search-dropdown">
+        <div class="navbar-search">
+            <form class="microsite-search js-MicrositeSearch" aria-label="header search" role="search">
+                <fieldset class="searchbar-fieldset">
+                    <legend><span class="screenreader-text">header search</span></legend>
+                    <div class="navbar-search-input_wrap">
+                        
+                        <input class="navbar-search-input microsite-search-term at-microsite-search-term search-term-autosuggest"
+                               data-autosuggest-hint="micrositeSearchTermInputHint-SitePageHeader"
+                               data-autosuggest-results="micrositeAutoCompleteResults-SitePageHeader"
+                               data-autosuggest-id="MicrositeSearchTerm-SitePageHeader"
+                               data-searchfilter="search-filter-SitePageHeader"
+                               placeholder="Search..."
+                               aria-label="Search..."
+                               type="text" maxlength="255"
+                                 autocomplete="off"                                 id="MicrositeSearchTerm-SitePageHeader">
+                        
+                        <input type="hidden" name="hfAutoCompleteMaxResults" class="hfAutoCompleteMaxResults" value="6" aria-hidden="true" />
+                        <input type="hidden" name="hfSolrAutoSuggestMinimumCharactersLength" class="hfSolrAutoSuggestMinimumCharactersLength" value="2" aria-hidden="true" />
+                        <input type="hidden" name="hfSolrJournalName" class="hfSolrJournalName" value="" aria-hidden="true" />
+                        <input type="hidden" name="hfSolrJournalID" class="hfSolrJournalID" value="" aria-hidden="true" />
+                        <label for="micrositeSearchTermInputHint-SitePageHeader" aria-hidden="true">
+                            <span class="screenreader-text">Search input auto suggest</span>
+                        </label>
+                        <input type="text"
+                               id="micrositeSearchTermInputHint-SitePageHeader"
+                               data-autosuggest-id="micrositeSearchTermInputHint-SitePageHeader"
+                               class="microsite-search-term-input-hint"
+                               autocomplete="off"
+                               tabindex="-1"
+                               aria-hidden="true"
+                               disabled />
+                        <ul data-autosuggest-id="micrositeAutoCompleteResults-SitePageHeader" class="term-list hidden"></ul>
+                    </div>
+                        <div class="navbar-search-filter_wrap">
+                            <label for="navbar-search-filter-site-SitePageHeader">
+                                <span class="screenreader-text">filter your search</span>
+                            </label>
+                            <select class="navbar-search-filter navbar-search-filter-site at-navbar-search-filter" id="navbar-search-filter-site-SitePageHeader" data-autosuggest-id="search-filter-SitePageHeader">
+<option class="header-search-bar-filters-item" value="/search-results?page=1&q={searchQuery}" data-siteid="0" >All Content</option><option class="header-search-bar-filters-item selected" value="/journals/search-results?page=1&q={searchQuery}&fl_SiteID=3&allJournals=1" data-siteid="3" selected>All Journals</option>                            </select>
+                        </div>
+                    <div class="navbar-search-submit_wrap">
+                        
+                        <button type="button" class="microsite-search-icon navbar-search-submit icon-menu_search"><span class="screenreader-text">Search</span></button>
+                    </div>
+                </fieldset>
+            </form><!-- /#MicrositeSearch -->
+        </div><!-- /.navbar-search -->
+<div class="navbar-search-advanced">
+    <a href="/advanced-search" class="advanced-search">Advanced Search</a>
+</div>    </div><!-- /.navbar-search-container -->
+
+<input type="hidden" name="parentSiteName" class="hfParentSiteName" value="Emerald Publishing" aria-hidden="true" />
+<input type="hidden" class="hfSolrMaxAllowSearchChar" value="100" aria-hidden="true" />
+<input type="hidden" class="hfJournalShortName" value="" aria-hidden="true" />
+<input type="hidden" class="hfSearchPlaceholder" value="" aria-hidden="true" />
+<input type="hidden" name="hfGlobalSearchSiteURL" class="hfGlobalSearchSiteURL" value="" aria-hidden="true" />
+<input type="hidden" name="hfSearchSiteURL" id="hfSiteURL" value="www.emerald.com/journals" aria-hidden="true" />
+<input type="hidden" class="hfQuickSearchUrl" value="/journals/search-results?page=1&amp;q={searchQuery}&amp;fl_SiteID=3&amp;allJournals=1" aria-hidden="true" />
+<script type="text/javascript">
+    (function () {
+        var hfSiteUrl = document.getElementById('hfSiteURL');
+        var siteUrl = hfSiteUrl.value;
+        var subdomainIndex = siteUrl.indexOf('/');
+
+        hfSiteUrl.value = location.host + (subdomainIndex >= 0 ? siteUrl.substring(subdomainIndex) : '');
+    })();
+</script>
+
+                <div class="tablet-menu-trigger_wrap">
+        <!-- MOBILE SHOPPING CART ICON -->
+
+<div class="site-theme-header-menu-item view-cart-wrap">
+    <a href="https://www.emerald.com/store/cart" class="view-cart" rel="nofollow" aria-label="Cart">
+        <span class="text-cart">Cart</span>
+        <i class="access-icon icon-availability_cart" aria-hidden="true"></i>
+            <span class="items-in-cart" aria-live="polite"></span>
+    </a>
+</div>        <button type="button"
+           class="btn-reset tablet-sign-in"
+           data-theme-dropdown-trigger="tablet-user-dropdown"
+           aria-controls="tablet-user-dropdown"
+           aria-expanded="false"><i class="icon-menu_account"><span class="screenreader-text">User Tools Dropdown</span></i></button>
+    </div>
+<div class="site-theme-header-menu-item_wrap tablet-menu" id="tablet-user-dropdown" data-theme-dropdown="tablet-user-dropdown">
+    <!-- DESKTOP SHOPPING CART ICON -->
+
+<div class="site-theme-header-menu-item view-cart-wrap">
+    <a href="https://www.emerald.com/store/cart" class="view-cart" rel="nofollow" aria-label="Cart">
+        <span class="text-cart">Cart</span>
+        <i class="access-icon icon-availability_cart" aria-hidden="true"></i>
+            <span class="items-in-cart" aria-live="polite"></span>
+    </a>
+</div>
+    <!-- DESKTOP REGISTRATION -->
+        <div class="site-theme-header-menu-item"><a href="/my-account/register?siteId=3&amp;returnUrl=%2fjournals%2fauthor-guidance%2f1627%2fEmerald-Publishing-Author-Guidelines" class="register at-register js-register-user-modals">Register</a></div>
+
+    <!-- ACCESS THROUGH INSTITUTION -->
+
+    <!-- DESKTOP INSTITUTIONS -->
+
+        <!-- DESKTOP SIGN IN -->
+        <div class="site-theme-header-menu-item not-authenicated">
+                <button type="button"
+                    class="btn-reset dropdown-toggle signin at-signin-dropdown at-signin-username"
+                    id="header-account-info-user-fullname"
+                    data-login-location="/SignIn/LoginForm/LoginFormPopup?returnUrl="
+                    data-theme-dropdown-trigger="sign-in-dropdown"
+                    aria-controls="sign-in-dropdown"
+                    aria-expanded="false"
+                    rel=nofollow>
+                    
+Sign In                    <i class="icon-general_arrow-down arrow-icon"><span class="screenreader-text">Open Menu</span></i>
+                </button>
+                <div class="dropdown-panel dropdown-panel-signin dropdown-panel-form at-signin-dropdown-panel" id="sign-in-dropdown" data-theme-dropdown="sign-in-dropdown">
+                    <div class="spinner"></div>
+                </div><!-- /.dropdown-panel -->
+        </div>
+
+</div>
+        </div><!-- /.site-theme-header_content -->
+    </div><!-- /.site-theme-header- -->
+
+
+    <div class="journal-header journal-bg">
+        <div class="journal-header_content ">
+    <div class="journal-logo_wrap">
+        <a href="//www.emerald.com/journals" class="journal-logo-link">
+
+Journals        </a>
+    </div>
+
+            
+
+
+<div class="navbar-menu_wrap">
+            <a class="mobile-site-menu-toggle" data-theme-dropdown-trigger="microsite-nav-menu" aria-controls="microsite-nav-menu" aria-expanded="false" href="javascript:;"><i class="icon-menu_hamburger"><span class="screenreader-text">Toggle Menu</span></i><span class="tablet-menu-label">Menu</span></a>
+            <nav class="navbar-menu" id="microsite-nav-menu" data-theme-dropdown="microsite-nav-menu" aria-label="Primary navigation">
+                    <ul class="site-menu site-menu-lvl-0 js-theme-dropdown">
+<li class="site-menu-item site-menu-lvl-0 " id="site-menu-item-16845">
+        <a href="/journals/collections/journal-subscription-collection" class="nav-link" >Journal Subscription Collections</a>
+    </li> <li class="site-menu-item site-menu-lvl-0 " id="site-menu-item-16846">
+        <a href="/journals/pages/journals_a-z" class="nav-link" >Journals A-Z</a>
+    </li> <li class="site-menu-item site-menu-lvl-0 " id="site-menu-item-16847">
+        <a href="/advanced-search" class="nav-link" >Advanced Search</a>
+    </li>     </ul>
+ 
+            </nav>
+</div><!-- /.navbar -->
+
+        </div><!-- /.center-inner-row -->
+
+    </div><!-- /.journal-header -->
+
+
+<input id="routename" name="RouteName" type="hidden" value="journals" />
+
+ 
+    </div>
+
+</section>
+
+<div id="main" class="content-main js-main ui-base" role="main">
+    <section class="master-main row">
+        <div class="content-main_content">
+            <span id="skipNav" tabindex="-1"></span>
+            
+
+
+
+
+    <div class="widget-CmsPost widget-instance-CmsPost" 
+         data-widget-name="CmsPost" 
+         data-widget-instance="CmsPost">
+        <div class="cms-post-view_wrap">
+    <div class="cms-post-view cms-enhanced-view cms-enhanced-jump-links-view">
+<div class="header">
+
+
+    <div class="header-hero-wrap">
+        <img class="header-hero-image" src="" alt="" />
+        <div class="header-hero-caption"></div>
+    </div>
+
+    <h1 class="header-title-wrap article-title-main">
+            <span class="header-title">Emerald Publishing Author Guidelines</span>
+                <i class='icon-availability_free' role='img' aria-label='Free'></i>    </h1>
+</div>
+            <div class="cms-post-pubdate">18 June, 2026</div>
+
+<div class="author al-author-name">
+    <a  rel="nofollow" href="javascript:;" class="author-name linked-name js-linked-name stats-author-info-trigger"></a>
+    <div class="al-author-info-wrap stats-author-info-panel">
+        <div class="info-card-author">
+            <div class="author-email"><a href="/cdn-cgi/l/email-protection#5f7776"></a></div>
+            <div class="author-affiliation"></div>
+            <div class="author-corresponding-address"></div>
+            <div class="author-orcid"><a class="author-orcid-link" href=""></a></div>
+            <div class="author-bio"></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="metadata">
+            <div class="metadata-contentlicense"><span class="meta-type">Content License:</span>FreeView</div>
+
+</div>
+
+
+
+
+
+        <div class="cms-enhanced-view-content-wrap">
+                <div class="page-column--left">
+<ul class="jumplink-list js-cms-jumplink-list">
+        <li class="head-3">
+            <a href="#author-checklist">Author checklist</a>
+        </li>
+        <li class="head-3">
+            <a href="#what-you-need-to-know">What you need to know</a>
+        </li>
+        <li class="head-3">
+            <a href="#prepare-your-manuscript">Prepare&#160;your&#160;manuscript</a>
+        </li>
+        <li class="head-3">
+            <a href="#before-you-submit">Before you submit</a>
+        </li>
+        <li class="head-3">
+            <a href="#open-access">Open&#160;Access</a>
+        </li>
+        <li class="head-3">
+            <a href="#prepare-your-manuscript-1">Prepare your&#160;manuscript</a>
+        </li>
+        <li class="head-3">
+            <a href="#emeralds-harvard-referencing-style">Emerald’s Harvard referencing style:</a>
+        </li>
+        <li class="head-3">
+            <a href="#submit-your-manuscript">Submit your&#160;manuscript</a>
+        </li>
+        <li class="head-3">
+            <a href="#what-you-can-expect-next">What you can expect next</a>
+        </li>
+        <li class="head-3">
+            <a href="#the-peer-review-process">The&#160;Peer&#160;Review&#160;process</a>
+        </li>
+        <li class="head-3">
+            <a href="#if-your-submission-is-accepted">If your submission is accepted</a>
+        </li>
+        <li class="head-3">
+            <a href="#frequently-asked-questions">Frequently asked questions</a>
+        </li>
+        <li class="head-3">
+            <a href="#useful-links">Useful links</a>
+        </li>
+</ul>
+                </div>
+
+            <div class="cms-content-area">
+                    <div class="cms-enhanced-share-bar">
+    <div class="title">Share</div>
+    <ul id="ShareDrop" class="share-list">
+            <li class="toolbar-item item-share">
+                <button type="button"
+                        class="st-custom-button addthis_button_facebook js-share-link "
+                        data-network="facebook"
+                        data-title="Emerald Publishing Author Guidelines"
+                        data-url="https://www.emerald.com/journals/author-guidance/1627/Emerald-Publishing-Author-Guidelines"
+                        data-email-subject="Emerald Publishing Author Guidelines">
+                    <i class="icon-social-facebook"><span class="screen-reader-only">Facebook Icon</span></i>
+                </button>
+            </li>
+            <li class="toolbar-item item-share">
+                <button type="button"
+                        class="st-custom-button addthis_button_twitter js-share-link "
+                        data-network="twitter"
+                        data-title="Emerald Publishing Author Guidelines"
+                        data-url="https://www.emerald.com/journals/author-guidance/1627/Emerald-Publishing-Author-Guidelines"
+                        data-email-subject="Emerald Publishing Author Guidelines">
+                    <i class="icon-social-twitter"><span class="screen-reader-only">X Icon</span></i>
+                </button>
+            </li>
+            <li class="toolbar-item item-share">
+                <button type="button"
+                        class="st-custom-button addthis_button_linkedin js-share-link "
+                        data-network="linkedin"
+                        data-title="Emerald Publishing Author Guidelines"
+                        data-url="https://www.emerald.com/journals/author-guidance/1627/Emerald-Publishing-Author-Guidelines"
+                        data-email-subject="Emerald Publishing Author Guidelines">
+                    <i class="icon-social-linkedin"><span class="screen-reader-only">LinkedIn Icon</span></i>
+                </button>
+            </li>
+    </ul>
+
+                    </div>
+
+
+    <div class="body">
+        <div class="body-text"><p></p><h3 id="author-checklist"><span data-ccp-parastyle="heading 2">Author checklist</span></h3><h3 id="what-you-need-to-know"><span data-ccp-parastyle="heading 3">What you need to know</span></h3><ul><li><p><strong><span data-ccp-parastyle="heading 3">Is your paper a good fit for your chosen journal?</span></strong>&nbsp;<br><span data-ccp-parastyle="heading 3">Check by reading the aims and scope on our journal homepages and look at recently published articles.</span></p></li></ul><ul><li><p><strong><span data-ccp-parastyle="heading 3">Have you checked the manuscript requirements for your chosen journal?</span></strong>&nbsp;<br><span data-ccp-parastyle="heading 3">Find our general manuscript requirements below and refer to your chosen journal’s homepage to check specific manuscript requirements such as article length, reference type and more.</span></p></li></ul><ul><li><p><strong><span data-ccp-parastyle="heading 3">Have you read and understood Emerald’s publication ethics guidelines and your author responsibilities?</span></strong>&nbsp;<br><span data-ccp-parastyle="heading 3">Our&nbsp;</span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/ethics-integrity/research-publishing-ethics#authorship" target="" type="external"><span data-ccp-charstyle="Hyperlink">publication&nbsp;ethics</span></a><span data-ccp-parastyle="heading 3">&nbsp;and&nbsp;</span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/ethics-integrity/research-publishing-ethics#authorship" target="" type="external"><span data-ccp-charstyle="Hyperlink">author&nbsp;policies</span></a><span data-ccp-parastyle="heading 3">&nbsp;apply to all Emerald journals, and all authors should read them before submitting. Please also ensure you refer to our guidelines about permitted uses of AI and&nbsp;Emerald’s full AI policy,&nbsp;including examples of use cases, which can all be found on our&nbsp;Publishing Ethics&nbsp;page.</span></p></li></ul><h3 id="prepare-your-manuscript"><span data-ccp-parastyle="heading 3">Prepare&nbsp;your&nbsp;manuscript</span></h3><ul><li><p><strong><span data-contrast="auto">Have you checked for spelling or typographical errors?</span></strong>&nbsp;<br><span data-contrast="auto">Is&nbsp;your manuscript complete, grammatically correct, and without spelling or typographical errors?</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">Have you cleared any necessary permissions?</span></strong>&nbsp;<br><span data-contrast="auto">Find our guidance on permissions below and visit our&nbsp;</span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/permissions-referencing" target="" type="external"><span data-ccp-charstyle="Hyperlink">permissions page</span></a><span data-contrast="auto">&nbsp;for further information.</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">Have you checked for any&nbsp;unintended&nbsp;identifying information?</span></strong>&nbsp;<br><span data-contrast="auto">Ensure your manuscript does not contain any information, such as author names, that could reveal your identity in the anonymous peer review process. When citing&nbsp;your own work, use wording like ‘</span><em><span data-contrast="auto">previous research has shown</span></em><span data-contrast="auto">’. Do not include your unpublished work in the reference list. Finally, make sure to upload any acknowledgements or author biographies as separate files.</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">Have you identified appropriate keywords?</span></strong>&nbsp;<br><span data-contrast="auto">Check keyword numbers by reading the aims and scope on our journal homepages. Find out how to&nbsp;make your paper more discoverable.</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">Have you written an effective title and abstract?</span></strong>&nbsp;<br><span data-contrast="auto">Manuscript&nbsp;titles should be descriptive of the content and contain relevant keywords that will improve the&nbsp;visibility&nbsp;of your research in online databases. Abstracts&nbsp;should follow the&nbsp;structured&nbsp;abstract format. For more&nbsp;information&nbsp;see guidelines below.</span></p></li></ul><p></p><ul><li><p><strong><span data-contrast="auto">Have you read through the formatting requirements laid out in these guidelines?&nbsp;</span></strong></p></li></ul><p><span data-contrast="auto">If not, then please take the time to read through the&nbsp;guidelines&nbsp;beneath&nbsp;this checklist.</span>&nbsp;<br></p><h3 id="before-you-submit"><span data-ccp-parastyle="heading 2">Before you submit</span></h3><p><span data-ccp-parastyle="heading 3">Author responsibilities</span></p><p><span data-contrast="auto">We aim to&nbsp;deliver a professional and courteous experience throughout the publication and review process.&nbsp;Please see our&nbsp;</span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/ethics-integrity/research-publishing-ethics#dignity" target="" type="external"><span data-ccp-charstyle="Hyperlink">Dignity at Work policy</span></a><span data-contrast="auto">&nbsp;for more information.</span></p><p><span data-contrast="auto">As an author, our expectation&nbsp;is that you will:</span></p><ul><li><p><span data-contrast="auto">Respond swiftly to any queries during the publication process.</span></p></li></ul><ul><li><p><span data-contrast="auto">Be accountable for all aspects of your work. This includes investigating and resolving any questions about accuracy or </span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/ethics-integrity/research-publishing-ethics" target="" type="external"><span data-ccp-charstyle="Hyperlink">research integrity</span></a><span data-contrast="auto">.</span></p></li></ul><ul><li><p><span data-contrast="auto">Treat communications between you and the journal&nbsp;editor&nbsp;as confidential until an editorial decision has been made.</span></p></li></ul><p><span data-ccp-parastyle="heading 3">Research and publishing&nbsp;ethics</span></p><p><span data-contrast="auto">Our&nbsp;editors and employees work hard to ensure the content we publish is ethically sound.&nbsp;Prior to submission,&nbsp;please ensure you read and adhere to all relevant publishing ethics policies as outlined in our publication ethics guidelines.</span></p><p><span data-contrast="auto">Emerald&nbsp;is a member of the&nbsp;</span><a data-router-slot="disabled" href="https://publicationethics.org/" target="" type="external"><span data-ccp-charstyle="Hyperlink">Committee on Publication Ethics</span></a><span data-contrast="auto">(COPE); we abide by COPE’s&nbsp;</span><a data-router-slot="disabled" href="https://publicationethics.org/resources/guidelines-new/principles-transparency-and-best-practice-scholarly-publishing" target="" type="external"><span data-ccp-charstyle="Hyperlink">Principles of Transparency and Best Practice in Scholarly Publishing</span></a></p><p><span data-ccp-parastyle="heading 3">Originality</span></p><p><span data-contrast="auto">Any manuscript you submit should be original. That means it should not have been published before in its current, or similar, form.&nbsp;Failure to comply with this may result in your work being desk-rejected by the&nbsp;journal&nbsp;editorial&nbsp;office</span><em><span data-contrast="auto">.&nbsp;</span></em><span data-contrast="auto">For further guidance please see our&nbsp;</span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/author-policies/editorial-policy-originality-guidelines" target="" type="external"><span data-ccp-charstyle="Hyperlink">editorial policy and originality guidelines.</span></a><span data-contrast="auto">&nbsp;Exceptions to this rule are outlined in our </span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/author-policies/pre-prints-conference-papers-policies" target="" type="external"><span data-ccp-charstyle="Hyperlink">pre-print and conference paper policies</span></a><span data-contrast="auto">. If any substantial element of your paper has been previously published, you need to declare this to the journal&nbsp;editor upon submission.&nbsp;</span></p><p><span data-ccp-parastyle="heading 3">Consent to&nbsp;publish</span></p><p><span data-contrast="auto">If you have written about a company/individual/organisation in detail using information that is not publicly available, have spent time within that company/organisation, or the work features named/interviewed employees, you will need to clear permission by using the </span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/sites/default/files/2024-08/consent-to-publish-form.pdf" target="" type="external"><span data-ccp-charstyle="Hyperlink">consent to publish form</span></a><span data-contrast="auto">.&nbsp;</span></p><p><span data-contrast="auto">If you have to clear permission with the company/individual/organisation, consent must be given either by the named individual in question or their representative, a board member of the company/organisation, or a HR department representative of the company/organisation.&nbsp;Please also see our </span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/permissions-referencing" target="" type="external"><span data-ccp-charstyle="Hyperlink">permissions guidance</span></a><span data-contrast="auto"> for full details.</span></p><p><span data-ccp-parastyle="heading 3">Human&nbsp;participants</span></p><p><span data-contrast="auto">You should conduct your research ethically and responsibly. This includes adhering to national and international research ethics guidelines, the ethical principles outlined by your discipline and any relevant authorities, and to be transparent about your research methods. All involved in the publication process should be able to&nbsp;fairly and appropriately evaluate your work.&nbsp;</span></p><p><span data-contrast="auto">For all research involving human participants, you must ensure that you have obtained informed consent, meaning that you must inform all participants in your work (or their legal representative) as to why the research is being conducted, whether their anonymity is protected, how their data will be stored and used, and whether there are any associated risks from participation in the study.&nbsp;</span></p><p><span data-contrast="auto">The&nbsp;submitted work must confirm that informed consent was obtained and detail how this was addressed in&nbsp;accordance with </span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/ethics-integrity/research-publishing-ethics#informed-consent" target="" type="external"><span data-ccp-charstyle="Hyperlink">our policy on informed consent</span></a><span data-contrast="auto">.</span></p><p><span data-ccp-parastyle="heading 3">Ethical&nbsp;statements</span></p><p><span data-contrast="auto">Where appropriate, you must provide an ethical statement within the submitted work confirming that your research received institutional and national (or international) ethical approval, and that it complies with all relevant guidelines and regulations for studies involving humans, whether that be data, individuals, or samples.</span></p><p><span data-contrast="auto">A statement requires:</span></p><ul><li><p><span data-contrast="auto">The&nbsp;name and location of the institutional ethics reviewing committee or review&nbsp;board;</span></p></li></ul><ul><li><p><span data-contrast="auto">The&nbsp;approval number&nbsp;and&nbsp;the date of&nbsp;approval;</span></p></li></ul><ul><li><p><span data-contrast="auto">The details of the national or international guidelines that were&nbsp;followed;</span></p></li></ul><ul><li><p><span data-contrast="auto">Any&nbsp;other relevant information.</span></p></li></ul><p><span data-contrast="auto">You should also include details of how the work adheres to relevant consent guidelines along with confirming that informed consent was secured for&nbsp;</span><em><span data-contrast="auto">all</span></em><span data-contrast="auto">&nbsp;participants. The details of these statements should ensure that author and participant anonymity is not compromised.&nbsp;</span></p><p><span data-contrast="auto">Any&nbsp;work submitted without a suitable ethical statement and details of informed consent for all participants, where required, will be returned to the&nbsp;authors,&nbsp;and will not be considered further until appropriate and clear documentation is provided.&nbsp;</span></p><p><span data-contrast="auto">Emerald reserves the right to reject work without sufficient evidence of informed consent from human participants and ethical approval where required.</span></p><p><span data-ccp-parastyle="heading 3">Transparency and&nbsp;Openness Promotion (TOP)&nbsp;guidelines</span></p><p><span data-contrast="auto">We are a signatory of the </span><a data-router-slot="disabled" href="https://cos.io/our-services/top-guidelines/" target="" type="external"><span data-ccp-charstyle="Hyperlink">Transparency and Openness Promotion (TOP) Guidelines</span></a><span data-contrast="auto">, a framework that supports the reproducibility of research through the adoption of transparent research practices. That means we encourage you to:</span></p><ul><li><p><span data-contrast="auto">Cite and fully reference all data, program code, and other methods in your article.</span></p></li></ul><ul><li><p><span data-contrast="auto">Include persistent identifiers, such as a&nbsp;</span><a data-router-slot="disabled" href="https://www.doi.org/the-identifier/what-is-a-doi/" target="" type="external"><span data-ccp-charstyle="Hyperlink">Digital Object Identifier</span></a><span data-contrast="auto">&nbsp;(DOI), in references for datasets and program codes. Persistent identifiers ensure future access to unique published digital objects, such as a piece of text or datasets. Persistent identifiers are assigned to datasets by digital archives, such as institutional repositories and partners in the Data Preservation Alliance for the Social Sciences (Data-PASS).</span></p></li></ul><ul><li><p><span data-contrast="auto">Follow appropriate international and national procedures with respect to data protection, rights to privacy and other ethical considerations, whenever you cite data.</span></p></li></ul><ul><li><p><span data-contrast="auto">For an example on how to cite databases, please refer to the references section&nbsp;below.</span></p></li></ul><ul><li><p><span data-contrast="auto">For further guidance, please refer to our&nbsp;</span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/ethics-integrity/research-publishing-ethics" target="" type="external"><span data-ccp-charstyle="Hyperlink">research and publishing ethics guidelines</span></a><span data-contrast="auto">.</span></p></li></ul><p><span data-ccp-parastyle="heading 3">Copyright and Third-Party Permissions</span></p><p><span data-contrast="auto">By submitting your work to Emerald, you are guaranteeing that the work is not in infringement of any existing copyright.</span></p><p><span data-contrast="auto">Prior to article submission, you need to ensure you&nbsp;have&nbsp;applied for, and received, written permission to use any material in your manuscript that has been created by a third party.&nbsp;We&nbsp;are unable to publish any article that still has permissions pending.&nbsp;Please read our </span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/permissions-referencing" target="" type="external"><span data-ccp-charstyle="Hyperlink">guide to publishing permissions</span></a><span data-contrast="auto"> to ensure you have met all the requirements, so that we can process your submission&nbsp;without delay.</span></p><p></p><h3 id="open-access"><span data-ccp-parastyle="heading 3">Open&nbsp;Access</span></h3><p><span data-contrast="auto">All&nbsp;of&nbsp;our journals currently offer two open access (OA) publishing&nbsp;routes:&nbsp;gold open access and green open access&nbsp;(self-archiving).</span></p><p><em><span data-ccp-parastyle="heading 4">Gold&nbsp;open&nbsp;access:</span></em></p><p><span data-contrast="auto">To make the branded publisher PDF (the version of record) freely available upon publication,&nbsp;authors can opt for the&nbsp;</span><strong><span data-contrast="auto">gold open access route</span></strong><span data-contrast="auto">.&nbsp;Authors can publish via the gold open access route in our&nbsp;fully open access journals, or in our hybrid journals.&nbsp;Following the acceptance of your article it will pass to our internal licencing system. If you would like to publish your article open&nbsp;access&nbsp;please ensure&nbsp;you select the&nbsp;open access&nbsp;option&nbsp;at this point.</span></p><p><span data-contrast="auto">If you&nbsp;choose to publish gold open access, you will be asked to pay&nbsp;an&nbsp;</span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/publish-open-access/journal" target="" type="external"><span data-ccp-charstyle="Hyperlink">APC (article processing charge)</span></a><span data-contrast="auto">, which&nbsp;varies by journal&nbsp;and can be found on our&nbsp;</span><span data-contrast="none">APC price list</span><span data-contrast="auto">&nbsp;or on the&nbsp;editorial system at the point of submission. </span></p><p><span data-contrast="auto">A number of organisations have established partnerships with us to cover the cost of an agreed number of gold open access articles or agreed a discount for their regions.&nbsp;As an author, if you are affiliated with one of our partner organisations you may be eligible for a&nbsp;prepaid open access publishing voucher. </span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/publish-open-access/open-access-publishing-agreements" target="" type="external"><span data-ccp-charstyle="Hyperlink">To&nbsp;check your&nbsp;eligibility please refer to our&nbsp;list of open access agreements.</span></a></p><p><span data-contrast="auto">For further guidance&nbsp;on APCs and payments please refer to our&nbsp;</span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/ethics-integrity/research-publishing-ethics#publication-charges" target="" type="external"><span data-ccp-charstyle="Hyperlink">publication charges guidelines</span></a><span data-contrast="auto">.</span></p><p><span data-contrast="auto">Your article will be published with a </span><a data-router-slot="disabled" href="https://creativecommons.org/licenses/by/4.0/" target="" type="external"><span data-ccp-charstyle="Hyperlink">Creative Commons CC BY 4.0 user licence</span></a><span data-contrast="auto">, which outlines how readers can reuse your work.</span></p><p><em><span data-ccp-parastyle="heading 4">Green&nbsp;open&nbsp;access:</span></em></p><p><span data-contrast="auto">If you would like to, or are required to, publish open access&nbsp;but&nbsp;do not have the&nbsp;funding to cover the APC, you can&nbsp;choose&nbsp;the&nbsp;</span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/author-policies/our-open-research-policies#green" target="" type="external"><span data-ccp-charstyle="Hyperlink">green open access</span></a><span data-contrast="auto">, or self-archiving, route.&nbsp;Once your article is published,&nbsp;you can&nbsp;immediately&nbsp;make the author-accepted-manuscript (the version accepted for publication) openly available, free from payment and embargo periods.</span></p><p><em><span data-ccp-parastyle="heading 4">For UK journal article authors </span></em></p><p><span data-contrast="auto">If you wish to submit your work accepted by Emerald to REF 2029, you must make a ‘closed deposit’ of your accepted manuscript to your respective institutional repository upon acceptance of your article. Articles accepted for publication after 1st January 2021 should be deposited as soon as possible, but no later than three months after the acceptance date. For further information and guidance, please refer to the </span><a data-router-slot="disabled" href="https://2029.ref.ac.uk/" target="" type="external"><span data-ccp-charstyle="Hyperlink">REF 2029</span></a><span data-contrast="auto"> website. Emerald is one of only a handful of publishers that doesn’t impose an embargo period. You may deposit your author-accepted-manuscript at any point, but it must not be made publicly accessible until official publication (i.e. as soon as it appears on Emerald Insight in its final typeset version).</span></p><h3 id="prepare-your-manuscript-1"><span data-ccp-parastyle="heading 2">Prepare your&nbsp;manuscript</span></h3><p><span data-ccp-parastyle="heading 3">Manuscript requirements</span></p><p><span data-contrast="auto">Before you submit your manuscript, it’s important you read and follow the guidelines below.&nbsp;You will also&nbsp;find some useful tips in our </span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/how-to/authoring-editing-reviewing/structure-your-journal-submission" target="" type="external"><span data-ccp-charstyle="Hyperlink">structure your journal submission</span></a><span data-contrast="auto"> how-to guide.</span></p><p><span data-contrast="auto">Our partners,&nbsp;</span><a data-router-slot="disabled" href="https://authorservices.emeraldpublishing.com/" target="" type="external"><span data-ccp-charstyle="Hyperlink">Editage</span></a><span data-contrast="auto">, offer a range of services specially designed to help authors through every stage of their&nbsp;academic journey and offer assistance in language editing, translation, formatting and other services.</span></p><p><em><span data-ccp-parastyle="heading 4">File&nbsp;format</span></em></p><p><span data-contrast="auto">Article files should be provided in a&nbsp;Microsoft word format.</span></p><p><span data-contrast="auto">While you can submit a PDF of the document alongside the Word file, PDFs alone are not acceptable. LaTeX files are accepted only if an accompanying PDF document is provided. Acceptable figure file types are listed further below.</span></p><p><em><span data-ccp-parastyle="heading 4">Title</span></em></p><p><span data-contrast="auto">A concisely worded title should be provided.</span></p><p><em><span data-ccp-parastyle="heading 4">Author details and biographies</span></em></p><p><span data-contrast="auto">The names of&nbsp;</span><strong><span data-contrast="auto">all</span></strong><span data-contrast="auto">&nbsp;contributing authors should be added to the ScholarOne submission. Please list them in the order in which you would like them to be published.</span></p><p><span data-contrast="auto">Each contributing author needs their own ScholarOne author account,&nbsp;which include the following&nbsp;details:</span></p><ul><li><p><strong><span data-contrast="auto">Author email address </span></strong><span data-contrast="auto">(institutional preferred).</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">Author name</span></strong><span data-contrast="auto">&nbsp;(we will reproduce it exactly, so any middle names and/or initials they want featured must be included.</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">Author affiliation</span></strong><span data-contrast="auto">&nbsp;(this should be where they were based when the research was conducted).</span></p></li></ul><p><span data-contrast="auto">Read about our </span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/ethics-integrity/research-publishing-ethics" target="" type="external"><span data-ccp-charstyle="Hyperlink">research ethics</span></a><span data-contrast="auto"> for authorship.&nbsp;For multi-authored&nbsp;work,&nbsp;</span><strong><span data-contrast="auto">ALL</span></strong><span data-contrast="auto">&nbsp;authors who have made a significant contribution should be listed. You should not include people who have not contributed to the&nbsp;work&nbsp;or who do not want to be associated with the research. Those who provided support but did not contribute to the research&nbsp;manuscript&nbsp;should feature in an acknowledgements section.&nbsp;</span></p><p><span data-contrast="auto">If you wish to include author biographies and/or acknowledgements, save them in a separate Microsoft Word document and upload the file with your submission. Where they are included, a brief professional biography of not more than 100 words should be supplied for each named author.</span></p><p><em><span data-ccp-parastyle="heading 4">Research&nbsp;funding</span></em></p><p><span data-contrast="auto">Your article must reference all sources of external research funding in the&nbsp;acknowledgements section. You should describe the role of the funder or financial sponsor in the entire research process, from study design to submission.</span></p><p><em><span data-ccp-parastyle="heading 4">Structured abstract</span></em></p><p><span data-contrast="auto">All articles must include a structured abstract, following this format.&nbsp;You can find some useful tips in our </span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/how-to/authoring-editing-reviewing/write-article-abstract" target="" type="external"><span data-ccp-charstyle="Hyperlink">write an article abstract</span></a><span data-contrast="auto"> how-to guide.</span></p><p><span data-contrast="auto">These four sub-headings and their accompanying explanations must always be included:</span></p><ul><li><p><span data-contrast="auto">Purpose</span></p></li></ul><ul><li><p><span data-contrast="auto">Design/methodology/approach</span></p></li></ul><ul><li><p><span data-contrast="auto">Findings</span></p></li></ul><ul><li><p><span data-contrast="auto">Originality</span></p></li></ul><p><span data-contrast="auto">The&nbsp;below&nbsp;sub-headings are optional and can be included, if applicable:</span></p><ul><li><p><span data-contrast="auto">Research limitations/implications</span></p></li></ul><ul><li><p><span data-contrast="auto">Practical implications</span></p></li></ul><ul><li><p><span data-contrast="auto">Social implications</span></p></li></ul><p><span data-contrast="auto">The maximum length of your abstract should be 250 words in total, including keywords and article classification (see the sections below).</span></p><p><em><span data-ccp-parastyle="heading 4">Article&nbsp;keywords</span></em></p><p><span data-contrast="auto">Your submission should include up to 6 appropriate and short keywords that capture the key topics of the paper.&nbsp;Choosing the right key words can help enhance the online discoverability of your research and may also be used to help&nbsp;find relevant reviewers.&nbsp;</span></p><p><span data-contrast="auto">Our&nbsp;in-house editorial team may replace some of them with matching terms to ensure consistency across publications and enhance your article’s visibility.</span></p><p><em><span data-ccp-parastyle="heading 4">Article classification</span></em></p><p><span data-contrast="auto">Each individual&nbsp;journal homepage will list the</span><strong><span data-contrast="auto">&nbsp;type of manuscripts</span></strong><span data-contrast="auto">&nbsp;the journal publishes&nbsp;along with guidance on&nbsp;</span><strong><span data-contrast="auto">word count</span></strong><span data-contrast="auto">.</span></p><p><span data-contrast="auto">When submitting your article&nbsp;in ScholarOne,&nbsp;you will also be asked&nbsp;to&nbsp;select the&nbsp;</span><strong><span data-contrast="auto">manuscript category</span></strong><span data-contrast="auto">&nbsp;for your paper.&nbsp;Manuscript categories are&nbsp;used to&nbsp;determine how&nbsp;content&nbsp;is displayed&nbsp;on&nbsp;Emerald Insight, Emerald’s content platform.&nbsp;The following is&nbsp;a&nbsp;list of&nbsp;typical&nbsp;manuscript&nbsp;categories.</span></p><ul><li><p><strong><span data-contrast="auto">Research Paper</span></strong><span data-contrast="auto">:&nbsp;Covers papers which report on any type of research undertaken by the author(s). The research may involve the construction or testing of a model or framework, action research, testing of data, market research or surveys, empirical,&nbsp;scientific&nbsp;or clinical research.</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">Case Report</span></strong><span data-contrast="auto">:&nbsp;Describes actual interventions or experiences within organizations. They may well be subjective and will not generally report on research. A description of a legal case or a hypothetical case study used as a teaching exercise would also fit into this category.</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">Practitioner Paper</span></strong><span data-contrast="auto">:&nbsp;Describes and/or evaluates technical products,&nbsp;processes&nbsp;or services, focuses on issues related to bridging research and practice, or discusses challenges in workplace management from a practice or policy perspective.</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">Technical Paper</span></strong><span data-contrast="auto">: A brief article describing a pretrial feasibility or pilot efficacy study that addresses important clinical questions. It might also include recommendations and conclusions of the research.</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">Conceptual Paper</span></strong><span data-contrast="auto">:&nbsp;Papers not based on research but will develop hypotheses. The papers are likely to be discursive and will cover philosophical discussions and comparative studies of others' work and thinking.</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">Literature Review</span></strong><span data-contrast="auto">:&nbsp;A survey of articles, books, and other sources relevant to a particular issue, field of research, or theory. It collects key sources on a topic and discusses those sources in conversation with each other (also called synthesis).</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">Viewpoint</span></strong><span data-contrast="auto">:&nbsp;Usually written by practitioners emphasising an opinion,&nbsp;explanation&nbsp;or novel ideas about the future of the subject. These papers will be reviewed by a member of the editorial board in such a way as to offer authors guidance for improvement.</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">General Review</span></strong><span data-contrast="auto">:&nbsp;Synthesizes and discusses established knowledge, frameworks, or historical developments. General reviews provide integrative and descriptive overviews intended to build understanding of a concept, phenomenon, or methodological tradition, and may include instructional elements such as models, tools, or approaches used in practice or research.</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">Impact Article</span></strong><span data-contrast="auto">:&nbsp;Facilitates knowledge exchange about impact, namely, how to collaborate on, design, develop, and demonstrate impact. Impact articles are typically written not upon completion of research but at the point of, or&nbsp;after, the actual change (or changes) which has resulted from it.</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">Brief Report</span></strong><span data-contrast="auto">: A brief and concise overview of recent research in a specific field well in the scope of this Journal and supported by bibliography belonging to quality sources.</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">Extended Editorial</span></strong><span data-contrast="auto">:&nbsp;Provide original insights as an introduction to a special issue or as a piece for a standard issue from the editorial team.</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">Editorial</span></strong><span data-contrast="auto">:&nbsp;Introduction to an issue written by the journal&nbsp;editor or&nbsp;guest&nbsp;editor. An editorial is not double blind refereed.</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">Book Review</span></strong><span data-contrast="auto">:&nbsp;Aims at providing insight and opinion on recently published scholarly books. Such submissions are short articles introducing new literature in the field.</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">Guest Editorial</span></strong><span data-contrast="auto">:&nbsp;Editorial for special issues that presents aims of contributing articles, as well as placing issue in broader context. Written by the&nbsp;guest&nbsp;editor for a specific journal issue.</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">Executive Summary</span></strong><span data-contrast="auto">:&nbsp;Provides a concise, accessible overview of key findings, implications, and contributions of a larger research report or initiative relevant to gender and entrepreneurship. Written to support rapid understanding among practitioners, policymakers, and non-academic audiences.&nbsp;</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">Discussion</span></strong><span data-contrast="auto">:&nbsp;Offer a focused analysis of an emerging issue, debate, or methodological concern in gender and entrepreneurship. They aim to provoke reflection, clarify tensions, or outline research and policy implications. These papers are typically invited or editor-approved submissions.</span></p></li></ul><ul><li><p><strong><span data-contrast="auto">Precis</span></strong><span data-contrast="auto">:&nbsp;Typically commissioned by the editorial team. A precis article is a summary of an original article which has been previously published by Emerald.</span></p></li></ul><p><span data-contrast="auto">Please see the journal landing page for the specific kinds of papers accepted by the journal, as well as guidance on maximum word counts.&nbsp;</span></p><p><em><span data-ccp-parastyle="heading 4">Headings</span></em></p><p><span data-contrast="auto">Headings must be concise, with a clear indication of the required hierarchy. The preferred format is for first level headings to be in&nbsp;</span><strong><span data-contrast="auto">bold</span></strong><span data-contrast="auto">, and subsequent sub-headings to be in&nbsp;</span><em><span data-contrast="auto">mediumitalics</span></em><span data-contrast="auto">.</span></p><p><em><span data-ccp-parastyle="heading 4">Notes and endnotes</span></em></p><p><span data-contrast="auto">Notes or endnotes should only be used if absolutely necessary. They should be identified in the text by consecutive numbers enclosed in square brackets. These numbers should then be listed, and explained, at the end of the article.</span></p><p><em><span data-ccp-parastyle="heading 4">Figures</span></em></p><p><span data-contrast="auto">If you are planning to use figures in your submission, here is some best practice:</span></p><ul><li><p><span data-contrast="auto">All figures (charts, diagrams, line drawings, webpages/screenshots, and photographic images) should be submitted electronically. Colour and black and white files are accepted.</span></p></li></ul><ul><li><p><span data-contrast="auto">Acceptable formats are .ai, .eps, .jpeg, .bmp, and .tif.</span></p></li></ul><ul><li><p><span data-contrast="auto">Electronic figures created in other applications should be supplied in their original formats and should also be either copied and pasted into a blank Microsoft Word document or submitted as a PDF file.</span></p></li></ul><ul><li><p><span data-contrast="auto">All figures should be supplied at highest resolution/quality possible with numbers and text clearly legible.</span></p></li></ul><ul><li><p><span data-contrast="auto">All figures should be numbered consecutively with Arabic numerals (digits 0-9) and have clear captions.</span></p></li></ul><ul><li><p><span data-contrast="auto">All photographs should be numbered as Plate 1, 2, 3, etc. and have clear captions.</span></p></li></ul><ul><li><p><span data-contrast="auto">All figure/table captions should include the necessary credit line, acknowledgement, or attribution if you have been given permission to use the figure/table. If the&nbsp;figure/table is the property of the author(s), this should be acknowledged in the caption.</span></p></li></ul><ul><li><p><span data-contrast="none">The submission and publication of images created by AI tools or large-scale generative models is subject to their intended purpose and potential rights requirements. Purpose is here defined as either illustrative, which is permitted, or factual/evidential, which is not permitted. Any such usage must not breach Emerald’s&nbsp;</span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/ethics-integrity/research-publishing-ethics#plagiarism" target="" type="external"><span data-ccp-charstyle="Hyperlink">plagiarism policy</span></a><span data-contrast="none">.&nbsp;</span><span data-contrast="auto">For full details, see Emerald’s&nbsp;</span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/ethics-integrity/research-publishing-ethics#ai" target="" type="external"><span data-ccp-charstyle="Hyperlink">AI policy</span></a><span data-contrast="auto">.</span></p></li></ul><p><em><span data-ccp-parastyle="heading 4">Tables</span></em></p><p><span data-contrast="auto">If you are planning to use tables in your submission, here is some best practice:</span></p><ul><li><p><span data-contrast="auto">Tables should be typed and submitted in a separate file to the main body of the article.&nbsp;</span></p></li></ul><ul><li><p><span data-contrast="auto">The position of each table should be clearly labelled in the main body of the article with corresponding labels clearly shown in the table file.&nbsp;</span></p></li></ul><ul><li><p><span data-contrast="auto">Tables should be numbered consecutively in Roman numerals (e.g. I, II, etc.).</span></p></li></ul><ul><li><p><span data-contrast="auto">Give each table a main title.</span></p></li></ul><ul><li><p><span data-contrast="auto">Tables should include column headings&nbsp;that signpost the information contained in the columns.</span></p></li></ul><ul><li><p><span data-contrast="auto">Ensure that any superscripts or asteriss are shown next to the relevant items and have explanations displayed as footnotes to the table, figure or plate.</span></p></li></ul><p><em><span data-ccp-parastyle="heading 4">Supplementary files</span></em></p><p><span data-contrast="auto">Where tables, figures, appendices, and other additional content are supplementary to the article but not critical to a reader’s understanding of it, you can choose to&nbsp;publish&nbsp;these supplementary files alongside your article on Emerald Insight, our content-hosting platform or on an alternative trusted online repository. </span></p><p><span data-contrast="auto">All supplementary material must be submitted prior to acceptance. Extensive supplementary material may be subject to peer review at the&nbsp;editor’s discretion. It may be dependent on the content of the material (e.g. whether including it would support the reviewer&nbsp;making a decision&nbsp;on the article during peer review).</span></p><p><span data-contrast="auto">We recommend using Emerald Insight to host your files as we can ensure your supplementary material remains accessible.</span></p><p><em><span data-ccp-parastyle="heading 4">Hosting your files on Emerald Insight</span></em></p><p><span data-contrast="auto">If you choose to host your supplementary files on Emerald Insight, please submit these as&nbsp;</span><strong><span data-contrast="auto">separate files</span></strong><span data-contrast="auto">&nbsp;alongside your article.</span></p><p><span data-contrast="auto">Emerald Insight can host the following file types and extensions:</span></p><ul><li><p><span data-contrast="auto">Adobe Acrobat (.pdf)</span></p></li></ul><ul><li><p><span data-contrast="auto">Microsoft Word document (.doc, .docx)</span></p></li></ul><ul><li><p><span data-contrast="auto">Microsoft Excel (.xls, xlsx)</span></p></li></ul><ul><li><p><span data-contrast="auto">Microsoft PowerPoint (.pptx)</span></p></li></ul><ul><li><p><span data-contrast="auto">Image (.png, .jpeg, .gif)</span></p></li></ul><ul><li><p><span data-contrast="auto">Plain ASCII text (.txt)</span></p></li></ul><ul><li><p><span data-contrast="auto">PostScript (.ps)</span></p></li></ul><ul><li><p><span data-contrast="auto">Rich Text Format (.rtf)</span></p></li></ul><p><span data-contrast="auto">Files should be clearly labelled to indicate they are supplementary (e.g. ‘Supplementary_material_appendix_1’ or ‘Supplementary tables’).</span></p><p><span data-contrast="auto">All supplementary material must be mentioned at the appropriate moment in the main text of the article. There is no need to include the content of the file, only the file name.</span></p><p><span data-contrast="auto">A link to the supplementary material will be added to the article during production, and the material will be made available alongside the main article text at the point of EarlyCite publication.</span></p><p><span data-contrast="auto">Emerald will&nbsp;</span><strong><span data-contrast="auto">not&nbsp;</span></strong><span data-contrast="auto">make changes to the material; it will not be copy-edited or typeset, and authors will not receive proofs of this content.</span></p><p><span data-contrast="auto">Emerald strongly recommends that you style all supplementary material&nbsp;</span><em><span data-contrast="auto">ahead</span></em><span data-contrast="auto">&nbsp;of acceptance of the article.</span></p><p><em><span data-ccp-parastyle="heading 4">Hosting your files on a trusted repository</span></em></p><p><span data-contrast="auto">Emerald otherwise recommends that authors use the following two lists when searching for a trusted repository:</span></p><ul><li><p><a data-router-slot="disabled" href="https://commons.datacite.org/repositories" target="" type="external"><span data-ccp-charstyle="Hyperlink">https://commons.datacite.org/repositories</span></a></p></li></ul><ul><li><p><a data-router-slot="disabled" href="https://www.re3data.org/" target="" type="external"><span data-ccp-charstyle="Hyperlink">https://www.re3data.org</span></a></p></li></ul><p><span data-contrast="auto">It is the responsibility of the submitting author to ensure that the material is free to access and that it remains permanently available.</span></p><p><span data-contrast="auto">If using an alternative trusted online repository, you should ensure that the supplementary material is hosted on the repository&nbsp;</span><strong><span data-contrast="auto">ahead of submission</span></strong><span data-contrast="auto">&nbsp;and then include a link to the repository within the article. The files should be presented as read-only.&nbsp;</span></p><p><span data-contrast="auto">Please be aware that you risk compromising your anonymity during the review process if the repository contains any information that may enable the reviewer to identify you. Please review any links to alternative repositories carefully prior to submission.</span></p><p><em><span data-ccp-parastyle="heading 4">Referencing</span></em></p><p><span data-contrast="auto">All references in your manuscript should be formatted using the journal's preferred reference style (please refer to the journal homepage) which will be either Harvard or APA. As the majority of our journals use the Harvard reference style, guidelines for this are provided below. For guidance on the APA reference style please refer to the&nbsp;</span><a data-router-slot="disabled" href="https://apastyle.apa.org/" target="" type="external"><span data-ccp-charstyle="Hyperlink">APA style guide.</span></a></p><p><span data-contrast="auto">Please ensure you check all your citations for completeness,&nbsp;accuracy,&nbsp;and consistency.</span></p><h3 id="emeralds-harvard-referencing-style"><strong><span data-contrast="auto">Emerald’s Harvard referencing style:</span></strong></h3><p><span data-contrast="auto">References to other publications in your text should be written as follows:</span></p><ul><li><p><span data-contrast="auto">Single author: (Adams, 2006)</span></p></li></ul><ul><li><p><span data-contrast="auto">Two authors: (Adams and Brown, 2006)</span></p></li></ul><ul><li><p><span data-contrast="auto">Three or more authors: (Adams&nbsp;</span><em><span data-contrast="auto">et al</span></em><span data-contrast="auto">., 2006)&nbsp;– note that&nbsp;</span><em><span data-contrast="auto">‘et al’</span></em><span data-contrast="auto">&nbsp;should be italicised.</span></p></li></ul><p><span data-contrast="auto">When&nbsp;referring to pages in a publication, use ‘p. [page number]’ for a single page or ‘pp. [page numbers]’ to indicate a page range.&nbsp;Page numbers should be written out in full, e.g. 175-179, not 175-9.</span></p><p><span data-contrast="auto">Where a colon or dash appears in the title of an article or book chapter, the letter that follows that colon or dash should always be lower case.</span></p><p><span data-contrast="auto">When citing a work with multiple editors, use the abbreviation ‘Ed.s’.</span></p><p><span data-contrast="auto">At the end of your paper, please supply a reference list in alphabetical order using the style guidelines below. Where a DOI is available, this should be included at the end of the reference.</span></p><p><span data-ccp-parastyle="heading 5">For journals</span></p><p><span data-contrast="auto">Surname, initials (year), "title of article", </span><em><span data-contrast="auto">journal name</span></em><span data-contrast="auto">, volume issue, page numbers.</span></p><p><span data-contrast="auto">e.g. Capizzi, M.T. and Ferguson, R. (2005), "Loyalty trends for the twenty-first century", </span><em><span data-contrast="auto">Journal of Consumer Marketing</span></em><span data-contrast="auto">, Vol. 22 No. 2, pp.72-80.</span></p><p><span data-ccp-parastyle="heading 5">For books</span></p><p><span data-contrast="auto">Surname, initials (year), </span><em><span data-contrast="auto">title of book</span></em><span data-contrast="auto">, publisher, place of publication.</span></p><p><span data-contrast="auto">e.g. Harrow, R. (2005), </span><em><span data-contrast="auto">No Place to Hide</span></em><span data-contrast="auto">, Simon &amp; Schuster, New York, NY.</span></p><p><span data-ccp-charstyle="Heading 5 Char">For book chapters</span></p><p><span data-contrast="auto">Surname, initials (year), "chapter title", editor's surname, initials (Ed.), </span><em><span data-contrast="auto">title of book</span></em><span data-contrast="auto">, publisher, place of publication, page numbers.</span></p><p><span data-contrast="auto">e.g. Calabrese, F.A. (2005), "The early pathways: theory to practice – a continuum",&nbsp;Stankosky, M. (Ed.), </span><em><span data-contrast="auto">Creating the Discipline of Knowledge Management</span></em><span data-contrast="auto">, Elsevier, New York, NY, pp.15-20.</span></p><p><span data-ccp-parastyle="heading 5">For published conference proceedings</span></p><p><span data-contrast="auto">Surname, initials (year of publication), "title of paper", in editor’s surname, initials (Ed.), </span><em><span data-contrast="auto">title of published proceeding which may include place and date(s) held</span></em><span data-contrast="auto">, publisher, place of publication, page numbers.</span></p><p><span data-contrast="auto">e.g. Wilde, S. and Cox, C. (2008), “Principal factors contributing to the competitiveness of tourism destinations at varying stages of development”, in Richardson, S.,&nbsp;Fredline, L.,&nbsp;Patiar&nbsp;A., &amp;&nbsp;Ternel, M. (Ed.s), </span><em><span data-contrast="auto">CAUTHE 2008: Where the 'bloody hell' are we?</span></em><span data-contrast="auto">, Griffith University, Gold Coast, Qld, pp.115-118.</span></p><p><span data-ccp-parastyle="heading 5">For unpublished conference proceedings</span></p><p><span data-contrast="auto">Surname, initials (year), "title of paper", paper presented at [name of conference], [date of conference], [place of conference], available at: URL if freely available on the internet (accessed date).</span></p><p><span data-contrast="auto">e.g.&nbsp;Aumueller, D. (2005), "Semantic authoring and retrieval within a wiki", paper presented at the European Semantic Web Conference (ESWC), 29 May-1 June, Heraklion, Crete,&nbsp;available at: http://dbs.uni-leipzig.de/file/aumueller05wiksar.pdf (accessed 20 February 2007).</span></p><p><span data-ccp-parastyle="heading 5">For working papers</span></p><p><span data-contrast="auto">Surname, initials (year), "title of article", working paper [number if available], institution or organization, place of organization, date.</span></p><p><span data-contrast="auto">e.g.&nbsp;Moizer, P. (2003), "How published academic research can inform policy decisions: the case of mandatory rotation of audit appointments", working paper, Leeds University Business School, University of Leeds, Leeds, 28 March.</span></p><p><span data-ccp-parastyle="heading 5">For encyclopaedia entries (with no author or editor)</span></p><p><em><span data-contrast="auto">Title of encyclopaedia</span></em><span data-contrast="auto"> (year), "title of entry", volume, edition, title of encyclopaedia, publisher, place of publication, page numbers.</span></p><p><span data-contrast="auto">e.g. </span><em><span data-contrast="auto">Encyclopaedia Britannica</span></em><span data-contrast="auto"> (1926), "Psychology of culture contact", Vol. 1, 13th ed., Encyclopaedia Britannica, London and New York, NY, pp.765-771.</span></p><p><span data-contrast="auto">(for authored entries, please refer to book chapter guidelines above)</span></p><p><em><span data-contrast="auto">For newspaper articles (authored):</span></em></p><p><span data-contrast="auto">Surname, initials (year), "article title", </span><em><span data-contrast="auto">newspaper</span></em><span data-contrast="auto">, date, page numbers.</span></p><p><span data-contrast="auto">e.g. Smith, A. (2008), "Money for old rope", </span><em><span data-contrast="auto">Daily News</span></em><span data-contrast="auto">, 21 January, pp.1, 3-4.</span></p><p><em><span data-contrast="auto">For newspaper articles (non-authored):</span></em></p><p><em><span data-contrast="auto">Newspaper</span></em><span data-contrast="auto"> (year), "article title", date, page numbers.</span></p><p><span data-contrast="auto">e.g. </span><em><span data-contrast="auto">Daily News</span></em><span data-contrast="auto"> (2008), "Small change", 2 February, p.7.</span></p><p><em><span data-contrast="auto">For archival or other unpublished sources:</span></em></p><p><span data-contrast="auto">Surname, initials (year), "title of document", unpublished manuscript, collection name, inventory record, name of archive, location of archive.</span></p><p><span data-contrast="auto">e.g.&nbsp;Litman, S. (1902), "Mechanism &amp; Technique of Commerce", unpublished manuscript, Simon&nbsp;Litman&nbsp;Papers, Record series 9/5/29 Box 3, University of Illinois Archives, Urbana-Champaign, IL.</span></p><p><span data-ccp-parastyle="heading 5">For electronic sources</span></p><p><span data-contrast="auto">If available online, the full URL should be supplied at the end of the reference, as well as the date that the resource was accessed.</span></p><p><span data-contrast="auto">Surname, initials (year), “title of electronic source”, available at: persistent URL (accessed date month year).</span></p><p><span data-contrast="auto">e.g.&nbsp;Weida, S. and&nbsp;Stolley, K. (2013), “Developing strong thesis statements”, available at: https://owl.english.purdue.edu/owl/resource/588/1/ (accessed 20 June 2018)</span></p><p><span data-contrast="auto">Standalone URLs, i.e. those without an author or date, should be included either inside parentheses within the main text, or preferably set as a note (Roman numeral within square brackets within text followed by the full URL address at the end of the paper).</span></p><p><span data-ccp-parastyle="heading 5">For data</span></p><p><span data-contrast="auto">Surname, initials (year), </span><em><span data-contrast="auto">title of dataset</span></em><span data-contrast="auto">, name of data repository, available at: persistent URL, (accessed date month year).</span></p><p><span data-contrast="auto">e.g. Campbell,&nbsp;A.&nbsp;and Kahn, R.L. (2015), </span><em><span data-contrast="auto">American National Election Study, 1948</span></em><span data-contrast="auto">, ICPSR07218-v4, Inter-university Consortium for Political and Social Research (distributor), Ann Arbor, MI, available at: https://doi.org/10.3886/ICPSR07218.v4 (accessed 20 June 2018)</span></p><p></p><h3 id="submit-your-manuscript"><span data-ccp-parastyle="heading 2">Submit your&nbsp;manuscript</span></h3><p><span data-contrast="auto">There are&nbsp;some&nbsp;key steps you should follow to ensure a trouble-free submission.</span></p><p><span data-ccp-parastyle="heading 3">The submission&nbsp;process</span></p><p><span data-contrast="auto">All manuscripts should be submitted through our&nbsp;online editorial system, ScholarOne.</span></p><p><em><span data-ccp-parastyle="heading 4">ScholarOne</span></em></p><p><span data-contrast="auto">You can only submit to the&nbsp;journal&nbsp;through the journal’s ScholarOne site as accessed via the Emerald website.&nbsp;Submissions should be done directly by the author(s) through the ScholarOne site and not via&nbsp;email,&nbsp;a&nbsp;journal representative, or&nbsp;third-party&nbsp;agent/company/journal&nbsp;proxy on their behalf.</span></p><p><span data-contrast="auto">A separate author account is required for each journal you submit to. If this is your first time submitting to this journal, please choose the </span><strong><span data-contrast="auto">Create an account</span></strong><span data-contrast="auto"> or </span><strong><span data-contrast="auto">Register&nbsp;now</span></strong><span data-contrast="auto"> option in the editorial system. If you already have an Emerald login, you are welcome to reuse the existing username and password here.</span></p><p><span data-contrast="auto">The next time you&nbsp;log into the system, you will be asked for your username. This will be the email address you entered when you set up your account.</span></p><p><span data-contrast="auto">Visit the </span><a data-router-slot="disabled" href="https://support.silverchair.com/scholarone-manuscripts/authors/" target="" type="external"><span data-ccp-charstyle="Hyperlink">ScholarOne support centre</span></a><span data-contrast="auto"> for&nbsp;further help and guidance.</span></p><p><em><span data-ccp-parastyle="heading 4">ORCiDID</span></em></p><p><span data-contrast="auto">Ensure you&nbsp;add your ORCiD&nbsp;ID</span><strong><span data-contrast="auto"> </span></strong><span data-contrast="auto">during the submission process&nbsp;so it can be&nbsp;embedded in your published article, along with a link to the&nbsp;ORCiD&nbsp;registry.&nbsp;This allows&nbsp;others&nbsp;to easily match you with your work.</span></p><p><span data-contrast="auto">Don’t have one yet? It only takes a few moments to </span><a data-router-slot="disabled" href="https://orcid.org/register" target="" type="external"><span data-ccp-charstyle="Hyperlink">register for a free&nbsp;ORCiD&nbsp;identifier</span></a><span data-contrast="auto">.</span></p><h3 id="what-you-can-expect-next"><span data-ccp-parastyle="heading 3">What you can expect next</span></h3><p><span data-contrast="auto">You will receive an automated email from the journal&nbsp;editor&nbsp;confirming your successful submission. It will provide you with a manuscript&nbsp;ID, which will be used in all future correspondence about your submission. If you have any reason to suspect the confirmation&nbsp;you received&nbsp;might be fraudulent, please contact the&nbsp;relevant journal&nbsp;editor&nbsp;in the first instance.</span></p><h3 id="the-peer-review-process"><span data-ccp-parastyle="heading 2">The&nbsp;Peer&nbsp;Review&nbsp;process</span></h3><p><span data-ccp-parastyle="heading 3">Review and decision&nbsp;process</span></p><p><span data-contrast="auto">Upon submission,&nbsp;each&nbsp;manuscript&nbsp;is screened and checked by the journal’s editorial office. At this stage, they may choose to&nbsp;reject&nbsp;your manuscript if it does not match the journal’s aims and scope or they feel the quality is not ready to be considered for publication. The editorial team may also choose to return the&nbsp;manuscript&nbsp;to you&nbsp;if it does&nbsp;not&nbsp;fit the journal’s submission policies,&nbsp;such as wordcount, anonymity requirements,&nbsp;etc for you to fix prior to peer&nbsp;review. </span></p><p><span data-contrast="auto">If they think&nbsp;the manuscript&nbsp;is&nbsp;suitable for the&nbsp;journal,&nbsp;the editorial team&nbsp;will send it to at least two independent referees for double-anonymous peer review.&nbsp;Based on their feedback, the&nbsp;editor may accept your manuscript,&nbsp;request minor or major revisions, or decline your work.&nbsp;For further information please refer to our&nbsp;</span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/services/authors/publish-us/publish-a-journal/journal-peer-review-process" target="" type="external"><span data-ccp-charstyle="Hyperlink">guidance on the peer review process.</span></a></p><p><span data-contrast="auto">Editors aim to inform you of their first decision within&nbsp;</span><strong><span data-contrast="auto">80 days</span></strong><span data-contrast="auto">, though all journals work to different timescales.&nbsp;Further information on the peer review turnaround times for each journal can be found on the journal’s&nbsp;homepage.&nbsp;For&nbsp;updates on the status of your&nbsp;manuscript please refer to the author centre in your ScholarOne account.&nbsp;</span></p><p><span data-contrast="auto">Each&nbsp;communication&nbsp;from ScholarOne&nbsp;will include the manuscript&nbsp;ID&nbsp;you were given at the point of submission.&nbsp;If you&nbsp;receive an email that&nbsp;</span><strong><span data-contrast="auto">does not</span></strong><span data-contrast="auto">&nbsp;match these criteria, it could be&nbsp;fraudulent,&nbsp;and we recommend you contact the journal&nbsp;editor&nbsp;in the first instance.</span></p><p><span data-ccp-parastyle="heading 3">Manuscript transfer service</span></p><p><span data-contrast="auto">Emerald’s&nbsp;Manuscript&nbsp;Transfer&nbsp;Service takes the pain out of the submission process if your manuscript doesn’t fit your initial journal choice. Our team of expert&nbsp;editors from participating journals work together to identify alternative journals that better align with your research, ensuring your work finds the ideal publication home it deserves. Our dedicated team is committed to supporting authors like you in finding the right home for your research.</span></p><p><span data-contrast="auto">If a journal is participating in the manuscript transfer&nbsp;service, the&nbsp;editor has the option to recommend your paper for transfer. If a transfer decision is made by the&nbsp;editor, you will receive an email with the details of the recommended journal and the option to accept or reject the transfer. It’s always down to you as the author to decide if you’d like to accept. If you do accept, your paper and any reviewer reports will automatically be transferred to the recommended journals. Authors will then confirm resubmissions in the new journal’s ScholarOne system.</span></p><p><span data-contrast="auto">Our </span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/our-services/author-services/manuscript-transfer-service" target="" type="external"><span data-ccp-charstyle="Hyperlink">Manuscript Transfer Service page</span></a><span data-contrast="auto"> has more information on the process.</span></p><h3 id="if-your-submission-is-accepted"><span data-ccp-parastyle="heading 2">If your submission is accepted</span></h3><p><span data-ccp-parastyle="heading 3">Copyright</span></p><p><span data-contrast="auto">All accepted authors are sent an email with a link to a&nbsp;copyright&nbsp;licence form.&nbsp;Please check this for accuracy, especially concerning affiliation&nbsp;and contact details and the spelling of your&nbsp;name, and&nbsp;return it to us electronically.&nbsp;</span></p><p><span data-contrast="auto">If there is a reason why you can’t assign copyright to us, you should discuss this with your journal&nbsp;editorial&nbsp;office&nbsp;contact.&nbsp;You will find their contact details&nbsp;in the journal’s editorial team section.</span></p><p><span data-contrast="auto">If at this stage you opt to publish your work via the gold open access route, your work will be published with&nbsp;a </span><a data-router-slot="disabled" href="https://creativecommons.org/licenses/by/4.0/" target="" type="external"><span data-ccp-charstyle="Hyperlink">Creative Commons CC BY 4.0 user licence</span></a><span data-contrast="auto">.</span></p><p><span data-ccp-parastyle="heading 3">Proofing and typesetting</span></p><p><span data-contrast="auto">Once we have received your completed licence form, the article will pass directly into the production process. We will carry out editorial checks, copyediting, and typesetting and then return proofs to you (if you are the corresponding author) for your review. This is your opportunity to correct any typographical errors, grammatical&nbsp;errors,&nbsp;or incorrect author details. We can’t accept requests to rewrite texts at this stage.</span></p><p><span data-contrast="auto">When the page proofs are finalised, the fully typeset and proofed version of record is published online. This is referred to as the </span><strong><span data-contrast="auto">EarlyCite</span></strong><span data-contrast="auto"> version. While an EarlyCite article has yet to be assigned to a volume or issue, it does have a digital object identifier (DOI) and is fully citable. It will be compiled into an issue according to the journal’s issue schedule, with papers being added by chronological date of publication.</span></p><p><span data-ccp-parastyle="heading 3">How to share your paper</span></p><p><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/author-policies/author-rights" target="" type="external"><span data-ccp-charstyle="Hyperlink">Visit our author rights page</span></a><span data-contrast="auto"> to find out how you can reuse and share your work.</span></p><p><span data-contrast="auto">To find tips on increasing the visibility of your published paper, read about </span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/our-services/author-services/promote-your-work" target="" type="external"><span data-ccp-charstyle="Hyperlink">how to promote your work</span></a><span data-contrast="auto">.</span></p><p><span data-ccp-parastyle="heading 3">Correcting inaccuracies in your published paper</span></p><p><span data-contrast="auto">Sometimes errors are made during the research, writing and publishing processes. Find out more about our&nbsp;post-publication policies&nbsp;</span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/author-policies/article-withdrawal-correction" target="" type="external"><span data-ccp-charstyle="Hyperlink">here</span></a><span data-contrast="auto">. </span></p><p><span data-contrast="auto">Need to make a change to the author list? See our frequently asked questions (FAQs) below.</span></p><h3 id="frequently-asked-questions"><span data-ccp-parastyle="heading 2">Frequently asked questions</span></h3><p><span data-ccp-parastyle="heading 3">Is my paper suitable for the journal?</span></p><p><span data-contrast="auto">If you’ve read the journal’s aims and scope and are still unsure whether your paper is suitable for the journal, please email the&nbsp;editor and include your paper's title and structured abstract. They will be able to advise on your manuscript’s suitability. You will find their contact details on the&nbsp;editorial team tab on this page.</span></p><p><span data-ccp-parastyle="heading 3">Is there a submission fee for the journal?</span></p><p><span data-contrast="auto">The only time we will ever ask you for money to publish in an Emerald journal is if you have chosen to publish via the&nbsp;</span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/publish-open-access/journal#gold-oa" target="" type="external"><span data-ccp-charstyle="Hyperlink">gold open access route</span></a><span data-contrast="auto">. You will be asked to pay an&nbsp;</span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/publish-open-access/journal#apc-charges" target="" type="external"><span data-ccp-charstyle="Hyperlink">APC (article-processing charge)</span></a><span data-contrast="auto">&nbsp;once your paper has been accepted (unless it is a sponsored open access journal), and never at submission.</span></p><p><span data-contrast="auto">At no other time will you be asked to contribute financially towards your article’s publication, processing, or review.&nbsp;</span></p><p><span data-contrast="auto">If you haven’t chosen gold open access and you receive an email that appears to be from Emerald, the journal, or a third party, asking you for payment to publish, please contact our support team via </span><a data-router-slot="disabled" href="/cdn-cgi/l/email-protection#95e6e0e5e5fae7e1d5f0f8f0e7f4f9f1bbf6faf8" target="" type="external"><span data-ccp-charstyle="Hyperlink"><span class="__cf_email__" data-cfemail="97e4e2e7e7f8e5e3d7f2faf2e5f6fbf3b9f4f8fa">[email&#160;protected]</span></span></a><span data-contrast="auto">.</span></p><p><span data-ccp-parastyle="heading 3">Who do I contact if I have a query about my submission?</span></p><p><span data-contrast="auto">Please email the journal&nbsp;editor – you will find their contact details on the journal landing page. If you ever suspect an email you’ve received from Emerald might not be genuine, you can verify it with the&nbsp;commissioning&nbsp;editor&nbsp;for the journal, whose contact details can be found on&nbsp;the journal landing page.</span></p><p><span data-ccp-parastyle="heading 3">Who do I contact if I want to find out which volume and issue my accepted paper will appear in?</span></p><p><span data-contrast="auto">Typically, papers are added to an issue according to their date of publication. Once your paper has been published in an issue, you will be notified by email.</span></p><p><span data-ccp-parastyle="heading 3">How do I make a change to the list of authors once the manuscript has been submitted?</span></p><p><span data-contrast="auto">Authorship and the order in which the authors are listed on the paper should be agreed&nbsp;</span><em><span data-contrast="auto">prior</span></em><span data-contrast="auto">&nbsp;to submission. We have a right-first-time policy on&nbsp;this,&nbsp;and no changes can be made to the list once submitted. If you have made an error in the submission process, please email the&nbsp;journal&nbsp;editorial&nbsp;office who will look into your request – you will find their contact details on the journal landing page.</span></p><p><span data-ccp-parastyle="heading 3">How can I become a reviewer for the journal?</span></p><p><span data-contrast="auto">Please contact the&nbsp;editor for the journal, with a copy of your CV. You will find their contact details on the journal landing page.&nbsp;Please also see our guide on&nbsp;</span><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/how-to/how-guides-reviewers/peer-review-hub/becoming-a-peer-reviewer-journals" target="" type="external"><span data-ccp-charstyle="Hyperlink">becoming a peer reviewer</span></a><span data-contrast="auto">.</span></p><p></p><h3 id="useful-links"><span data-ccp-parastyle="heading 2">Useful links</span></h3><p><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/ethics-integrity/research-publishing-ethics" target="" type="external"><span data-ccp-charstyle="Hyperlink">Publishing Ethics</span></a><span data-contrast="auto">&nbsp;(Emerald Publishing)</span></p><p><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/author-policies/pre-prints-conference-papers-policies" target="" type="external"><span data-ccp-charstyle="Hyperlink">Author Policies</span></a><span data-contrast="auto">&nbsp;(Emerald Publishing)</span></p><p><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/sites/default/files/2024-08/consent-to-publish-form.pdf" target="" type="external"><span data-ccp-charstyle="Hyperlink">Consent to Publish Form</span></a><span data-contrast="auto">&nbsp;(Emerald Publishing)</span></p><p><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/permissions-referencing" target="" type="external"><span data-ccp-charstyle="Hyperlink">Permissions and&nbsp;Referencing</span></a><span data-contrast="auto">&nbsp;(Emerald Publishing)</span></p><p><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/how-to/authoring-editing-reviewing/structure-your-journal-submission" target="" type="external"><span data-ccp-charstyle="Hyperlink">Structuring Your Journal Submission</span></a><span data-contrast="auto">&nbsp;(Emerald Publishing)</span></p><p><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/how-to/authoring-editing-reviewing/write-article-abstract" target="" type="external"><span data-ccp-charstyle="Hyperlink">How to... Write an Article Abstract</span></a><span data-contrast="auto">&nbsp;(Emerald Publishing)</span></p><p><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/how-to/authoring-editing-reviewing/make-your-research-easy-find-seo" target="" type="external"><span data-ccp-charstyle="Hyperlink">How To... Make Your Research Easy to Find with SEO</span></a><span data-contrast="auto">&nbsp;(Emerald Publishing)</span></p><p><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/open-research-emerald/publish-open-access" target="" type="external"><span data-ccp-charstyle="Hyperlink">Open Research</span></a><span data-contrast="auto">&nbsp;(Emerald Publishing)</span></p><p><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/our-services/author-services/manuscript-transfer-service" target="" type="external"><span data-ccp-charstyle="Hyperlink">Manuscript Transfer Service</span></a><span data-contrast="auto">&nbsp;(Emerald Publishing)</span></p><p><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/author-policies/author-rights" target="" type="external"><span data-ccp-charstyle="Hyperlink">Author Rights</span></a><span data-contrast="auto">&nbsp;(Emerald Publishing)</span></p><p><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/our-services/author-services/promote-your-work" target="" type="external"><span data-ccp-charstyle="Hyperlink">Promote Your Work</span></a><span data-contrast="auto">&nbsp;(Emerald Publishing)</span></p><p><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/publish-with-us/author-policies/article-withdrawal-correction" target="" type="external"><span data-ccp-charstyle="Hyperlink">Article Withdrawal and Correction</span></a><span data-contrast="auto">&nbsp;(Emerald Publishing)</span></p><p><a data-router-slot="disabled" href="https://www.emeraldgrouppublishing.com/how-to/how-guides-reviewers/peer-review-hub/becoming-a-peer-reviewer-journals" target="" type="external"><span data-ccp-charstyle="Hyperlink">Becoming a Peer Reviewer for Journals (Emerald Publishing)</span></a></p><p></p><p><strong><span data-contrast="auto">Please note that these are external links to Emerald Publishing:</span></strong></p><p><a data-router-slot="disabled" href="https://publicationethics.org/cope-position-statements/ai-author?ct=t(member-insight-ai-feb-2023)" target="" type="external"><span data-ccp-charstyle="Hyperlink">COPE’s Position Statement on AI Tools</span></a></p><p><a data-router-slot="disabled" href="https://www.cos.io/initiatives/top-guidelines" target="" type="external"><span data-ccp-charstyle="Hyperlink">Transparency and Openness Promotion (TOP) Guidelines</span></a></p><p><a data-router-slot="disabled" href="https://www.doi.org/the-identifier/what-is-a-doi/" target="" type="external"><span data-ccp-charstyle="Hyperlink">Digital Object Identifier (DOI)</span></a></p><p><a data-router-slot="disabled" href="https://stm-assoc.org/what-we-do/core-services/ip-copyright/permissions/permissions-guidelines/" target="" type="external"><span data-ccp-charstyle="Hyperlink">STM Permissions Guidelines</span></a></p><p><a data-router-slot="disabled" href="https://creativecommons.org/licenses/by/4.0/" target="" type="external"><span data-ccp-charstyle="Hyperlink">CC BY 4.0 User Licence</span></a></p><p><a data-router-slot="disabled" href="https://www.re3data.org/" target="" type="external"><span data-ccp-charstyle="Hyperlink">Re3data.org (Registry of Research Data Repositories)</span></a></p><p><a data-router-slot="disabled" href="https://commons.datacite.org/repositories" target="" type="external"><span data-ccp-charstyle="Hyperlink">DataCite&nbsp;Commons</span></a></p><p><a data-router-slot="disabled" href="https://thinkchecksubmit.org/" target="" type="external"><span data-ccp-charstyle="Hyperlink">Think.Check.Submit</span></a></p><p><a data-router-slot="disabled" href="https://support.silverchair.com/scholarone-manuscripts/authors/" target="" type="external"><span data-ccp-charstyle="Hyperlink">ScholarOne Support Centre</span></a></p><p><a data-router-slot="disabled" href="https://orcid.org/register" target="" type="external"><span data-ccp-charstyle="Hyperlink">ORCiD&nbsp;ID</span></a></p></div>
+
+
+    </div>
+
+                                <input type="hidden" class="js-sidebar-stick-only-last-ad" value=true>
+<div class="user-comments-wrap js-userComments">
+    <div class="widget-UserCommentBody widget-instance-UserCommentBody" 
+         data-widget-name="UserCommentBody" 
+         data-widget-instance="UserCommentBody">
+         
+    </div>
+    <div class="widget-UserComment widget-instance-UserComment" 
+         data-widget-name="UserComment" 
+         data-widget-instance="UserComment">
+         
+    </div>
+
+</div>
+            </div>
+
+            <div class="cms-aside">
+
+
+<div class="page-column--right sidebar-widget_wrap">
+    <div class="widget-DynamicWidgetLayout widget-instance-CmsPost_RightRail" 
+         data-widget-name="DynamicWidgetLayout" 
+         data-widget-instance="CmsPost_RightRail">
+        <div class="widget widget-dynamic " data-count="0">
+    
+
+    <div class="widget-dynamic-inner-wrap">
+
+
+    </div>
+
+</div> 
+    </div>
+
+</div>
+
+<div class="footer">
+    <img class="footer-image" src="" alt=""/>
+    <span class="footer-text"></span>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+ 
+    </div>
+
+
+    <div class="widget-UserAffinityTracking widget-instance-PersonalizedContent_UserAffinityTracking_CmsPost" 
+         data-widget-name="UserAffinityTracking" 
+         data-widget-instance="PersonalizedContent_UserAffinityTracking_CmsPost">
+        <div class="SCM-SharedWidgets-LocalStorage-UserAffinityTracking" data-resource-id="108" data-resource-type="Gbos" data-days-to-retain="90"></div> 
+    </div>
+
+
+        </div><!-- /.content-main_content -->
+    </section>
+</div>
+<div class="mobile-mask">
+</div>
+<section class="footer_wrap vt-site-footer" role="contentinfo">
+    
+
+
+<div class="ad-banner js-ad-banner ad-banner-footer">
+    <div class="widget-AdBlock widget-instance-FooterAd" 
+         data-widget-name="AdBlock" 
+         data-widget-instance="FooterAd">
+        
+ 
+    </div>
+
+</div>
+
+<div class="sticky-footer-ad js-sticky-footer-ad">
+    <div class="widget-AdBlock widget-instance-StickyAd" 
+         data-widget-name="AdBlock" 
+         data-widget-instance="StickyAd">
+        
+ 
+    </div>
+
+</div>
+
+
+    <div class="widget-SitePageFooter widget-instance-SitePageFooter" 
+         data-widget-name="SitePageFooter" 
+         data-widget-instance="SitePageFooter">
+            <div class="journal-footer journal-bg">
+        <div class="journal-footer_content clearfix foot-right">
+        </div>
+    </div>
+ 
+    </div>
+
+
+
+<div class="site-theme-footer">
+        <div class="site-theme-footer_content">
+    <div class="widget-SelfServeContent widget-instance-UmbrellaFooterSelfServe" 
+         data-widget-name="SelfServeContent" 
+         data-widget-instance="UmbrellaFooterSelfServe">
+        
+
+
+
+    <input type="hidden" class="SelfServeContentId" value="GlobalFooter_Links" />
+    <input type="hidden" class="SelfServeVersionId" value="0" />
+
+<div class="theme-footer">
+<div class="flex-row">
+<div class="col-4 footer-branding">
+<div class="footer-logo">
+<a href="#"><img alt="Emerald Publishing logo" src="https://emer.silverchair-cdn.com/ImageLibrary/emerald-footer-logo.png?versionId=3973" /></a>
+</div>
+<div class="social-icons-wrap">
+<ul class="social-icons-list">
+    <li><a class="social-link" href="https://bsky.app/profile/emeraldpublishing.bsky.social" target="_blank"><span class="icon-social-bluesky"></span><span class="screenreader-text">Bluesky</span></a></li>
+    <li>
+    <a class="social-link" href="https://www.facebook.com/EmeraldPublishingImpact/" target="_blank"><span class="icon-social-facebook"></span><span class="screenreader-text">Facebook</span></a>
+    </li>
+    <li>
+    <a class="social-link" href="https://www.linkedin.com/company/emeraldpublishing/" target="_blank"><span class="icon-social-linkedin"></span><span class="screenreader-text">LinkedIn</span></a>
+    </li>
+    <li>
+    <a class="social-link" href="https://www.youtube.com/user/EmeraldPublishing67" target="_blank"><span class="icon-social-youtube"></span><span class="screenreader-text">YouTube</span></a>
+    </li>
+    <li>
+    <a class="social-link" href="https://www.instagram.com/emerald_publishing/" target="_blank"><span class="icon-social-instagram"></span><span class="screenreader-text">Instagram</span></a>
+    </li>
+</ul>
+</div>
+<div class="tag-copy">
+© 2025 Emerald Publishing Limited
+</div>
+</div>
+<div class="col-8 footer-nav">
+<div class="flex-row">
+<div class="col-3">
+<div class="footer-links-group">
+<ul class="list-lvl-0">
+    <li class="list-lvl-0">
+    <a href="https://www.emeraldgrouppublishing.com/our-services/author-services" target="_blank">Authors</a>
+    </li>
+    <li class="list-lvl-0">
+    <a href="https://www.emeraldgrouppublishing.com/our-services/editors" target="_blank">Editors</a>
+    </li>
+    <li class="list-lvl-0">
+    <a href="https://www.emeraldgrouppublishing.com/our-services/librarians" target="_blank">Librarians</a>
+    </li>
+    <li class="list-lvl-0">
+    <a href="https://www.emeraldgrouppublishing.com/our-services/researchers" target="_blank">Researchers</a>
+    </li>
+    <li class="list-lvl-0">
+    <a href="https://www.emeraldgrouppublishing.com/our-services/reviewers" target="_blank">Reviewers</a>
+    </li>
+</ul>
+</div>
+</div>
+<div class="col-4">
+<div class="footer-links-group">
+<ul class="list-lvl-0">
+    <li class="list-lvl-0">
+    <a href="/open-access">Open Access</a>
+    </li>
+    <li class="list-lvl-0">
+    <a href="https://www.emeraldgrouppublishing.com/how-to" target="_blank">How-to Guides</a>
+    </li>
+    <li class="list-lvl-0">
+    <a href="https://www.emeraldgrouppublishing.com/discover-our-services/emerald-publishing-services" target="_blank">Emerald Publishing Services</a>
+    </li>
+</ul>
+</div>
+</div>
+<div class="col-3">
+<div class="footer-links-group">
+<ul class="list-lvl-0">
+    <li class="list-lvl-0">
+    <a href="https://www.emeraldgrouppublishing.com/contact-us" target="_blank">Contact us</a>
+    </li>
+    <li class="list-lvl-0">
+    <a href="https://emeraldpublishinggroup.freshdesk.com/support/home" target="_blank">Help</a>
+    </li>
+    <li class="list-lvl-0">
+    <a href="https://www.emeraldgrouppublishing.com/who-we-are/about-us?distinct_id=74ee1e3b-4e70-40c6-be08-d06abd155adf&amp;_ga=2.145614326.33409777.1714473076-993168562.1710334523" target="_blank">About Emerald</a>
+    </li>
+    <li class="list-lvl-0">
+    <a href="https://www.emeraldgrouppublishing.com/who-we-are/about-us/work-with-us" target="_blank">Working for Emerald</a>
+    </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="legal-links-content">
+<div class="legal-links-wrap">
+<ul class="legal-links">
+    <li>
+    <a href="/pages/cookie_policy">Cookie Policy</a>
+    </li>
+    <li>
+    <a href="https://www.emeraldgrouppublishing.com/emerald-accessibility-statement">Accessibility</a>
+    </li>
+    <li>
+    <a href="/pages/site_policies">Site policies</a>
+    </li>
+    <li>
+    <a href="/pages/privacy_notice">Privacy notice</a>
+    </li>
+    <li>
+    <a href="/pages/modern_slavery_act">Modern Slavery Act</a>
+    </li>
+    <li class="copyright">© 2025 Emerald Publishing Limited</li>
+</ul>
+</div>
+</div>
+
+
+
+ 
+    </div>
+
+
+
+        </div><!-- /.center-inner-row -->
+</div><!-- /.site-theme-footer -->
+<div class="ss-ui-only">
+
+    <div class="widget-SelfServeContent widget-instance-SSuiOnlySelfServe" 
+         data-widget-name="SelfServeContent" 
+         data-widget-instance="SSuiOnlySelfServe">
+        
+
+
+
+    <input type="hidden" class="SelfServeContentId" value="SSuiOnly" />
+    <input type="hidden" class="SelfServeVersionId" value="0" />
+
+<style type="text/css">
+    .kwd-group {
+    border-top: 1px solid #9e9e9e !important;
+    }
+    div#book-info__abstract {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    border-top: none !important;
+    }
+    .content-suppressed {
+    padding: 1rem;
+    }
+    div[class*=-about-this] p a {
+    color: #1c696a !important;
+    font-weight: 300 !important;
+    text-decoration: none !important;
+    }
+    .widget-SelfServeContent[class*=publisher-info] a {
+    color: #1c696a !important;
+    font-weight: 300 !important;
+    text-decoration: none !important;
+    }
+    .widget-SitePageFooter .journal-footer .journal-footer_content .journal-footer-affiliations a img {
+    height: fit-content !important;
+    max-height: none !important;
+    width: 100% !important;
+    max-width: 200px !important;
+    }
+    .widget-IssueSupplementalLinks a:link, .widget-AllIssuesLink a:link {
+    color: #0E4751 !important;
+    }
+    .badge-bar .resource-links-info div.item a {
+    color: #0E4751 !important;
+    }
+    .badge-bar .resource-links-info div.item a.pdf span, .item-container .item-info .badge-bar .resource-links-info div.item a.pdf span {
+    color: #0E4751 !important;
+    }
+    .badge-bar .resource-links-info div.item a.pdf i[class*=icon-], .item-container .item-info .badge-bar .resource-links-info div.item a.pdf i[class*=icon-] {
+    color: #0E4751 !important;
+    }
+    .badge-bar .resource-links-info div.item a i[class*=icon-], .item-container .item-info .badge-bar .resource-links-info div.item a i[class*=icon-] {
+    color: #0E4751 !important;
+    display: inline-block;
+    align-items: center;
+    }
+    .sri-type {
+    color: #000000 !important;
+    }
+    .article-groups.left-flag {
+    color: #000000 !important;
+    }
+    .chapter-groups.left-flag {
+    color: #000000 !important;
+    }
+    .pg_AdvancedSearch .search-module.expanded .limit-results-search .range-select .labels, .pg_CitationSearch .search-module.expanded .limit-results-search .range-select .labels {
+    font-size: 13px;
+    color: #000000 !important;
+    }
+    .content-meta {
+    color: #000000 !important;
+    }
+    .book-series.left-flag {
+    color: #000000 !important;
+    }
+    .citation-manager .citation-manager-container .cdm-item-list-group tfoot .items-wrap button.disabled, .citation-manager .citation-manager-container .cdm-item-list-group thead .items-wrap button.disabled {
+    color: #000000 !important;
+    }
+    .cart-items-wrap .header-row li
+    {
+    color: #000000 !important;
+    }
+    .cart-items-wrap li {
+    color: #000000 !important;
+    }
+    .widget-UserAffinityRecommendations .user-affinity-recommendations .user-affinity-recommendation-items .user-affinity-rec-item-head {
+    color: #000000 !important;
+    }
+    input.btn-edit-userprofile
+    {
+    cursor: pointer;
+    background: #0e4751 !important;
+    border: 1px solid #0e4751 !important;
+    display: inline-block !important;
+    font-family: museo-sans, sans-serif !important;
+    font-size: .75rem !important;
+    font-weight: 300 !important;
+    padding: .5rem 1rem !important;
+    text-align: center !important;
+    text-decoration: none;
+    transition: all .25s ease-in-out !important;
+    border-radius: 22px;
+    }
+    input.btn-edit-userprofile:hover
+    {
+    cursor: pointer;
+    background: #0e4751 !important;
+    border: 1px solid #0e4751 !important;
+    color: #fff !important;
+    }
+    .customer-details [class$=-label], .order-details [class$=-label] {
+    color: #000000 !important;
+    }
+    .summary-list-wrap .summary-list-heading-row li {
+    color: #000000 !important;
+    }
+    .summary-list-wrap li {
+    color: #000000 !important;
+    }
+    .al-article-clienttype, .al-article-series-title, .articleClientType, .left-flag, .sri-type {
+    color: #000000 !important;
+    }
+    .journal-header .site-menu .nav-link {
+    color: #000000 !important
+    }
+    .site-theme-header {
+    background: #fff;
+    )
+</style>
+
+
+
+ 
+    </div>
+
+</div>
+
+<div class="ad-banner js-ad-interstitial">
+    <div class="widget-AdBlock widget-instance-Interstitial" 
+         data-widget-name="AdBlock" 
+         data-widget-instance="Interstitial">
+        
+ 
+    </div>
+
+</div>
+</section>
+
+
+
+
+
+    
+
+
+
+    <div class="widget-SiteWideModals widget-instance-SiteWideModals" 
+         data-widget-name="SiteWideModals" 
+         data-widget-instance="SiteWideModals">
+        <div id="revealModal" class="reveal-modal" data-reveal aria-hidden="true" aria-live="assertive" tabindex="-1">
+    <div id="revealContent"></div>
+    <a class="close-reveal-modal" href="javascript:;" aria-label="Close modal"><i class="icon-general-close"><span class="screenreader-text">Close Modal</span></i></a>
+</div>
+
+<div id="globalModalContainer" class="modal-global-container"
+     role="dialog"
+     aria-hidden="true"
+     aria-live="assertive"
+     tabindex="-1">
+    <div id="globalModalContent">
+        <div class="js-globalModalPlaceholder"></div>
+    </div>
+    <a href="javascript:;" class="close-modal js-close-modal" role="button" aria-label="Close modal">
+        <i class="icon-general-close" aria-hidden="true"></i>
+        <span class="screenreader-text">Close Modal</span>
+    </a>
+</div>
+<div id="globalModalOverlay" class="modal-overlay js-modal-overlay"></div>
+
+    <div id="NeedSubscription" class="reveal-modal small" data-reveal>
+            <div class="subscription-needed">
+                <div class="modal-heading">This Feature Is Available To Subscribers Only</div>
+                <p><a class="btn modal-sign_in-btn" href="/sign-in?returnUrl=%2fjournals%2fauthor-guidance%2f1627%2fEmerald-Publishing-Author-Guidelines">Sign In</a> or <a class="modal-register-link" href="/my-account/register?siteId=3&amp;returnUrl=%2fjournals%2fauthor-guidance%2f1627%2fEmerald-Publishing-Author-Guidelines">Create an Account</a></p>
+            </div>
+
+
+        <a class="close-reveal-modal" href="javascript:;"><i class="icon-general-close"><span class="screenreader-text">Close Modal</span></i></a>
+    </div>
+
+
+<div id="noAccessReveal" class="reveal-modal tiny" data-reveal>
+    <a class="close-reveal-modal" href="javascript:;" aria-label="Close modal"><i class="icon-general-close"><span class="screenreader-text">Close Modal</span></i></a>
+    <div id="noAccessForm">
+        <div class="spinner"></div>
+    </div>
+</div>
+
+
+<div id="cookieShareModal" class="cookie-share-modal-content" hidden>
+    <h2 id="cookieShareModalTitle" class="js-modal-label">Sharing Unavailable</h2>
+    <p>Sharing content requires targeting cookies to be enabled. Please update your cookie preferences to use this feature.</p>
+    <div class="cookie-share-modal__actions">
+        <button type="button" class="btn btn-primary js-share-cookie-prefs-btn">Update Cookie Preferences</button>
+        <button type="button" class="btn js-close-modal">Cancel</button>
+    </div>
+</div> 
+    </div>
+
+    
+
+
+
+
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+    MathJax = {
+        tex: {
+            inlineMath: [['|$', '$|'], ['\\(', '\\)']]
+        }    };
+</script>
+<script id="MathJax-script" async src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+    <!-- CookiePro Default Categories -->
+    <!-- When the Cookie Compliance code loads, if cookies for the associated group have consent...
+         it will dynamically change the tag to: script type=text/JavaScript...
+         the code inside the tags will then be recognized and run as normal. -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="//emer.silverchair-cdn.com/Themes/Client/app/jsdist/v-639195022462674397/site.min.js"></script>
+
+
+    
+    
+
+
+    
+
+        <script type="text/javascript">
+        $(document).ready(function () {
+            App.SearchAutoComplete.init(["Keywords"]);
+        });
+        </script>
+    
+    
+
+
+
+
+    <div class="ad-banner js-ad-riser ad-banner-riser" role="region" aria-label="Advertisement">
+    <div class="widget-AdBlock widget-instance-RiserAd" 
+         data-widget-name="AdBlock" 
+         data-widget-instance="RiserAd">
+        
+ 
+    </div>
+
+    </div>
+
+
+
+            
+    <div class="end-of-page-js"></div>
+</body>
+</html>
+

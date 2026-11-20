@@ -1,0 +1,22 @@
+{
+ "title": 15,
+ "abstract": 227,
+ "body": 4402,
+ "references": 1067,
+ "captions": 81,
+ "equation_layout_tables": 6,
+ "exhibit_markers": [
+  "[Table I about here]",
+  "[Figure 1 about here]",
+  "[Figure 2 about here]",
+  "[Figure 3 about here]",
+  "[Table II about here]",
+  "[Figure 4 about here]"
+ ],
+ "n_exhibits": 6,
+ "all_text_words": 5798,
+ "exhibit_allowance": 1680,
+ "effective_total": 7478,
+ "tables_file_words_incl_notes": 222,
+ "conservative_double_count": 7700
+}

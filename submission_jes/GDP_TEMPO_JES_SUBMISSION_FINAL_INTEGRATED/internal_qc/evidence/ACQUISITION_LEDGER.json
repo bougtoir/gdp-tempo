@@ -1,0 +1,244 @@
+[
+ {
+  "path": "raw_guidelines/SHA256SUMS.txt",
+  "source_url": "derived from archived page",
+  "acquired_utc": "2026-11-09T00:51:26Z (file mtime)",
+  "bytes": 1573,
+  "sha256": "b441ef71686ca95b01e320e06b1b13e47a7eafed9742e5d432a940be57424b1e",
+  "terms": "Internet Archive capture of publisher page (citation/reference use)"
+ },
+ {
+  "path": "raw_guidelines/ai_policy_excerpt.txt",
+  "source_url": "derived from archived page",
+  "acquired_utc": "2026-11-09T00:51:26Z (file mtime)",
+  "bytes": 4328,
+  "sha256": "43b1478889c2dd35eb980a77525e444c40cc1e722f21d99658e7990345875f61",
+  "terms": "Internet Archive capture of publisher page (citation/reference use)"
+ },
+ {
+  "path": "raw_guidelines/wb_emerald_author_guidelines.html",
+  "source_url": "https://web.archive.org/web/20260728104902/https://www.emerald.com/journals/author-guidance/1627/emerald-publishing-author-guidelines",
+  "acquired_utc": "2026-11-09T00:50:57Z (file mtime)",
+  "bytes": 127531,
+  "sha256": "c25f5fd1114e628ddbe21c4bc0c6f4af20ce0dd82f23bfc76ad8bdb09a4c2198",
+  "terms": "Internet Archive capture of publisher page (citation/reference use)"
+ },
+ {
+  "path": "raw_guidelines/wb_emerald_author_guidelines.txt",
+  "source_url": "https://web.archive.org/web/20260728104902/https://www.emerald.com/journals/author-guidance/1627/emerald-publishing-author-guidelines",
+  "acquired_utc": "2026-11-09T00:50:57Z (file mtime)",
+  "bytes": 42859,
+  "sha256": "bb0475085d8fb0341e28235204403672eb8a921f598de821dadc555226ca88b6",
+  "terms": "Internet Archive capture of publisher page (citation/reference use)"
+ },
+ {
+  "path": "raw_guidelines/wb_emerald_jes_20261018.html",
+  "source_url": "https://web.archive.org/web/20261018/https://www.emerald.com/jes",
+  "acquired_utc": "2026-11-09T00:49:00Z (file mtime)",
+  "bytes": 14821,
+  "sha256": "6bfef1145fe42dbea401bfaa6798c27f319b14f3cb3ca3c6ccfadc72478b84a3",
+  "terms": "Internet Archive capture of publisher page (citation/reference use)"
+ },
+ {
+  "path": "raw_guidelines/wb_emerald_jes_20261018.txt",
+  "source_url": "https://web.archive.org/web/20261018/https://www.emerald.com/jes",
+  "acquired_utc": "2026-11-09T00:49:05Z (file mtime)",
+  "bytes": 5959,
+  "sha256": "e69a1d0ef8307ab9068722b49add703d5994ee91520f913ece9f144f6ff65e33",
+  "terms": "Internet Archive capture of publisher page (citation/reference use)"
+ },
+ {
+  "path": "raw_guidelines/wb_jes.html",
+  "source_url": "derived from archived page",
+  "acquired_utc": "2026-11-09T00:49:05Z (file mtime)",
+  "bytes": 70860,
+  "sha256": "ea7c2e69376d485991bafdd76b0cee4ac7fa4fe0f375017d767ab69324955409",
+  "terms": "Internet Archive capture of publisher page (citation/reference use)"
+ },
+ {
+  "path": "raw_guidelines/wb_publication_ethics.html",
+  "source_url": "https://web.archive.org/web/20260929174446/https://www.emerald.com/publish-with-us/pages/publication-ethics",
+  "acquired_utc": "2026-11-09T00:51:20Z (file mtime)",
+  "bytes": 161139,
+  "sha256": "b558c0b71b77a9a8b7389acb1b35431aa39962675fa475bc592c1c0a14d76f7d",
+  "terms": "Internet Archive capture of publisher page (citation/reference use)"
+ },
+ {
+  "path": "raw_guidelines/wb_publication_ethics.txt",
+  "source_url": "https://web.archive.org/web/20260929174446/https://www.emerald.com/publish-with-us/pages/publication-ethics",
+  "acquired_utc": "2026-11-09T00:51:20Z (file mtime)",
+  "bytes": 88311,
+  "sha256": "f4fad25edde18359a31e781d580328251f0c66a72a88b7f5f9b83ad9250f0897",
+  "terms": "Internet Archive capture of publisher page (citation/reference use)"
+ },
+ {
+  "path": "raw_guidelines/www.emerald.com_jes.html",
+  "source_url": "derived from archived page",
+  "acquired_utc": "2026-11-09T00:48:07Z (file mtime)",
+  "bytes": 44748,
+  "sha256": "17f397ecd03450090f5c76e494ee000a3fded19cebfce9cbe4576ec1c5877454",
+  "terms": "Internet Archive capture of publisher page (citation/reference use)"
+ },
+ {
+  "path": "raw_guidelines/www.emerald.com_jes.txt",
+  "source_url": "derived from archived page",
+  "acquired_utc": "2026-11-09T00:48:07Z (file mtime)",
+  "bytes": 263,
+  "sha256": "7682c6ba73295350c23908f93d7ad44a53cf7e50439b8a76bff7c0f0288f3801",
+  "terms": "Internet Archive capture of publisher page (citation/reference use)"
+ },
+ {
+  "path": "raw_guidelines/www.emerald.com_jes_authorguidelines.html",
+  "source_url": "derived from archived page",
+  "acquired_utc": "2026-11-09T00:48:15Z (file mtime)",
+  "bytes": 44820,
+  "sha256": "32f03da9c72af6ddf0a1a650d051a8516c044bbd093a708573c2476f098f9fad",
+  "terms": "Internet Archive capture of publisher page (citation/reference use)"
+ },
+ {
+  "path": "raw_guidelines/www.emerald.com_jes_authorguidelines.txt",
+  "source_url": "derived from archived page",
+  "acquired_utc": "2026-11-09T00:48:15Z (file mtime)",
+  "bytes": 263,
+  "sha256": "3917e6a6dfa42ea402157413d2ef292b043735da1a64767a8eed46f30be4b553",
+  "terms": "Internet Archive capture of publisher page (citation/reference use)"
+ },
+ {
+  "path": "raw_guidelines/www.emerald.com_journal_jes.html",
+  "source_url": "derived from archived page",
+  "acquired_utc": "2026-11-09T00:48:23Z (file mtime)",
+  "bytes": 44793,
+  "sha256": "de9f90e65cbaed35d5c36e7b8424970238ed766c17af4b195297b1bd2a29e8cc",
+  "terms": "Internet Archive capture of publisher page (citation/reference use)"
+ },
+ {
+  "path": "raw_guidelines/www.emerald.com_journal_jes.txt",
+  "source_url": "derived from archived page",
+  "acquired_utc": "2026-11-09T00:48:23Z (file mtime)",
+  "bytes": 263,
+  "sha256": "7194dc099289cd86db99ad96e957d4e087359abf6e9b969bce767925d06d40b0",
+  "terms": "Internet Archive capture of publisher page (citation/reference use)"
+ },
+ {
+  "path": "raw_guidelines/www.emerald.com_publish-with-us_author-guidelines.html",
+  "source_url": "derived from archived page",
+  "acquired_utc": "2026-11-09T00:48:31Z (file mtime)",
+  "bytes": 44881,
+  "sha256": "72675b5a4cf9af02698b3006989a641b77a2fe4ab71d03ccac6e91784d37a84b",
+  "terms": "Internet Archive capture of publisher page (citation/reference use)"
+ },
+ {
+  "path": "raw_guidelines/www.emerald.com_publish-with-us_author-guidelines.txt",
+  "source_url": "derived from archived page",
+  "acquired_utc": "2026-11-09T00:48:31Z (file mtime)",
+  "bytes": 263,
+  "sha256": "cb763619b2a76f8a7ceaceb1ebd7e0592d46d40ec511fb58ed41a430732b178a",
+  "terms": "Internet Archive capture of publisher page (citation/reference use)"
+ },
+ {
+  "path": "raw_crossref/SHA256SUMS.txt",
+  "source_url": "https://api.crossref.org/works (see filename for query/DOI)",
+  "acquired_utc": "2026-11-09T00:54:24Z (file mtime)",
+  "bytes": 998,
+  "sha256": "f404bd5652f90fe4e66f5d23ed01b03e1c5d502fd044787ac9747d2e6f0aa27e",
+  "terms": "Crossref REST API metadata, CC0"
+ },
+ {
+  "path": "raw_crossref/fetched_utc.txt",
+  "source_url": "https://api.crossref.org/works (see filename for query/DOI)",
+  "acquired_utc": "2026-11-09T00:54:24Z (file mtime)",
+  "bytes": 21,
+  "sha256": "dc945978d4eaa957ae7a13ca8ed8c8c247758b99588d33b985dad9c562bf6e9a",
+  "terms": "Crossref REST API metadata, CC0"
+ },
+ {
+  "path": "raw_crossref/jes_growth_accounting_capital.json",
+  "source_url": "https://api.crossref.org/works (see filename for query/DOI)",
+  "acquired_utc": "2026-11-09T00:53:59Z (file mtime)",
+  "bytes": 5338,
+  "sha256": "4459534e8d3a28726043b1a55efe6b513288a760d73677d045ce7ad92d5f5c40",
+  "terms": "Crossref REST API metadata, CC0"
+ },
+ {
+  "path": "raw_crossref/jes_intangible_capital_productivity.json",
+  "source_url": "https://api.crossref.org/works (see filename for query/DOI)",
+  "acquired_utc": "2026-11-09T00:53:58Z (file mtime)",
+  "bytes": 4110,
+  "sha256": "a9d2cd9ea9ef4e451e7e08d8c99d692e9da56c5e077525fe35033d3728d81330",
+  "terms": "Crossref REST API metadata, CC0"
+ },
+ {
+  "path": "raw_crossref/jes_labour_share_capital.json",
+  "source_url": "https://api.crossref.org/works (see filename for query/DOI)",
+  "acquired_utc": "2026-11-09T00:54:00Z (file mtime)",
+  "bytes": 4050,
+  "sha256": "32a9ed192e944f321c6861a75737a29cbc3e9ce3a26e9faa094a141f340085d9",
+  "terms": "Crossref REST API metadata, CC0"
+ },
+ {
+  "path": "raw_crossref/jes_time_to_build_investment.json",
+  "source_url": "https://api.crossref.org/works (see filename for query/DOI)",
+  "acquired_utc": "2026-11-09T00:53:59Z (file mtime)",
+  "bytes": 3226,
+  "sha256": "5c01dd1d12f492935633856cf48ecb67ac7b9c2e4d0b9eebfbe91fa4454c6aec",
+  "terms": "Crossref REST API metadata, CC0"
+ },
+ {
+  "path": "raw_crossref/jes_total_factor_productivity_measurement_capital_stock.json",
+  "source_url": "https://api.crossref.org/works (see filename for query/DOI)",
+  "acquired_utc": "2026-11-09T00:53:58Z (file mtime)",
+  "bytes": 3569,
+  "sha256": "3d9de2a1560ae75659015be108681a774faf5862a76e93a5f4af851efed3fc80",
+  "terms": "Crossref REST API metadata, CC0"
+ },
+ {
+  "path": "raw_crossref/work_01443580210414111.json",
+  "source_url": "https://api.crossref.org/works (see filename for query/DOI)",
+  "acquired_utc": "2026-11-09T00:54:24Z (file mtime)",
+  "bytes": 8416,
+  "sha256": "bdf888bcd611c9bb2b98b80996eeaa6d987101eb6490a0f6feaa3fbdaf566591",
+  "terms": "Crossref REST API metadata, CC0"
+ },
+ {
+  "path": "raw_crossref/work_01443580810870173.json",
+  "source_url": "https://api.crossref.org/works (see filename for query/DOI)",
+  "acquired_utc": "2026-11-09T00:54:24Z (file mtime)",
+  "bytes": 10919,
+  "sha256": "9a58135328b79dd2a552be8f3091fade795e78afc9246eaf76ebc88089f8c1ec",
+  "terms": "Crossref REST API metadata, CC0"
+ },
+ {
+  "path": "raw_crossref/work_jes-02-2021-0072.json",
+  "source_url": "https://api.crossref.org/works (see filename for query/DOI)",
+  "acquired_utc": "2026-11-09T00:54:23Z (file mtime)",
+  "bytes": 16406,
+  "sha256": "5c4653097433158e73a4dbcc8d814eec42953ff1cc476c8c3d93c6ed620b807f",
+  "terms": "Crossref REST API metadata, CC0"
+ },
+ {
+  "path": "raw_crossref/work_jes-07-2026-0812.json",
+  "source_url": "https://api.crossref.org/works (see filename for query/DOI)",
+  "acquired_utc": "2026-11-09T00:54:24Z (file mtime)",
+  "bytes": 10295,
+  "sha256": "c1518d3cf625ac97107e164c0674984dcbc2dc06ae39452d29addd8a99f15639",
+  "terms": "Crossref REST API metadata, CC0"
+ },
+ {
+  "path": "raw_crossref/work_jes-11-2023-0620.json",
+  "source_url": "https://api.crossref.org/works (see filename for query/DOI)",
+  "acquired_utc": "2026-11-09T00:54:23Z (file mtime)",
+  "bytes": 20930,
+  "sha256": "4b594693b4e69e0988ec87213632e8c06232fc72fdef217c3a084bc57ad81348",
+  "terms": "Crossref REST API metadata, CC0"
+ },
+ {
+  "url": "https://api.crossref.org/works/10.1111/j.1468-0084.2012.00718.x",
+  "identifier": "doi:10.1111/j.1468-0084.2012.00718.x",
+  "acquired_utc": "2026-11-12T05:52:03Z",
+  "conditions": "Crossref REST API, polite pool, no query params",
+  "path": "internal_qc/evidence/raw_crossref/work_10.1111_j.1468-0084.2012.00718.x.json (local master: ~/work/jes/raw_crossref/borgo2013.json)",
+  "bytes": 11624,
+  "sha256": "c419ab5dd3fc5b2ee0de5297302f334b3e6aa87033a5892f335131452673b26e",
+  "terms": "Crossref metadata, CC0"
+ }
+]

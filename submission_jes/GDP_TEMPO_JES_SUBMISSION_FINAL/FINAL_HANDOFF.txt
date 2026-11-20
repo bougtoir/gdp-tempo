@@ -1,0 +1,33 @@
+GDP+Tempo — Journal of Economic Studies (Emerald) submission package
+Decision: SCIENTIFICALLY READY — AUTHOR METADATA PENDING (and AUTHOR AI-POLICY COMPLIANCE PENDING)
+
+Not done by Devin (author-only): no submission, registration, payment or declaration was made.
+
+Upload to ScholarOne (files in submission/):
+  1. manuscript_JES_blinded.docx   — anonymised main document (abstract, text, references, figure captions, exhibit markers)
+  2. tables_JES.docx               — Table I and Table II (editable Word)
+  3. figures/Figure_1-4.tif         — one file per figure
+  4. supplementary_material_JES.docx — Supplementary Tables 1–16, Figures 1–15 (anonymised)
+  5. cover_letter_JES.docx          — complete the [AUTHOR TO COMPLETE] lines first
+  6. title_page_JES_LOCAL_COMPLETION.docx — author information / declarations; complete locally, upload only as a non-anonymised file if the system requests it
+Do NOT upload internal_qc/ or reproducibility/.
+
+Word count (Emerald rule: all text + 280 per figure/table): 5,798 text words + 6 × 280 = 7,478 (≤ 8,000).
+  Conservative (also counting text inside the separate tables file): 7,700.
+Abstract incl. keywords, paper type, JEL: 227 (≤ 250). Keywords: 6.
+
+Author actions required before submission:
+  a. Emerald AI policy: the text was prepared/compressed with generative-AI assistance. Emerald's captured policy does not
+     permit generative-AI copywriting of any part of a submission or AI reporting of in-text statistics. Authors must read the
+     live policy, review/rewrite as needed so the text is their own, verify every number, and declare AI use truthfully.
+     See internal_qc/GATE5_COST_ETHICS_CHECK.md. Devin makes no compliance attestation.
+  b. Complete names, affiliations, ORCID, institutional emails, corresponding author, contributions, funding,
+     competing interests, acknowledgements (title page + cover letter + ScholarOne).
+  c. Confirm originality/not-under-consideration statement.
+  d. Re-check the live JES author guidelines (emerald.com blocked automated access; archived captures were used).
+  e. Decide which repository commit to cite (recorded reproduction 6c0d313; current main 709f2ab) and keep the link out of anonymised files.
+  f. Check two inherited internal labels in the supplement clustering section ("Table 9", "Table 10b").
+
+Costs: no submission fee; APC only if gold OA is chosen after acceptance; green/subscription route free.
+OBES-26-685 was a desk rejection without external review; it is not evidence of scientific validation.
+No re-estimation or clean-clone rebuild was performed in this session; numbers are from frozen outputs (internal_qc/numeric_qc_output.txt).

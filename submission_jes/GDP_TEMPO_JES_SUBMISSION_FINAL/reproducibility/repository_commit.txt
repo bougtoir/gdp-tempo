@@ -1,0 +1,5 @@
+Public repository: https://github.com/bougtoir/gdp-tempo-paper
+Commit reproduced: 6c0d313129ced627128b7fadfe142a08004d02cc (main, 2026-09-27)
+Minimal-fix sync branch: obes-v2-uncertainty @ 45cc11890057abefb4a913d51e550507714f6aa2
+  (adds scripts/cross_country_uncertainty.py, corrected Table 5 labels,
+   data/cross_country_uncertainty* — analysis values unchanged)

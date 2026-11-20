@@ -1,0 +1,37 @@
+GDP+Tempo — JES integrated package — FINAL HANDOFF (2026-11-12)
+
+STATUS: CONDITIONAL GO
+  Scientific/format gates 1–6 PASS. Conditional only on author-only actions below (cannot be done by the assistant).
+
+UPLOAD TO JES (ScholarOne): submission/ only
+  manuscript_JES_blinded.docx (anonymised; 4 figures, 2 tables cited in order)
+  tables_JES.docx (Table I, Table II)
+  figures/Figure_1–4.tif
+  title_page_JES_LOCAL_COMPLETION.docx (non-anonymised; complete locally)
+  cover_letter_JES.docx (complete locally)
+  No supplementary file (all essential material integrated; see SUPPLEMENT_INTEGRATION_MATRIX.md).
+
+KEY FIGURES
+  Supplement S.1–S.25: integrated 3, condensed 12, repository-only 5, removed 5, separate supplement retained 0.
+  "Table 9" = legacy label of tables/table10_cluster_analysis.csv; "Table 10b" = tables/table10b_cluster_metrics.csv (= former Supp. Table 14).
+     Both belong to the cluster analysis, whose validation claims were unsupported -> removed from submission; files remain public.
+  Tables 13–15 mislabelled 1–3 by the old builder: T13 (episode LOO) -> repository; T14/T15 (cluster) -> removed. No such labels remain.
+  Effective words 7,608 (5,928 text + 6 x 280); conservative 7,886; limit 8,000. Abstract 242 incl. keywords/type/JEL.
+  Public repo https://github.com/bougtoir/gdp-tempo-paper main 709f2aba568a9582b4d00f1880f9689dd9a4fb37 (18/18 used outputs identical).
+
+SCIENTIFIC CHANGES (reporting only; no result re-estimated)
+  - μ described as weakly identified (bootstrap: 5/39 above grid bound; MC short-lag bias); former "39/39 excludes zero" removed.
+  - M2 OOS gain shown to arise in boundary-lag countries; M4 beats M0 in 19/39 only; p = 0.18 retained.
+  - Cluster typology and γ_price revaluation analysis removed (unsupported).
+  - Abstract Originality now states weak lag identification and reliance on M_obs.
+  - References: Hayashi & Prescott (2002) removed (uncited); Dal Borgo et al. (2013) harmonised (Crossref-verified).
+
+AUTHOR-ONLY ACTIONS
+  1. Emerald AI policy: text was drafted/revised by an AI system. Review and rewrite as needed, verify all numbers, declare AI use accurately. Not certified here.
+  2. Complete [AUTHOR TO COMPLETE] fields: names, affiliations, ORCID, corresponding author, funding, conflicts, data availability, acknowledgements.
+  3. Decide whether/when the repository link is shown to the editor (withheld for double-anonymous review).
+  4. Re-check current Emerald/JES instructions on emerald.com (only archived 2026-07/10 snapshots were accessible).
+  5. Open files in Microsoft Word once (rendering verified in LibreOffice only).
+  6. Do not upload reproducibility/ or internal_qc/.
+
+NOT DONE: submission, registration, payment, declarations, re-estimation, clean-clone rebuild, public-repo sync of this package.

@@ -1,0 +1,65 @@
+Artificial Intelligence (AI)
+This policy explains how our authors, editorial teams, and peer reviewers can use artificial intelligence
+(AI) when preparing or reviewing work for Emerald. Further details are provided below on the specific
+use-cases for this technology; any questions should be directed to the appropriate Emerald editorial contact.
+Copywriting
+ (creating, drafting, or writing) any part of a submission using generative AI
+tools and technology to generate new material 
+is not permitted
+.
+Copy-editing
+ (correcting, editing, formatting, modifying, or refining) all or part of an
+author’s own original existing work using generative AI tools and technology to improve its structure and
+the clarity of the language and grammar 
+is permitted
+, ensuring users adhere to the
+following overarching principles.
+readers. Authors must ensure they remain fully accountable for any sources used and the work produced.
+Declaring AI Usage
+Any use of AI tools, including Large Language Models (LLMs), for the creation, development, or generation
+of an Emerald publication must be flagged, clearly and transparently, by authors within the Methods and
+Acknowledgements (or another appropriate section) of the work. Authors must describe the content created
+or modified as well as appropriately cite the name and version of the AI tool used; any additional works
+drawn on by the AI tool should also be appropriately cited and referenced, with any necessary rights for
+reproduction secured.
+If not provided, this information may be requested during the submission and peer review process, or after
+publication, and its absence could result in the rejection of the work or post-publication action. Authors
+must abide by Emerald’s principles of generative AI usage and should review the terms and conditions or
+terms of use associated with the AI tool employed to ensure compliance.
+Authors must take full responsibility for the accuracy of all content considered for publication and verify
+that the material submitted, including citations and references, is correct, appropriately correlates with
+the research, and aligns with Emerald’s
+research and publishing ethics.
+Standard tools that are used to improve spelling and grammar are not included within the parameters of this
+guidance, specifically those tools not using generative AI. Emerald reserves the right to determine whether
+the use of an AI tool is permitted in a submitted work, and the right to reject submissions and to take
+copyright, are incapable of conceptualising a research design without human direction, and cannot be
+accountable for the integrity, originality, and validity of the published work.
+AI and content creation
+    Copywriting any part of a submission using a generative AI tool/LLM is
+not permitted
+, including the generation of the abstract
+    or the literature review. In line with standard academic practice, however,
+    Emerald permits the use of examples of generative AI for illustrative purposes
+    as part of scholarly critique and discussion; these examples must be appropriately
+    flagged in the text and be fully cited and referenced in accordance with formatting
+    requirements.
+    Generating, manipulating, or reporting research data and results using a generative
+    AI tool/LLM is 
+not permitted
+.
+    In-text reporting of statistics using a generative AI tool/LLM is
+not permitted
+ due to concerns over the authenticity,
+    integrity, and validity of the data produced, although the use of such a tool to
+    aid in the analysis of the work is permissible with appropriate and transparent
+    declaration.
+    The submission and publication of images created by AI tools or large-scale generative
+    models is subject to their intended purpose and potential rights requirements. Purpose
+    is here defined as either illustrative, which is permitted, or factual/evidential,
+    which is not permitted. Any such usage must not breach Emerald’s
+    plagiarism policy. The following types of AI-generated images are
+    permitted for illustrative or visualisation purposes only, but we encourage authors
+    to check this in advance of submission with the appropriate editorial contact:
+    explanatory diagrams, graphical abstracts, teaching illustrations, conceptual
+    visualisations, and process flow diagrams.

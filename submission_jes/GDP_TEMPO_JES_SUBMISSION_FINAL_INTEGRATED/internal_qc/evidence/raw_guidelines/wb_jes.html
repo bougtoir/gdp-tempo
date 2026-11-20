@@ -1,0 +1,1636 @@
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+
+<head>
+    <!-- charset must appear in the first 1024 bytes of the document -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Journal of Economic Studies | Emerald Publishing</title>
+        
+
+
+
+        <script src="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="0197c624-2c4e-797f-8a8e-d7b514495009" class="cookiepro-otsdkstub"></script>
+    <script type="text/javascript">
+        function OptanonWrapper() {
+            // Get initial OnetrustActiveGroups ids
+            if (typeof OptanonWrapperCount == "undefined") {
+                otGetInitialGrps();
+            }
+
+            //Delete cookies
+            otDeleteCookie(otIniGrps);
+
+            // Assign OnetrustActiveGroups to custom variable
+            function otGetInitialGrps() {
+                OptanonWrapperCount = '';
+                otIniGrps = OnetrustActiveGroups;
+            }
+
+            function otDeleteCookie(iniOptGrpId) {
+                var otDomainGrps = JSON.parse(JSON.stringify(Optanon.GetDomainData().Groups));
+                var otDeletedGrpIds = otGetInactiveId(iniOptGrpId, OnetrustActiveGroups);
+                if (otDeletedGrpIds.length != 0 && otDomainGrps.length != 0) {
+                    for (var i = 0; i < otDomainGrps.length; i++) {
+                        //Check if CustomGroupId matches
+                        if (otDomainGrps[i]['CustomGroupId'] != '' && otDeletedGrpIds.includes(otDomainGrps[i]['CustomGroupId'])) {
+                            for (var j = 0; j < otDomainGrps[i]['Cookies'].length; j++) {
+                                // console.log("otDeleteCookie",otDomainGrps[i]['Cookies'][j]['Name'])
+                                //Delete cookie
+                                eraseCookie(otDomainGrps[i]['Cookies'][j]['Name']);
+                            }
+                        }
+
+                        //Check if Hostid matches
+                        if (otDomainGrps[i]['Hosts'].length != 0) {
+                            for (var j = 0; j < otDomainGrps[i]['Hosts'].length; j++) {
+                                //Check if HostId presents in the deleted list and cookie array is not blank
+                                if (otDeletedGrpIds.includes(otDomainGrps[i]['Hosts'][j]['HostId']) && otDomainGrps[i]['Hosts'][j]['Cookies'].length != 0) {
+                                    for (var k = 0; k < otDomainGrps[i]['Hosts'][j]['Cookies'].length; k++) {
+                                        //Delete cookie
+                                        eraseCookie(otDomainGrps[i]['Hosts'][j]['Cookies'][k]['Name']);
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+                otGetInitialGrps(); //Reassign new group ids
+            }
+
+            //Get inactive ids
+            function otGetInactiveId(customIniId, otActiveGrp) {
+                //Initial OnetrustActiveGroups
+                // console.log("otGetInactiveId",customIniId)
+                customIniId = customIniId.split(",");
+                customIniId = customIniId.filter(Boolean);
+
+                //After action OnetrustActiveGroups
+                otActiveGrp = otActiveGrp.split(",");
+                otActiveGrp = otActiveGrp.filter(Boolean);
+
+                var result = [];
+                for (var i = 0; i < customIniId.length; i++) {
+                    if (otActiveGrp.indexOf(customIniId[i]) <= -1) {
+                        result.push(customIniId[i]);
+                    }
+                }
+                return result;
+            }
+
+            //Delete cookie
+            function eraseCookie(name) {
+                //Delete root path cookies
+                domainName = window.location.hostname;
+                document.cookie = name + '=; Max-Age=-99999999; Path=/;Domain=' + domainName;
+                document.cookie = name + '=; Max-Age=-99999999; Path=/;';
+
+                //Delete LSO incase LSO being used, cna be commented out.
+                localStorage.removeItem(name);
+
+                //Check for the current path of the page
+                pathArray = window.location.pathname.split('/');
+                //Loop through path hierarchy and delete potential cookies at each path.
+                for (var i = 0; i < pathArray.length; i++) {
+                    if (pathArray[i]) {
+                        //Build the path string from the Path Array e.g /site/login
+                        var currentPath = pathArray.slice(0, i + 1).join('/');
+                        document.cookie = name + '=; Max-Age=-99999999; Path=' + currentPath + ';Domain=' + domainName;
+                        document.cookie = name + '=; Max-Age=-99999999; Path=' + currentPath + ';';
+                        //Maybe path has a trailing slash!
+                        document.cookie = name + '=; Max-Age=-99999999; Path=' + currentPath + '/;Domain=' + domainName;
+                        document.cookie = name + '=; Max-Age=-99999999; Path=' + currentPath + '/;';
+
+
+                    }
+                }
+
+            }
+        }
+    </script>
+                
+
+
+<script type="text/javascript" src="https://play.cadmore.media/js/CADMORE_ALL_JS.js"></script>
+
+
+
+        <script type='text/plain' defer src='//js.trendmd.com/trendmd.min.js' data-trendmdconfig='{"journal_id":"59879","element":"#trendmd-suggestions"}' class='optanon-category-C0004'></script>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="//emer.silverchair-cdn.com/Themes/Silver/app/js/jquery.3.4.1.min.js" type="text/javascript">\x3C/script>')</script>
+<script src="//emer.silverchair-cdn.com/Themes/Silver/app/vendor/v-639259857155117235/jquery-migrate-3.1.0.min.js" type="text/javascript"></script>
+
+    <script type='text/plain' src='https://platform-api.sharethis.com/js/sharethis.js#property=643701de45aa460012e1032e&amp;product=sop' async='async' class='optanon-category-C0004'></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10" />
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <!-- Turn off telephone number detection. -->
+    <meta name="format-detection" content="telephone=no" />
+    
+<!-- Bookmark Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="//emer.silverchair-cdn.com/Themes/Client/app/img/favicons/v-639259854275521861/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="//emer.silverchair-cdn.com/Themes/Client/app/img/favicons/v-639259854276071900/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="//emer.silverchair-cdn.com/Themes/Client/app/img/favicons/v-639259854275571867/favicon-16x16.png" sizes="16x16">
+  <link rel="mask-icon" href="//emer.silverchair-cdn.com/Themes/Client/app/img/favicons/v-639259854276121896/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="icon" href="//emer.silverchair-cdn.com/Themes/Client/app/img/favicons/v-639259854276121896/favicon.ico" sizes="32x32">
+  <link rel="manifest" href="//emer.silverchair-cdn.com/Themes/Client/app/img/favicons/v-639259854276171886/site.webmanifest">
+  <meta name="msapplication-config" content="//emer.silverchair-cdn.com/Themes/Client/app/img/favicons/v-639259854275521861/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+
+    
+
+
+  <link rel="stylesheet" type="text/css" href="//emer.silverchair-cdn.com/Themes/Client/app/css/v-639273628458404195/site.min.css" />
+  <link rel="stylesheet" type="text/css" href="//emer.silverchair-cdn.com/Themes/Silver/app/icons/v-639259856988575817/style.css" />
+  <link rel="stylesheet" type="text/css" href="//emer.silverchair-cdn.com/Themes/Client/app/css/v-639259854273471824/bg_img.css" />
+
+<link rel="stylesheet" href="https://use.typekit.net/xpl0ais.css">
+
+
+        <link href="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/CSS/umbrella/v-639274949814815591/umbrella.css" rel="stylesheet" type="text/css" />
+            <link href="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/data/SiteBuilderAssets/CSS/basesite/site.css" rel="stylesheet" type="text/css" />
+
+            <script>
+                (function (w, d, s, l, i) {
+                    w[l] = w[l] || []; w[l].push({
+                        'gtm.start':
+                            new Date().getTime(), event: 'gtm.js'
+                    }); var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                        j.setAttribute('type', 'text/plain');
+                            j.setAttribute('class', 'optanon-category-C0002');
+                        j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', 'GTM-W9XTGPJQ');
+            </script>
+
+    
+
+        <script type="text/javascript">
+            var App = App || {};
+            App.LoginUserInfo = {
+                isInstLoggedIn: 0,
+                isIndividualLoggedIn: 0
+            };
+
+            App.CurrentSubdomain = 'jes';
+            App.SiteURL = 'www.emerald.com/jes';
+            App.EnableAdobeAnalytics = false;
+        </script>
+    
+    
+    
+    <script type="application/ld+json">
+        {"@context":"https://schema.org","@type":"Periodical","@id":"https://www.emerald.com/jes","name":"Journal of Economic Studies","datePublished":"0001-01-01","url":"https://www.emerald.com/jes","inLanguage":"en","issn":["1758-7387"],"copyrightHolder":"Emerald Publishing","copyrightYear":"2026","publisher":"","sameAs":[],"description":"The Journal of Economic Studies publishes high quality research findings and commentary on international developments in economics maintaining a sound balance between economic theory and application at both micro and macro levels","siteName":"Emerald Publishing","siteNameTitle":"Emerald Publishing","thumbnailURL":"https://emer.silverchair-cdn.com/emer/content_public/journal/jes/issue/53/9/7/m_cover.jpeg?Expires=1855425262&Signature=s7oozvIdCXMbiqR9O1B1blwfFDOQi6gaSSOAPH9L2PX99Dh4b4C1NhYYcqXeJgteMy-DgeehnEKpMU0PwMqWMkBUcsepWOWnZ3siKF-YFPkr65j5WDeVYQutKD93eZo6ctzFSsfe81evfHXAwEKG4OCwQaPkrrSvhOltD3dNkzKfJ2tfoIg4FUk5MrSnpxdcAyLI0dYA~c1Pn88fyO2NNUIFbos1SIFvHaUByXTpXyIhKhFq9oJvtCevgWfkpH4-6JOP9Szyzr5CLZ8C19oG4nLkFtKHH5FPaMQPxzix0CkcSJ0ZAG8srHt0tjfAnLYHOoKr-01Fm7YAl-t54uIwEw__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA","image:alt":""}
+    </script>
+<meta property="og:site_name" content="Emerald Publishing" />
+<meta property="og:title" content="Journal of Economic Studies | Emerald Publishing" />
+<meta property="og:description" content="The Journal of Economic Studies publishes high quality research findings and commentary on international developments in economics maintaining a sound balance between economic theory and application at both micro and macro levels" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.emerald.com/jes" />
+<meta property="og:updated_time" content="" />
+<meta property="og:image" content="https://emer.silverchair-cdn.com/emer/content_public/journal/jes/issue/53/9/7/m_cover.jpeg?Expires=1855425262&Signature=s7oozvIdCXMbiqR9O1B1blwfFDOQi6gaSSOAPH9L2PX99Dh4b4C1NhYYcqXeJgteMy-DgeehnEKpMU0PwMqWMkBUcsepWOWnZ3siKF-YFPkr65j5WDeVYQutKD93eZo6ctzFSsfe81evfHXAwEKG4OCwQaPkrrSvhOltD3dNkzKfJ2tfoIg4FUk5MrSnpxdcAyLI0dYA~c1Pn88fyO2NNUIFbos1SIFvHaUByXTpXyIhKhFq9oJvtCevgWfkpH4-6JOP9Szyzr5CLZ8C19oG4nLkFtKHH5FPaMQPxzix0CkcSJ0ZAG8srHt0tjfAnLYHOoKr-01Fm7YAl-t54uIwEw__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" />
+<meta property="og:image:url" content="https://emer.silverchair-cdn.com/emer/content_public/journal/jes/issue/53/9/7/m_cover.jpeg?Expires=1855425262&Signature=s7oozvIdCXMbiqR9O1B1blwfFDOQi6gaSSOAPH9L2PX99Dh4b4C1NhYYcqXeJgteMy-DgeehnEKpMU0PwMqWMkBUcsepWOWnZ3siKF-YFPkr65j5WDeVYQutKD93eZo6ctzFSsfe81evfHXAwEKG4OCwQaPkrrSvhOltD3dNkzKfJ2tfoIg4FUk5MrSnpxdcAyLI0dYA~c1Pn88fyO2NNUIFbos1SIFvHaUByXTpXyIhKhFq9oJvtCevgWfkpH4-6JOP9Szyzr5CLZ8C19oG4nLkFtKHH5FPaMQPxzix0CkcSJ0ZAG8srHt0tjfAnLYHOoKr-01Fm7YAl-t54uIwEw__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" />
+<meta property="og:image:secure_url" content="https://emer.silverchair-cdn.com/emer/content_public/journal/jes/issue/53/9/7/m_cover.jpeg?Expires=1855425262&Signature=s7oozvIdCXMbiqR9O1B1blwfFDOQi6gaSSOAPH9L2PX99Dh4b4C1NhYYcqXeJgteMy-DgeehnEKpMU0PwMqWMkBUcsepWOWnZ3siKF-YFPkr65j5WDeVYQutKD93eZo6ctzFSsfe81evfHXAwEKG4OCwQaPkrrSvhOltD3dNkzKfJ2tfoIg4FUk5MrSnpxdcAyLI0dYA~c1Pn88fyO2NNUIFbos1SIFvHaUByXTpXyIhKhFq9oJvtCevgWfkpH4-6JOP9Szyzr5CLZ8C19oG4nLkFtKHH5FPaMQPxzix0CkcSJ0ZAG8srHt0tjfAnLYHOoKr-01Fm7YAl-t54uIwEw__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" />
+<meta property="og:image:alt" content="" />
+    <meta name="description" content="The Journal of Economic Studies publishes high quality research findings and commentary on international developments in economics maintaining a sound">
+
+
+    <link rel="canonical" href="https://www.emerald.com/jes" />
+
+
+
+
+
+
+
+    <meta name="publish_image" content="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/Images/jes/Journal_of_Economic_Studies_Header.svg" />
+
+
+
+    <meta name="product_code" content="PPVJOURNALST2" />
+    <meta name="product_code" content="ALLJOURNALS_KBART" />
+    <meta name="product_code" content="EBA_CP" />
+    <meta name="product_code" content="ALL_CONTENT" />
+    <meta name="product_code" content="EAMANCA" />
+    <meta name="product_code" content="MikeAllJournals" />
+    <meta name="product_code" content="EAPREMA" />
+
+
+
+
+
+    
+
+
+
+    <script type="text/plain" async="async" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" class='optanon-category-C0004'></script>
+
+    <script>
+        var SCM = SCM || {};
+        SCM.pubGradeAdsEnabled = false;
+    </script>
+
+
+<script>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+
+    googletag.cmd.push(function () {
+    googletag.setConfig({ disableInitialLoad: true });
+
+    
+
+    });
+</script>
+    
+
+
+    
+
+
+
+
+</head>
+
+<body data-sitename="journalofeconomicstudies" class="off-canvas pg_Index pg_index   " theme-jes data-sitestyletemplate="Journal" >
+                <noscript>
+                    <iframe  src="https://www.googletagmanager.com/ns.html?id=GTM-W9XTGPJQ"
+                            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+                </noscript>
+            <nav aria-label="Skip navigation">
+                <a href="#skipNav" class="skipnav">Skip to Main Content</a>
+            </nav>
+<input id="hdnSiteID" name="hdnSiteID" type="hidden" value="1000491" /><input id="hdnAdDelaySeconds" name="hdnAdDelaySeconds" type="hidden" value="3000" /><input id="hdnAdConfigurationTop" name="hdnAdConfigurationTop" type="hidden" value="basic" /><input id="hdnAdConfigurationRightRail" name="hdnAdConfigurationRightRail" type="hidden" value="basic" />
+    <div class="ad-banner js-ad-revealer ad-banner-revealer" role="region" aria-label="Advertisement" aria-hidden="true">
+    <div class="widget-AdBlock widget-instance-HeaderRevealerAd" 
+         data-widget-name="AdBlock" 
+         data-widget-instance="HeaderRevealerAd">
+        
+ 
+    </div>
+
+    </div>
+    
+
+
+
+
+<section class="master-header row vt-site-header" role="banner">
+
+    <div class="ad-banner js-ad-banner">
+    <div class="widget-AdBlock widget-instance-HeaderAd" 
+         data-widget-name="AdBlock" 
+         data-widget-instance="HeaderAd">
+        
+ 
+    </div>
+
+    </div>
+
+    <div class="widget-SitePageHeader widget-instance-SitePageHeader" 
+         data-widget-name="SitePageHeader" 
+         data-widget-instance="SitePageHeader">
+            <div class="site-theme-header">
+        <div class="site-theme-header_contents global-nav-base">
+
+
+<div class="global-nav">
+            <div class="collapsed-view">
+            <a class="js-dropdown-trigger global-nav-trigger" href="javascript:;">
+                <picture>
+                        <source media="(max-width: 600px)" srcset="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/images/umbrella/umbrella-logo-mobile.svg">
+                    <source media="(min-width: 601px)" srcset="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/Images/umbrella/umbrella-logo.svg">
+                    <img class="logo-JournalofEconomicStudies site-theme-header-image" src="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/Images/umbrella/umbrella-logo.svg" alt="Emerald Insight logo" />
+                </picture>
+                    <i class="icon-general_arrow-down arrow-icon"></i>
+            </a>
+            <nav class="navbar-menu global-nav-dropdown js-dropdown">
+                <div class="site-theme-header-logo">
+                    <a href="/" class="site-theme-header-image-wrap">
+                            <picture>
+                                    <source media="(max-width: 600px)" srcset="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/images/umbrella/umbrella-logo-mobile.svg">
+                                <source media="(min-width: 601px)" srcset="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/Images/umbrella/umbrella-logo.svg">
+                                <img class="logo-JournalofEconomicStudies site-theme-header-image" src="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/Images/umbrella/umbrella-logo.svg" alt="Emerald Insight logo" />
+                            </picture>
+                    </a>
+                    <a href="javascript:;" class="icon-general-close menu-close js-menu-close"><span class="screenreader-text">Close</span></a>
+                </div>
+                        <ul class="site-menu site-menu-lvl-0 js-theme-dropdown">
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-Emerald-Insight " id="site-menu-item-39598">
+                        <a href="https://www.emerald.com/insight/" class="nav-link">
+                            Emerald Insight                         </a>
+
+                    
+                </li>
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-About-us " id="site-menu-item-39599">
+                        <a href="https://www.emerald.com/about-us" class="nav-link">
+                            About us                         </a>
+
+                    
+                </li>
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-Publish " id="site-menu-item-39600">
+                        <a href="https://www.emerald.com/publish-with-us" class="nav-link">
+                            Publish                         </a>
+
+                    
+                </li>
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-Research-Services " id="site-menu-item-39601">
+                        <a href="https://www.emerald.com/research-services" class="nav-link">
+                            Research Services                         </a>
+
+                    
+                </li>
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-Bookstore " id="site-menu-item-39602">
+                        <a href="https://bookstore.emerald.com/" class="nav-link">
+                            Bookstore                         </a>
+
+                    
+                </li>
+        </ul>
+
+            </nav>
+        </div>
+    <div class="expanded-view">
+        <a href="/" class="global-nav_link-wrap">
+            <picture>
+                    <source media="(max-width: 600px)" srcset="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/images/umbrella/umbrella-logo-mobile.svg">
+                <source media="(min-width: 601px)" srcset="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/Images/umbrella/umbrella-logo.svg">
+                <img class="logo-JournalofEconomicStudies site-theme-header-image" src="//emer.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/Images/umbrella/umbrella-logo.svg" alt="Emerald Insight logo" />
+            </picture>
+        </a>
+                <ul class="site-menu site-menu-lvl-0 js-theme-dropdown">
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-Emerald-Insight " id="site-menu-item-39598">
+                        <a href="https://www.emerald.com/insight/" class="nav-link">
+                            Emerald Insight                         </a>
+
+                    
+                </li>
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-About-us " id="site-menu-item-39599">
+                        <a href="https://www.emerald.com/about-us" class="nav-link">
+                            About us                         </a>
+
+                    
+                </li>
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-Publish " id="site-menu-item-39600">
+                        <a href="https://www.emerald.com/publish-with-us" class="nav-link">
+                            Publish                         </a>
+
+                    
+                </li>
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-Research-Services " id="site-menu-item-39601">
+                        <a href="https://www.emerald.com/research-services" class="nav-link">
+                            Research Services                         </a>
+
+                    
+                </li>
+                <li class="site-menu-item site-menu-lvl-0 site-menu-item-Bookstore " id="site-menu-item-39602">
+                        <a href="https://bookstore.emerald.com/" class="nav-link">
+                            Bookstore                         </a>
+
+                    
+                </li>
+        </ul>
+
+    </div>
+</div>
+
+
+
+    <input type="hidden" class="hfEnableEnhancedAutoSuggest" value="false" name="searchScope" aria-hidden="true" />
+        <div class="mobile-menu-trigger_wrap mobile-search_wrap">
+            <button type="button"
+                    class="mobile-search_toggle at-search-toggle"
+                    aria-expanded="false"
+                    data-theme-dropdown-trigger="search-dropdown"><i class="icon-menu_search" aria-hidden="true"></i><span class="screenreader-text">Search Dropdown Menu</span></button>
+        </div>
+    <div class="navbar-search-container mobile-dropdown search-dropdown" data-theme-dropdown="search-dropdown">
+        <div class="navbar-search">
+            <form class="microsite-search js-MicrositeSearch" aria-label="header search" role="search">
+                <fieldset class="searchbar-fieldset">
+                    <legend><span class="screenreader-text">header search</span></legend>
+                    <div class="navbar-search-input_wrap">
+                        
+                        <input class="navbar-search-input microsite-search-term at-microsite-search-term search-term-autosuggest"
+                               data-autosuggest-hint="micrositeSearchTermInputHint-SitePageHeader"
+                               data-autosuggest-results="micrositeAutoCompleteResults-SitePageHeader"
+                               data-autosuggest-id="MicrositeSearchTerm-SitePageHeader"
+                               data-searchfilter="search-filter-SitePageHeader"
+                               placeholder="Search..."
+                               aria-label="Search..."
+                               type="text" maxlength="255"
+                                 autocomplete="off"                                 id="MicrositeSearchTerm-SitePageHeader">
+                        
+                        <input type="hidden" name="hfAutoCompleteMaxResults" class="hfAutoCompleteMaxResults" value="6" aria-hidden="true" />
+                        <input type="hidden" name="hfSolrAutoSuggestMinimumCharactersLength" class="hfSolrAutoSuggestMinimumCharactersLength" value="2" aria-hidden="true" />
+                        <input type="hidden" name="hfSolrJournalName" class="hfSolrJournalName" value="" aria-hidden="true" />
+                        <input type="hidden" name="hfSolrJournalID" class="hfSolrJournalID" value="" aria-hidden="true" />
+                        <label for="micrositeSearchTermInputHint-SitePageHeader" aria-hidden="true">
+                            <span class="screenreader-text">Search input auto suggest</span>
+                        </label>
+                        <input type="text"
+                               id="micrositeSearchTermInputHint-SitePageHeader"
+                               data-autosuggest-id="micrositeSearchTermInputHint-SitePageHeader"
+                               class="microsite-search-term-input-hint"
+                               autocomplete="off"
+                               tabindex="-1"
+                               aria-hidden="true"
+                               disabled />
+                        
+                        <ul data-autosuggest-id="micrositeAutoCompleteResults-SitePageHeader" role="presentation" class="term-list hidden"></ul>
+                    </div>
+                        <div class="navbar-search-filter_wrap">
+                            <label for="navbar-search-filter-site-SitePageHeader">
+                                <span class="screenreader-text">filter your search</span>
+                            </label>
+                            <select class="navbar-search-filter navbar-search-filter-site at-navbar-search-filter" id="navbar-search-filter-site-SitePageHeader" data-autosuggest-id="search-filter-SitePageHeader">
+<option class="header-search-bar-filters-item" value="/search-results?page=1&q={searchQuery}" data-siteid="0" >All Content</option><option class="header-search-bar-filters-item" value="/journals/search-results?page=1&q={searchQuery}&fl_SiteID=3&allJournals=1" data-siteid="3" >All Journals</option><option class="header-search-bar-filters-item selected" value="/jes/search-results?page=1&q={searchQuery}&fl_SiteID=1000491" data-siteid="1000491" selected>Journal of Economic Studies</option>                            </select>
+                        </div>
+                    <div class="navbar-search-submit_wrap">
+                        
+                        <button type="button" class="microsite-search-icon navbar-search-submit icon-menu_search"><span class="screenreader-text">Search</span></button>
+                    </div>
+                </fieldset>
+            </form><!-- /#MicrositeSearch -->
+        </div><!-- /.navbar-search -->
+<div class="navbar-search-advanced">
+    <a href="/advanced-search" class="advanced-search">Advanced Search</a>
+</div>    </div><!-- /.navbar-search-container -->
+
+<input type="hidden" name="parentSiteName" class="hfParentSiteName" value="Journals Gateway" aria-hidden="true" />
+<input type="hidden" class="hfSolrMaxAllowSearchChar" value="100" aria-hidden="true" />
+<input type="hidden" class="hfJournalShortName" value="" aria-hidden="true" />
+<input type="hidden" class="hfSearchPlaceholder" value="" aria-hidden="true" />
+<input type="hidden" name="hfGlobalSearchSiteURL" class="hfGlobalSearchSiteURL" value="" aria-hidden="true" />
+<input type="hidden" name="hfSearchSiteURL" id="hfSiteURL" value="www.emerald.com/jes" aria-hidden="true" />
+<input type="hidden" class="hfQuickSearchUrl" value="/jes/search-results?page=1&amp;q={searchQuery}&amp;fl_SiteID=1000491" aria-hidden="true" />
+<script type="text/javascript">
+    (function () {
+        var hfSiteUrl = document.getElementById('hfSiteURL');
+        var siteUrl = hfSiteUrl.value;
+        var subdomainIndex = siteUrl.indexOf('/');
+
+        hfSiteUrl.value = location.host + (subdomainIndex >= 0 ? siteUrl.substring(subdomainIndex) : '');
+    })();
+</script>
+
+                <div class="tablet-menu-trigger_wrap">
+        <!-- MOBILE SHOPPING CART ICON -->
+
+<div class="site-theme-header-menu-item view-cart-wrap">
+    <a href="https://www.emerald.com/store/cart" class="view-cart" rel="nofollow" aria-label="Cart">
+        <span class="text-cart">Cart</span>
+        <i class="access-icon icon-availability_cart" aria-hidden="true"></i>
+            <span class="items-in-cart" aria-live="polite"></span>
+    </a>
+</div>        <button type="button"
+           class="btn-reset tablet-sign-in"
+           data-theme-dropdown-trigger="tablet-user-dropdown"
+           aria-controls="tablet-user-dropdown"
+           aria-expanded="false"><i class="icon-menu_account"><span class="screenreader-text">User Tools Dropdown</span></i></button>
+    </div>
+<div class="site-theme-header-menu-item_wrap tablet-menu" id="tablet-user-dropdown" data-theme-dropdown="tablet-user-dropdown">
+    <!-- DESKTOP SHOPPING CART ICON -->
+
+<div class="site-theme-header-menu-item view-cart-wrap">
+    <a href="https://www.emerald.com/store/cart" class="view-cart" rel="nofollow" aria-label="Cart">
+        <span class="text-cart">Cart</span>
+        <i class="access-icon icon-availability_cart" aria-hidden="true"></i>
+            <span class="items-in-cart" aria-live="polite"></span>
+    </a>
+</div>
+    <!-- DESKTOP REGISTRATION -->
+        <div class="site-theme-header-menu-item"><a href="/my-account/register?siteId=1000491&amp;returnUrl=%2fjes%2f" class="register at-register js-register-user-modals">Register</a></div>
+
+    <!-- ACCESS THROUGH INSTITUTION -->
+
+    <!-- DESKTOP INSTITUTIONS -->
+
+        <!-- DESKTOP SIGN IN -->
+        <div class="site-theme-header-menu-item not-authenicated">
+                <button type="button"
+                    class="btn-reset dropdown-toggle signin at-signin-dropdown at-signin-username"
+                    id="header-account-info-user-fullname"
+                    data-login-location="/SignIn/LoginForm/LoginFormPopup?returnUrl="
+                    data-theme-dropdown-trigger="sign-in-dropdown"
+                    aria-controls="sign-in-dropdown"
+                    aria-expanded="false"
+                    rel=nofollow>
+                    
+Sign In                    <i class="icon-general_arrow-down arrow-icon"><span class="screenreader-text">Open Menu</span></i>
+                </button>
+                <div class="dropdown-panel dropdown-panel-signin dropdown-panel-form at-signin-dropdown-panel" id="sign-in-dropdown" data-theme-dropdown="sign-in-dropdown">
+                    <div class="spinner"></div>
+                </div><!-- /.dropdown-panel -->
+        </div>
+
+</div>
+        </div><!-- /.site-theme-header_content -->
+    </div><!-- /.site-theme-header- -->
+
+
+    <div class="journal-header journal-bg">
+        <div class="journal-header_content ">
+    <div class="journal-logo_wrap">
+        <a href="//www.emerald.com/jes" class="journal-logo-link">
+
+Journal of Economic Studies        </a>
+    </div>
+
+            
+
+
+<div class="navbar-menu_wrap">
+            <a class="mobile-site-menu-toggle" data-theme-dropdown-trigger="microsite-nav-menu" aria-controls="microsite-nav-menu" aria-expanded="false" href="javascript:;"><i class="icon-menu_hamburger"><span class="screenreader-text">Toggle Menu</span></i><span class="tablet-menu-label">Menu</span></a>
+            <nav class="navbar-menu" id="microsite-nav-menu" data-theme-dropdown="microsite-nav-menu" aria-label="Primary navigation">
+                    <ul class="site-menu site-menu-lvl-0 js-theme-dropdown">
+<li class="site-menu-item site-menu-lvl-0 " id="site-menu-item-32829">
+        <a href="/jes" class="nav-link" >Journal Home</a>
+    </li> <li class="site-menu-item site-menu-lvl-0 " id="site-menu-item-32830">
+        <a href="/jes/issue" class="nav-link" >Issues</a>
+    </li> <li class="site-menu-item site-menu-lvl-0 " id="site-menu-item-32831">
+        <a href="/jes/earlycite" class="nav-link" >Earlycite Articles</a>
+    </li> <li class="site-menu-item site-menu-lvl-0 " id="site-menu-item-32828">
+        <button type="button" class="btn-reset nav-link js-theme-dropdown-trigger" aria-expanded="false">About this Journal<i class="nav-arrow icon-general_arrow-down arrow-icon"><span class="screenreader-text">Open Menu</span></i></button>
+        <ul class="site-menu site-menu-lvl-1 js-theme-dropdown">
+<li class="site-menu-item site-menu-lvl-1 " id="site-menu-item-32832">
+        <a href="/jes/pages/about" class="nav-link" >About this journal</a>
+    </li> <li class="site-menu-item site-menu-lvl-1 " id="site-menu-item-32833">
+        <a href="/jes/pages/editorial-board" class="nav-link" >Editorial board</a>
+    </li> <li class="site-menu-item site-menu-lvl-1 " id="site-menu-item-32834">
+        <a href="https://www.emerald.com/journals/author-guidance/1627/emerald-publishing-author-guidelines" class="nav-link" >Author guidelines</a>
+    </li> <li class="site-menu-item site-menu-lvl-1 " id="site-menu-item-32835">
+        <a href="/jes/pages/indexing-and-metrics" class="nav-link" >Indexing and metrics</a>
+    </li>     </ul>
+ </li>     </ul>
+ 
+            </nav>
+</div><!-- /.navbar -->
+
+        </div><!-- /.center-inner-row -->
+
+    </div><!-- /.journal-header -->
+
+
+<input id="routename" name="RouteName" type="hidden" value="jes" />
+
+ 
+    </div>
+
+</section>
+
+<div id="main" class="content-main js-main ui-base" role="main">
+    <section class="master-main row">
+        <div class="content-main_content">
+            <span id="skipNav" tabindex="-1"></span>
+            
+
+
+
+
+
+<div class="large-12">
+    <div class="index-inner-wrap">
+        <div class="location-main-content vt-index-widget-wrap">
+    <div class="widget-DynamicWidgetLayout widget-instance-Home_MainContent" 
+         data-widget-name="DynamicWidgetLayout" 
+         data-widget-instance="Home_MainContent">
+        <div class="widget widget-dynamic " data-count="1">
+    
+
+    <div class="widget-dynamic-inner-wrap">
+
+    <div class="widget-DynamicWidgetLayout widget-instance-Home_MainContentB0" 
+         data-widget-name="DynamicWidgetLayout" 
+         data-widget-instance="Home_MainContentB0">
+        <div class="widget widget-dynamic theme-homepage-layout emer journal" data-count="2">
+    
+
+    <div class="widget-dynamic-inner-wrap">
+
+    <div class="widget-DynamicWidgetLayout widget-instance-Home_MainContentB0B0" 
+         data-widget-name="DynamicWidgetLayout" 
+         data-widget-instance="Home_MainContentB0B0">
+        <div class="widget widget-dynamic hero-row light-background" data-count="2">
+    
+
+    <div class="widget-dynamic-inner-wrap">
+
+    <div class="widget-DynamicWidgetLayout widget-instance-Home_MainContentB0B0B0" 
+         data-widget-name="DynamicWidgetLayout" 
+         data-widget-instance="Home_MainContentB0B0B0">
+        <div class="widget widget-dynamic home-issue-info issue-info" data-count="1">
+    
+
+    <div class="widget-dynamic-inner-wrap">
+
+    <div class="widget-IssueInfo widget-instance-Home_MainContentB0B0B0home-issue-info" 
+         data-widget-name="IssueInfo" 
+         data-widget-instance="Home_MainContentB0B0B0home-issue-info">
+        
+
+<div id="issueInfo-Home_MainContentB0B0B0home-issue-info" class="vt-issue-info widget-info-wrap clearfix">
+    <div class="article-issue-img">
+            <a href="/jes/issue/53/5">
+                <img id="issueImage" 
+                     class="fb-featured-image" 
+                     src="https://emer.silverchair-cdn.com/emer/content_public/journal/jes/issue/53/5/1/m_cover.jpeg?Expires=1795377261&amp;Signature=NGtn9g5ovDK5USDJLObJE5M7mg9tzwkLHFdSqZ2CGBshlFKqHKKIpDr7Tf5MV2CunZ~juN2MF5GkXaG2Z7UHsKPcNiSmdImd0H0t1xnib~TAtDxbIUj-3vC3AOTpmly6Tcb-TWhamiXkGdXlaDx-416KtOF2F-VomkmKLxERdb8P1XUoErjtjmVH8EvG6tOLlLr-KTR4t-x5V1mX6aIwOiGakt3HjLUOrHprISJIk9H8mo0mYHrvLvXbaR49c64598D0umVHdVzdCEZn7JMYJuLw~rCxwx-UUqtUKNrD70mnTShsPFXx7QbQlFtMMoP17m98yALkW23G3SqP7D8VrQ__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" 
+                     alt="Journal of Economic Studies Cover Image for Volume 53, Issue 5" />
+            </a>
+    </div>
+    <div class="current-issue-title">
+Current Issue    </div>
+    <div class="article-issue-info">
+                    <div class="volume">
+
+                        Volume 53<span class="volume-comma">,</span>                    </div>
+                    <div class="issue">
+                        Issue 5<span class="issue-comma">,</span>
+                    </div>
+<div class="ii-pub-date">
+16 June 2026</div>
+        <div class="view-current-issue">
+            <a href="/jes/issue/53/5" class="button">View This Issue</a>
+        </div>
+
+            <div class="open-issues_wrap">
+                <div class="open-issues_label">
+                    ISSUES IN PROGRESS
+                </div>
+                <div class="open-issues_list">
+                        <div class="open-issues_item">
+                            <a href="/jes/issue/53/9">
+                                Volume 53, Issue 9, December 2026
+                            </a>
+                        </div>
+                        <div class="open-issues_item">
+                            <a href="/jes/issue/53/6">
+                                Volume 53, Issue 6, October 2026
+                            </a>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div> 
+    </div>
+
+    </div>
+
+</div> 
+    </div>
+    <div class="widget-DynamicWidgetLayout widget-instance-Home_MainContentB0B0B1" 
+         data-widget-name="DynamicWidgetLayout" 
+         data-widget-instance="Home_MainContentB0B0B1">
+        <div class="widget widget-dynamic home-self-serve-content-about-this-journal" data-count="1">
+    
+
+    <div class="widget-dynamic-inner-wrap">
+
+    <div class="widget-SelfServeContent widget-instance-jes_home-self-serve-content-about-this-journal" 
+         data-widget-name="SelfServeContent" 
+         data-widget-instance="jes_home-self-serve-content-about-this-journal">
+        
+
+
+
+    <input type="hidden" class="SelfServeContentId" value="home-self-serve-content-about-this-journal" />
+    <input type="hidden" class="SelfServeVersionId" value="0" />
+
+<h3>About the Journal</h3>
+<p>The Journal of Economic Studies publishes high quality research findings and commentary on international developments in economics, maintaining a sound balance between economic theory and application at both micro and macro levels</p>
+<div class="home-btn-wrap">
+<a href="https://mc.manuscriptcentral.com/jest" target="_blank" class="button filled">Submit to this journal<span class="icon-linkout"></span></a>
+<a href="https://www.emerald.com/jes/pages/about" class="button">About this journal<span class="icon-linkout"></span></a>
+</div>
+
+
+
+ 
+    </div>
+
+    </div>
+
+</div> 
+    </div>
+
+    </div>
+
+</div> 
+    </div>
+    <div class="widget-DynamicWidgetLayout widget-instance-Home_MainContentB0B1" 
+         data-widget-name="DynamicWidgetLayout" 
+         data-widget-instance="Home_MainContentB0B1">
+        <div class="widget widget-dynamic home-row2 home-columns wide-narrow" data-count="2">
+    
+
+    <div class="widget-dynamic-inner-wrap">
+
+    <div class="widget-DynamicWidgetLayout widget-instance-Home_MainContentB0B1B0" 
+         data-widget-name="DynamicWidgetLayout" 
+         data-widget-instance="Home_MainContentB0B1B0">
+        <div class="widget widget-dynamic home-row2-1 home-columns" data-count="2">
+    
+
+    <div class="widget-dynamic-inner-wrap">
+
+    <div class="widget-DynamicWidgetLayout widget-instance-Home_MainContentB0B1B0B0" 
+         data-widget-name="DynamicWidgetLayout" 
+         data-widget-instance="Home_MainContentB0B1B0B0">
+        <div class="widget widget-dynamic home-col-stack" data-count="1">
+    
+
+    <div class="widget-dynamic-inner-wrap">
+
+    <div class="widget-SelfServeContent widget-instance-jes_home-self-serve-content-submission-information" 
+         data-widget-name="SelfServeContent" 
+         data-widget-instance="jes_home-self-serve-content-submission-information">
+        
+
+
+
+    <input type="hidden" class="SelfServeContentId" value="home-self-serve-content-submission-information" />
+    <input type="hidden" class="SelfServeVersionId" value="0" />
+
+<div style="background-color:#ffffff; padding:16px 20px;">
+<h3 style="color:#1c696a; font-size:18px; font-weight:700; margin:0 0 16px;">Submission information</h3>
+<h4>Accepted manuscript types and word counts</h4>
+<ul>
+    <li><strong>Research Paper</strong> — up to 8000 words</li>
+    <li><strong>Editorial</strong> — up to 3000 words</li>
+</ul>
+<p>Please see the article types and word counts section on the about this journal page for more information. The word count includes all text, figures and tables. When estimating your total, please allow 280 words for each figure or table. <a href="https://www.emerald.com/jes/pages/about" target="_blank">Read more about the article types for this journal</a>.</p>
+<h4>Reference style</h4>
+<p>Use the Harvard reference style. <a href="https://www.emerald.com/journals/author-guidance/1627/emerald-publishing-author-guidelines#referencing" target="_blank">Read more about the reference types for this journal</a>.</p>
+<h4>Keywords</h4>
+<p>Please include up to 6 short, relevant keywords that describe the main topics of your paper. When you submit to the journal, you’ll be able to choose keywords that describe the main topics of your paper from a list of recommended keywords, or you can add your own.</p>
+<h4>Peer review type</h4>
+<p>Double anonymous peer review. All submissions are sent to at least 2 independent and anonymous reviewers.</p>
+<h4>Open access options</h4>
+<p>This is a hybrid journal. Hybrid journals are subscription journals but offer all authors the option to publish their work open access. If you choose to publish open access you will be required to pay an article processing charge (APC). Alternatively you can opt for the green open access route and self-archive your article (at no cost to the author). <a href="https://www.emerald.com/publish-with-us/pages/publish-in-an-open-access-journal">Read more about our open access options</a>.</p>
+<h4>Accepted languages</h4>
+<p>This journal only accepts manuscripts written in UK or US English.</p>
+<h4>Accepted submission files</h4>
+<p>Article files should be provided in Microsoft Word format.</p>
+<p><a href="https://www.emerald.com/journals/author-guidance/1627/emerald-publishing-author-guidelines" class="button">View author guidelines</a></p>
+</div>
+
+
+
+ 
+    </div>
+
+    </div>
+
+</div> 
+    </div>
+    <div class="widget-DynamicWidgetLayout widget-instance-Home_MainContentB0B1B0B1" 
+         data-widget-name="DynamicWidgetLayout" 
+         data-widget-instance="Home_MainContentB0B1B0B1">
+        <div class="widget widget-dynamic home-col-stack" data-count="2">
+    
+
+    <div class="widget-dynamic-inner-wrap">
+
+    <div class="widget-CallsForSubmissions widget-instance-Home_MainContentB0B1B0B1home-calls-for-submissions" 
+         data-widget-name="CallsForSubmissions" 
+         data-widget-instance="Home_MainContentB0B1B0B1home-calls-for-submissions">
+        <div class="calls-for-submissions js-calls-for-submissions">
+    <div class="calls-for-submissions__title">Calls for papers</div>
+        <div class="calls-for-submissions__empty">
+            <p><strong>There are currently no open calls for papers for this journal.</strong> New calls are posted as they become available.</p><p><a href="/calls-for-submissions/">View all active calls for papers</a></p>
+        </div>
+</div>
+ 
+    </div>
+    <div class="widget-SelectableContentList widget-instance-Home_MainContentB0B1B0B1home-SelectableContentList-1" 
+         data-widget-name="SelectableContentList" 
+         data-widget-instance="Home_MainContentB0B1B0B1home-SelectableContentList-1">
+        
+
+<div class="widget-dynamic-content advanced-view ">
+        <h2 class="widget-dynamic-heading">
+        Open access articles
+    </h2>
+
+
+        <div class="widget-dynamic-entry-wrap">
+
+<div class="widget-dynamic-entry item at-widget-entry-SCL">
+    <span class="hfDoi" data-attribute="10.1108/JES-07-2026-0730" aria-hidden="true"></span>
+
+
+            <div class="widget-dynamic-type-date-wrap">
+                <div class="widget-dynamic-journal-article-date">
+        <span class="widget-dynamic-journal-article-date-delimiter">
+            
+        </span>
+        October 20 2026
+    </div>
+                    </div>
+    <div class="widget-dynamic-content-wrap">
+    <div class="widget-dynamic-journal-title">
+        <a href="/jes/article/53/9/352/1402943/Task-assignment-and-restaurant-output-a-simulation">
+            Task assignment and restaurant output: a simulation analysis
+        </a>
+    </div>
+    <div class="widget-dynamic-journal-authors">
+        Ernesto F. L. Amaral, Raymond Robertson
+    </div>
+
+            </div>
+
+</div>
+<div class="widget-dynamic-entry item at-widget-entry-SCL">
+    <span class="hfDoi" data-attribute="10.1108/JES-06-2026-0666" aria-hidden="true"></span>
+
+
+            <div class="widget-dynamic-type-date-wrap">
+                <div class="widget-dynamic-journal-article-date">
+        <span class="widget-dynamic-journal-article-date-delimiter">
+            
+        </span>
+        October 01 2026
+    </div>
+                    </div>
+    <div class="widget-dynamic-content-wrap">
+    <div class="widget-dynamic-journal-title">
+        <a href="/jes/article/53/9/334/1399905/Remittances-under-siege-how-democracy-and">
+            Remittances under siege: how democracy and militarization shape economic growth in the world's top recipient nations
+        </a>
+    </div>
+    <div class="widget-dynamic-journal-authors">
+        Ayesha Iqbal, Min Bai et al.
+    </div>
+
+            </div>
+
+</div>
+<div class="widget-dynamic-entry item at-widget-entry-SCL">
+    <span class="hfDoi" data-attribute="10.1108/JES-05-2026-0469" aria-hidden="true"></span>
+
+
+            <div class="widget-dynamic-type-date-wrap">
+                <div class="widget-dynamic-journal-article-date">
+        <span class="widget-dynamic-journal-article-date-delimiter">
+            
+        </span>
+        September 22 2026
+    </div>
+                    </div>
+    <div class="widget-dynamic-content-wrap">
+    <div class="widget-dynamic-journal-title">
+        <a href="/jes/article/53/9/306/1398274/Clean-job-creation-versus-dirty-job-destruction">
+            Clean job creation versus dirty job destruction: labor market dynamics and business cycles
+        </a>
+    </div>
+    <div class="widget-dynamic-journal-authors">
+        Francesco Busato, Gianluigi Cisco et al.
+    </div>
+
+            </div>
+
+</div>
+<div class="widget-dynamic-entry item at-widget-entry-SCL">
+    <span class="hfDoi" data-attribute="10.1108/JES-09-2025-0667" aria-hidden="true"></span>
+
+
+            <div class="widget-dynamic-type-date-wrap">
+                <div class="widget-dynamic-journal-article-date">
+        <span class="widget-dynamic-journal-article-date-delimiter">
+            
+        </span>
+        September 03 2026
+    </div>
+                    </div>
+    <div class="widget-dynamic-content-wrap">
+    <div class="widget-dynamic-journal-title">
+        <a href="/jes/article/53/9/289/1394847/Estimating-the-gender-wage-gap-using-stochastic">
+            Estimating the gender wage gap using stochastic frontiers: some modelling issues
+        </a>
+    </div>
+    <div class="widget-dynamic-journal-authors">
+        Graziella Bonanno, Antonio Alvarez
+    </div>
+
+            </div>
+
+</div>
+<div class="widget-dynamic-entry item at-widget-entry-SCL">
+    <span class="hfDoi" data-attribute="10.1108/JES-01-2026-0078" aria-hidden="true"></span>
+
+
+            <div class="widget-dynamic-type-date-wrap">
+                <div class="widget-dynamic-journal-article-date">
+        <span class="widget-dynamic-journal-article-date-delimiter">
+            
+        </span>
+        August 21 2026
+    </div>
+                    </div>
+    <div class="widget-dynamic-content-wrap">
+    <div class="widget-dynamic-journal-title">
+        <a href="/jes/article/53/9/270/1393100/Sectoral-value-added-and-employment-shifts-as">
+            Sectoral value-added and employment shifts as drivers of inclusive growth in sub-Saharan Africa: evidence from structural transformation dynamics
+        </a>
+    </div>
+    <div class="widget-dynamic-journal-authors">
+        Salom Kuume Katoole, Christelle Meniago et al.
+    </div>
+
+            </div>
+
+</div>
+        </div>
+
+</div>
+ 
+    </div>
+
+    </div>
+
+</div> 
+    </div>
+
+    </div>
+
+</div> 
+    </div>
+    <div class="widget-DynamicWidgetLayout widget-instance-Home_MainContentB0B1B1" 
+         data-widget-name="DynamicWidgetLayout" 
+         data-widget-instance="Home_MainContentB0B1B1">
+        <div class="widget widget-dynamic home-row2-2" data-count="6">
+    
+
+    <div class="widget-dynamic-inner-wrap">
+
+    <div class="widget-JournalMetricsList widget-instance-Home_MainContentB0B1B1JournalMetricsSnapshot" 
+         data-widget-name="JournalMetricsList" 
+         data-widget-instance="Home_MainContentB0B1B1JournalMetricsSnapshot">
+        <div class="journal-metrics-list-wrap">
+        <h4 class="journal-metrics-list__title">Metrics snapshot</h4>
+    <dl class="journal-metrics-list">
+            <div class="journal-metrics-list__item">
+                <dt class="journal-metrics-list__label">2025 Journal Impact Factor (Clarivate)</dt>
+                <dd class="journal-metrics-list__value">2.7</dd>
+            </div>
+            <div class="journal-metrics-list__item">
+                <dt class="journal-metrics-list__label">2025 CiteScore (Scopus)</dt>
+                <dd class="journal-metrics-list__value">5.3</dd>
+            </div>
+            <div class="journal-metrics-list__item">
+                <dt class="journal-metrics-list__label">Downloaded articles in the last 12 months</dt>
+                <dd class="journal-metrics-list__value">171397</dd>
+            </div>
+    </dl>
+</div>
+ 
+    </div>
+    <div class="widget-SelfServeContent widget-instance-jes_home-self-serve-content-publisher-info" 
+         data-widget-name="SelfServeContent" 
+         data-widget-instance="jes_home-self-serve-content-publisher-info">
+        
+
+
+
+    <input type="hidden" class="SelfServeContentId" value="home-self-serve-content-publisher-info" />
+    <input type="hidden" class="SelfServeVersionId" value="0" />
+
+<div class="homepage-panel-wrap">
+<div class="homepage-panel-text">
+<h4>Journal information</h4>
+<p><strong>Editor(s):</strong><br />
+Prof Mohsen Bahmani-Oskooee</p>
+<p><a href="https://www.emerald.com/jes/pages/editorial-board">View full editorial team</a></p>
+</div>
+</div>
+
+
+
+ 
+    </div>
+    <div class="widget-ArticleListNewAndPopular widget-instance-Home_MainContentB0B1B1home-article-list-new-and-popular-combined" 
+         data-widget-name="ArticleListNewAndPopular" 
+         data-widget-instance="Home_MainContentB0B1B1home-article-list-new-and-popular-combined">
+            <div class="vt-new-and-popular-combined new-and-popular-combined">
+        <h2 class="screenreader-text">New and popular articles</h2>
+        <ul class="articleListNewAndPopularCombinedView">
+                <li>
+                    <a href="javascript:;" class="js-new-and-popular-mode active" data-mode="MostRecent" data-instanceName="Home_MainContentB0B1B1home-article-list-new-and-popular-combined" aria-label="View Latest articles">Latest</a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="js-new-and-popular-mode " data-mode="MostRead" data-instanceName="Home_MainContentB0B1B1home-article-list-new-and-popular-combined" aria-label="View Most Read articles">Most Read</a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="js-new-and-popular-mode " data-mode="MostCited" data-instanceName="Home_MainContentB0B1B1home-article-list-new-and-popular-combined" aria-label="View Most Cited articles">Most Cited</a>
+                </li>
+        </ul>
+            <section class="js-new-and-popular-content js-new-and-popular-content-MostRecent hasContent">
+
+
+
+
+    <div id="newPopularList-Home_MainContentB0B1B1home-article-list-new-and-popular-combined" class="fb new-and-popular vt-new-and-popular-Home_MainContentB0B1B1home-article-list-new-and-popular-combined">
+
+
+        <div class="widget-dynamic-entry-wrap">
+<div class="widget-dynamic-entry">
+    <div class="fb-item-title">
+                <a href="/jes/article/53/9/352/1402943/Task-assignment-and-restaurant-output-a-simulation">Task assignment and restaurant output: a simulation analysis</a>
+
+
+    </div>
+</div>
+<div class="widget-dynamic-entry">
+    <div class="fb-item-title">
+                <a href="/jes/article/doi/10.1108/JES-02-2026-0152/1402676/The-impact-of-demographic-aging-on-government-debt">The impact of demographic aging on government debt</a>
+
+
+    </div>
+</div>
+<div class="widget-dynamic-entry">
+    <div class="fb-item-title">
+                <a href="/jes/article/doi/10.1108/JES-07-2026-0812/1401945/Beyond-linear-and-quadratic-specifications-wage">Beyond linear and quadratic specifications: wage share and economic growth in OECD countries</a>
+
+
+    </div>
+</div>
+<div class="widget-dynamic-entry">
+    <div class="fb-item-title">
+                <a href="/jes/article/doi/10.1108/JES-03-2026-0303/1401273/Association-between-women-s-autonomy-and-their">Association between women's autonomy and their health outcomes in India: evidence from NFHS-5</a>
+
+
+    </div>
+</div>
+<div class="widget-dynamic-entry">
+    <div class="fb-item-title">
+                <a href="/jes/article/53/9/334/1399905/Remittances-under-siege-how-democracy-and">Remittances under siege: how democracy and militarization shape economic growth in the world's top recipient nations</a>
+
+
+    </div>
+</div>
+        </div>
+    </div>
+            </section>
+            <section class="js-new-and-popular-content js-new-and-popular-content-MostRead hide">
+            </section>
+            <section class="js-new-and-popular-content js-new-and-popular-content-MostCited hide">
+            </section>
+        <div class="spinner hide"></div>
+    </div>
+ 
+    </div>
+    <div class="widget-SelfServeContent widget-instance-jes_home-self-serve-content-email-alerts" 
+         data-widget-name="SelfServeContent" 
+         data-widget-instance="jes_home-self-serve-content-email-alerts">
+        
+
+
+
+    <input type="hidden" class="SelfServeContentId" value="home-self-serve-content-email-alerts" />
+    <input type="hidden" class="SelfServeVersionId" value="0" />
+
+<div class="homepage-panel-wrap">
+<div class="homepage-panel-text">
+<h4>Email alerts</h4>
+<p><a href="/my-account/alerts">Latest published articles</a></p>
+<p><a href="/my-account/alerts">Closed issue alerts</a></p>
+<p><a href="/my-account/alerts">Earlycite alerts</a></p>
+</div>
+</div>
+
+
+
+ 
+    </div>
+
+    </div>
+
+</div> 
+    </div>
+
+    </div>
+
+</div> 
+    </div>
+
+    </div>
+
+</div> 
+    </div>
+
+    </div>
+
+</div> 
+    </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+        </div><!-- /.content-main_content -->
+    </section>
+</div>
+<div class="mobile-mask">
+</div>
+<section class="footer_wrap vt-site-footer" role="contentinfo">
+    
+
+
+<div class="ad-banner js-ad-banner ad-banner-footer">
+    <div class="widget-AdBlock widget-instance-FooterAd" 
+         data-widget-name="AdBlock" 
+         data-widget-instance="FooterAd">
+        
+ 
+    </div>
+
+</div>
+
+<div class="sticky-footer-ad js-sticky-footer-ad">
+    <div class="widget-AdBlock widget-instance-StickyAd" 
+         data-widget-name="AdBlock" 
+         data-widget-instance="StickyAd">
+        
+ 
+    </div>
+
+</div>
+
+
+    <div class="widget-SitePageFooter widget-instance-SitePageFooter" 
+         data-widget-name="SitePageFooter" 
+         data-widget-instance="SitePageFooter">
+            <div class="journal-footer journal-bg">
+        <div class="journal-footer_content clearfix foot-right">
+    <div class="journal-footer-menu">
+        
+            <ul>
+                <li class="link-0">
+                    <a href="/jes/pages/about">About this Journal</a>
+                </li>
+                <li class="link-1">
+                    <a href="/jes/pages/editorial-board">Editorial Team</a>
+                </li>
+                <li class="link-2">
+                    <a href="https://mc.manuscriptcentral.com/jest">Write for this Journal</a>
+                </li>
+                <li class="link-3">
+                    <a href="https://www.emerald.com/journals/author-guidance/1627/emerald-publishing-author-guidelines">Author Guidelines</a>
+                </li>
+            </ul>
+        
+
+    </div>
+    <div class="journal-footer-affiliations aff-right">
+        <!-- <h3>Affiliations</h3> -->
+            <a href="/" target="">
+                <img id="footer-logo-JournalofEconomicStudies" class="journal-footer-affiliations-logo" src="//emer.silverchair-cdn.com/data/SiteBuilderAssets/Live/Images/jes/Journal_of_Economic_Studies-1986937361.svg" alt="Journal of Economic Studies" />
+            </a>
+    </div>
+        </div>
+    <div class="journal-footer-colophon">
+        <ul>
+                <li><span>Online ISSN</span> 1758-7387</li>
+                            <li><span>Print ISSN</span> 0144-3585</li>
+                    </ul>
+    </div>
+    </div>
+ 
+    </div>
+
+
+
+<div class="site-theme-footer">
+        <div class="site-theme-footer_content">
+    <div class="widget-SelfServeContent widget-instance-UmbrellaFooterSelfServe" 
+         data-widget-name="SelfServeContent" 
+         data-widget-instance="UmbrellaFooterSelfServe">
+        
+
+
+
+    <input type="hidden" class="SelfServeContentId" value="GlobalFooter_Links" />
+    <input type="hidden" class="SelfServeVersionId" value="0" />
+
+<div class="theme-footer">
+<div class="flex-row">
+<div class="col-4 footer-branding">
+<div class="footer-logo">
+<a href="#"><img alt="Emerald Publishing logo" src="https://emer.silverchair-cdn.com/ImageLibrary/emerald-footer-logo.png?versionId=9651" /></a>
+</div>
+<div class="social-icons-wrap">
+<ul class="social-icons-list">
+    <li><a class="social-link" href="https://bsky.app/profile/emeraldpublishing.bsky.social" target="_blank"><span class="icon-social-bluesky"></span><span class="screenreader-text">Bluesky</span></a></li>
+    <li>
+    <a class="social-link" href="https://www.facebook.com/EmeraldPublishingImpact/" target="_blank"><span class="icon-social-facebook"></span><span class="screenreader-text">Facebook</span></a>
+    </li>
+    <li>
+    <a class="social-link" href="https://www.linkedin.com/company/emeraldpublishing/" target="_blank"><span class="icon-social-linkedin"></span><span class="screenreader-text">LinkedIn</span></a>
+    </li>
+    <li>
+    <a class="social-link" href="https://www.youtube.com/user/EmeraldPublishing67" target="_blank"><span class="icon-social-youtube"></span><span class="screenreader-text">YouTube</span></a>
+    </li>
+    <li>
+    <a class="social-link" href="https://www.instagram.com/emerald_publishing/" target="_blank"><span class="icon-social-instagram"></span><span class="screenreader-text">Instagram</span></a>
+    </li>
+</ul>
+</div>
+<div class="tag-copy">
+© 2026 Emerald Publishing Limited
+</div>
+</div>
+<div class="col-8 footer-nav">
+<div class="flex-row">
+<div class="col-3">
+<div class="footer-links-group">
+<ul class="list-lvl-0">
+    <li class="list-lvl-0">
+    <a href="https://www.emerald.com/insight">Emerald Insight</a>
+    </li>
+    <li class="list-lvl-0">
+    <a href="https://www.emerald.com/about-us">About Emerald</a>
+    </li>
+    <li class="list-lvl-0">
+    <a href="https://bookstore.emerald.com/" target="_blank">Emerald Bookstore</a>
+    </li>
+</ul>
+</div>
+</div>
+<div class="col-4">
+<div class="footer-links-group">
+<ul class="list-lvl-0">
+    <li class="list-lvl-0">
+    <a href="/open-access">Open Access</a>
+    </li>
+    <li class="list-lvl-0">
+    <a href="https://www.emerald.com/emerald-publishing-services">Emerald Publishing Services</a>
+    </li>
+    <li class="list-lvl-0">
+    <a href="https://www.emerald.com/research-services">Research Services</a>
+    </li>
+</ul>
+</div>
+</div>
+<div class="col-3">
+<div class="footer-links-group">
+<ul class="list-lvl-0">
+    <li class="list-lvl-0">
+    <a href="https://www.emerald.com/contact-emerald">Contact us</a>
+    </li>
+    <li class="list-lvl-0">
+    <a href="https://emeraldpublishinggroup.freshdesk.com/support/home" target="_blank">Emerald Support Portal</a>
+    </li>
+    <li class="list-lvl-0">
+    <a href="https://www.emerald.com/about-us/pages/start-your-new-chapter">Working for Emerald</a>
+    </li>
+    <li class="list-lvl-0">
+    <a href="https://emer.silverchair-cdn.com/data/sitemap/sitemap.xml">Sitemap</a>
+    </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="legal-links-content">
+<div class="legal-links-wrap">
+<ul class="legal-links">
+    <li>
+    <a href="/pages/cookie_policy">Cookie Policy</a>
+    </li>
+    <li>
+    <a href="https://www.emerald.com/pages/accessibility-statement">Accessibility</a>
+    </li>
+    <li>
+    <a href="/pages/site_policies">Site policies</a>
+    </li>
+    <li>
+    <a href="/pages/privacy_notice">Privacy notice</a>
+    </li>
+    <li>
+    <a href="/pages/modern_slavery_act">Modern Slavery Act</a>
+    </li>
+    <li class="copyright">© 2026 Emerald Publishing Limited</li>
+</ul>
+</div>
+</div>
+
+
+
+ 
+    </div>
+
+
+
+        </div><!-- /.center-inner-row -->
+</div><!-- /.site-theme-footer -->
+<div class="ss-ui-only">
+
+    <div class="widget-SelfServeContent widget-instance-SSuiOnlySelfServe" 
+         data-widget-name="SelfServeContent" 
+         data-widget-instance="SSuiOnlySelfServe">
+        
+
+
+
+    <input type="hidden" class="SelfServeContentId" value="SSuiOnly" />
+    <input type="hidden" class="SelfServeVersionId" value="0" />
+
+<style type="text/css">
+    .kwd-group {
+    border-top: 1px solid #9e9e9e !important;
+    }
+    div#book-info__abstract {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    border-top: none !important;
+    }
+    .content-suppressed {
+    padding: 1rem;
+    }
+    div[class*=-about-this] p a {
+    color: #1c696a !important;
+    font-weight: 300 !important;
+    text-decoration: none !important;
+    }
+    .widget-SelfServeContent[class*=publisher-info] a {
+    color: #1c696a !important;
+    font-weight: 300 !important;
+    text-decoration: none !important;
+    }
+    .widget-SitePageFooter .journal-footer .journal-footer_content .journal-footer-affiliations a img {
+    height: fit-content !important;
+    max-height: none !important;
+    width: 100% !important;
+    max-width: 200px !important;
+    }
+    .widget-IssueSupplementalLinks a:link, .widget-AllIssuesLink a:link {
+    color: #0E4751 !important;
+    }
+    .badge-bar .resource-links-info div.item a {
+    color: #0E4751 !important;
+    }
+    .badge-bar .resource-links-info div.item a.pdf span, .item-container .item-info .badge-bar .resource-links-info div.item a.pdf span {
+    color: #0E4751 !important;
+    }
+    .badge-bar .resource-links-info div.item a.pdf i[class*=icon-], .item-container .item-info .badge-bar .resource-links-info div.item a.pdf i[class*=icon-] {
+    color: #0E4751 !important;
+    }
+    .badge-bar .resource-links-info div.item a i[class*=icon-], .item-container .item-info .badge-bar .resource-links-info div.item a i[class*=icon-] {
+    color: #0E4751 !important;
+    display: inline-block;
+    align-items: center;
+    }
+    .sri-type {
+    color: #000000 !important;
+    }
+    .article-groups.left-flag {
+    color: #000000 !important;
+    }
+    .chapter-groups.left-flag {
+    color: #000000 !important;
+    }
+    .pg_AdvancedSearch .search-module.expanded .limit-results-search .range-select .labels, .pg_CitationSearch .search-module.expanded .limit-results-search .range-select .labels {
+    font-size: 13px;
+    color: #000000 !important;
+    }
+    .content-meta {
+    color: #000000 !important;
+    }
+    .book-series.left-flag {
+    color: #000000 !important;
+    }
+    .citation-manager .citation-manager-container .cdm-item-list-group tfoot .items-wrap button.disabled, .citation-manager .citation-manager-container .cdm-item-list-group thead .items-wrap button.disabled {
+    color: #000000 !important;
+    }
+    .cart-items-wrap .header-row li
+    {
+    color: #000000 !important;
+    }
+    .cart-items-wrap li {
+    color: #000000 !important;
+    }
+    .widget-UserAffinityRecommendations .user-affinity-recommendations .user-affinity-recommendation-items .user-affinity-rec-item-head {
+    color: #000000 !important;
+    }
+    input.btn-edit-userprofile
+    {
+    cursor: pointer;
+    background: #0e4751 !important;
+    border: 1px solid #0e4751 !important;
+    display: inline-block !important;
+    font-family: museo-sans, sans-serif !important;
+    font-size: .75rem !important;
+    font-weight: 300 !important;
+    padding: .5rem 1rem !important;
+    text-align: center !important;
+    text-decoration: none;
+    transition: all .25s ease-in-out !important;
+    border-radius: 22px;
+    }
+    input.btn-edit-userprofile:hover
+    {
+    cursor: pointer;
+    background: #0e4751 !important;
+    border: 1px solid #0e4751 !important;
+    color: #fff !important;
+    }
+    .customer-details [class$=-label], .order-details [class$=-label] {
+    color: #000000 !important;
+    }
+    .summary-list-wrap .summary-list-heading-row li {
+    color: #000000 !important;
+    }
+    .summary-list-wrap li {
+    color: #000000 !important;
+    }
+    .al-article-clienttype, .al-article-series-title, .articleClientType, .left-flag, .sri-type {
+    color: #000000 !important;
+    }
+    .journal-header .site-menu .nav-link {
+    color: #000000 !important
+    }
+    .site-theme-header {
+    background: #fff;
+    )
+</style>
+
+
+
+ 
+    </div>
+
+</div>
+
+<div class="ad-banner js-ad-interstitial">
+    <div class="widget-AdBlock widget-instance-Interstitial" 
+         data-widget-name="AdBlock" 
+         data-widget-instance="Interstitial">
+        
+ 
+    </div>
+
+</div>
+</section>
+
+
+
+
+
+    
+
+
+
+    <div class="widget-SiteWideModals widget-instance-SiteWideModals" 
+         data-widget-name="SiteWideModals" 
+         data-widget-instance="SiteWideModals">
+        <div id="revealModal" class="reveal-modal" data-reveal aria-hidden="true" aria-live="assertive" tabindex="-1">
+    <div id="revealContent"></div>
+    
+    <a class="close-reveal-modal" href="javascript:;"><i class="icon-general-close" aria-hidden="true"></i><span class="screenreader-text">Close dialog</span></a>
+</div>
+
+<div id="globalModalContainer" class="modal-global-container"
+     role="dialog"
+     aria-hidden="true"
+     aria-live="assertive"
+     tabindex="-1">
+    <div id="globalModalContent">
+        <div class="js-globalModalPlaceholder"></div>
+    </div>
+    
+    <a href="javascript:;" class="close-modal js-close-modal" role="button">
+        <i class="icon-general-close" aria-hidden="true"></i>
+        <span class="screenreader-text">Close dialog</span>
+    </a>
+</div>
+<div id="globalModalOverlay" class="modal-overlay js-modal-overlay"></div>
+
+    <div id="NeedSubscription" class="reveal-modal small" data-reveal>
+            <div class="subscription-needed">
+                <div class="modal-heading">This Feature Is Available To Subscribers Only</div>
+                <p><a class="btn modal-sign_in-btn" href="/sign-in?returnUrl=%2fjes%2f">Sign In</a> or <a class="modal-register-link" href="/my-account/register?siteId=1000491&amp;returnUrl=%2fjes%2f">Create an Account</a></p>
+            </div>
+
+
+        <a class="close-reveal-modal" href="javascript:;"><i class="icon-general-close" aria-hidden="true"></i><span class="screenreader-text">Close subscription notice</span></a>
+    </div>
+
+
+<div id="noAccessReveal" class="reveal-modal tiny" data-reveal>
+    <a class="close-reveal-modal" href="javascript:;"><i class="icon-general-close" aria-hidden="true"></i><span class="screenreader-text">Close access options</span></a>
+    <div id="noAccessForm">
+        <div class="spinner"></div>
+    </div>
+</div>
+
+
+<div id="cookieShareModal" class="cookie-share-modal-content" hidden>
+    <h2 id="cookieShareModalTitle" class="js-modal-label">Sharing Unavailable</h2>
+    <p>Sharing content requires targeting cookies to be enabled. Please update your cookie preferences to use this feature.</p>
+    <div class="cookie-share-modal__actions">
+        <button type="button" class="btn btn-primary js-share-cookie-prefs-btn">Update Cookie Preferences</button>
+        <button type="button" class="btn js-close-modal">Cancel</button>
+    </div>
+</div> 
+    </div>
+
+    
+
+
+
+
+
+
+<script type="text/javascript">
+    MathJax = {
+        tex: {
+            inlineMath: [['|$', '$|'], ['\\(', '\\)']]
+        }    };
+</script>
+<script id="MathJax-script" async src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+    <!-- CookiePro Default Categories -->
+    <!-- When the Cookie Compliance code loads, if cookies for the associated group have consent...
+         it will dynamically change the tag to: script type=text/JavaScript...
+         the code inside the tags will then be recognized and run as normal. -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="//emer.silverchair-cdn.com/Themes/Client/app/jsdist/v-639273628713703306/site.min.js"></script>
+
+
+    
+    
+
+
+    
+
+        <script type="text/javascript">
+        $(document).ready(function () {
+            App.SearchAutoComplete.init(["Keywords"]);
+        });
+        </script>
+    
+    
+
+
+
+
+    <div class="ad-banner js-ad-riser ad-banner-riser" role="region" aria-label="Advertisement">
+    <div class="widget-AdBlock widget-instance-RiserAd" 
+         data-widget-name="AdBlock" 
+         data-widget-instance="RiserAd">
+        
+ 
+    </div>
+
+    </div>
+
+
+
+            
+    <div class="end-of-page-js"></div>
+</body>
+</html>
+
